@@ -1,6 +1,6 @@
 #Resumen de enunciado
 
-C -> scanner -> beamer(latex doc)
+C -> scanner -> beamer
 
 
 generacion archivo temporal (preprocesador)
@@ -31,3 +31,43 @@ analisis lexico
 
 		**recomendable hacer el `Get_Token()` reusable para futuros proyectos**
 	
+	El beamer puede ser apartir de varios archivos
+		- estatico
+		- lexemas en formato latex generado por scanner
+		- histograma generado por gnuplot apartir de archivo generado por scanner?
+
+		C -> temporal -> scanner -> lexemas                                -> beamer
+								 -> archivo datos -> gnuplot -> histograma ->
+								 -> estatico                               ->
+
+salida
+------
+
+	C -> temporal -> scanner -> Latex source -> beamer
+
+	presentacion beamer de latex
+	internamente ejecutar comando `pdflatex`
+	desplegarlo de inmendiato (probalemente usand el comando `evince`) en fullscreen
+
+	presentacion beamer
+		gran calidad, tablas, colores, dibujos, imagenes, graficos
+		- portada
+		- explicacion del proceso de scanning y la herramienta flex
+		- slides del codigo temporal/intermedio, distincion de cada lexema
+			utilizar tipos de letra, pesos, italics, colores (fg, bg)
+			reportar errores lexicos
+		- cantidad razonable del codigo original en cada slide
+		- histograma de las cantidades de cada tipo de token
+			se puede preparar internamente un archivo de datos
+			invocar el comando gnuplot desde el programa
+			o utilizar el package pdfplots de latex
+
+
+Dudas
+=====
+
+	presentacion en beamer:
+		hay partes estaticas y el resto se genera con el scanner, right?
+		como determinar cuanto codigo por slide?
+		codigo original y el temporal en el mismo slide?
+		output del scanner serian los archivos para el beamer y tambien compilarlos a latex y hacerles display?
