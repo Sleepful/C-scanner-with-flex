@@ -23,6 +23,7 @@ analisis lexico
 	
 	C -> archivo temporal -> scanner -> beamer
 
+	relativamente facil con *flex*
 	escribir un scanner para el lenguaje de C completo, segun la documentacion de c
 	algo asi como hacer una funcion `Get_Token()`
 		al ser invocada regresa el siguiente token del fuente, en alguna estructura de datos
