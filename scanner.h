@@ -5,10 +5,6 @@
 #define OPERATOR 5
 #define PUNCTUATOR  6
 #define COMMENT 7
+#define PREPROCESSOR 9
 
-#define INTEGER 8
-#define COLON 9
-#define TYPE 10
-#define NAME 11
-#define TABLE_PREFIX 12
-#define PORT 13
+#define INTEGER 10

@@ -11,6 +11,7 @@ extern char* yytext;
 typedef struct table_row {
 	int token;
 	char* name;
+	int value;
 	struct table_row * next;
 } Row;
 
@@ -26,7 +27,7 @@ int main(void)
 	rowtoken = getToken();
 	while(rowtoken.token) {
 		printf("%d\n", rowtoken.token);
-		printf("%s\n",rowtoken.name);
+		printf(rowtoken.name);
 		rowtoken = getToken();
 	}
 	return 0;
@@ -36,6 +37,9 @@ Row getToken(void){
 	Row myRow;
 	int token = yylex();
 	myRow.token = token;
-	myRow.name = yytext;
+	if(token==INTEGER)
+		myRow.value = atof(yytext);
+	else
+		myRow.name = yytext;
 	return myRow;
 }

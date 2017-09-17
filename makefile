@@ -1,9 +1,9 @@
-scanner: scanner.c scanner.h lex.yy.c
-	cc scanner.c lex.yy.c -o scanner 
+scanner: scanner.h scanner.c lex.yy.c
+	cc lex.yy.c scanner.c -o scanner 
 
 lex: scanner.l
-	lex scanner.l
+	lex scanner.l > lex.yy.c
 
 clean:
-	rm scanner
 	rm lex.yy.c
+	rm scanner
