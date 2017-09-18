@@ -1,3 +1,18792 @@
+1
+static
+aaaaa 1 1
+11
+ 
+aaaaa 1 1
+1
+int
+aaaaa 1 1
+11
+ 
+aaaaa 1 1
+2
+kernel_init
+aaaaa 1 1
+5
+(
+aaaaa 1 1
+1
+void
+aaaaa 1 1
+11
+ 
+aaaaa 1 1
+4
+*
+aaaaa 1 1
+5
+)
+aaaaa 1 1
+5
+;
+aaaaa 1 1
+11
 
-\color{blue}
-\verb$sfsdfsdfsafd$\tab\color{red}\verb@derpdeeee@\newline\color{brown}\verb@derpdeeee@
+
+aaaaa 2 1
+11
+
+
+aaaaa 3 1
+1
+extern
+aaaaa 3 1
+11
+ 
+aaaaa 3 1
+1
+void
+aaaaa 3 1
+11
+ 
+aaaaa 3 1
+2
+init_IRQ
+aaaaa 3 1
+5
+(
+aaaaa 3 1
+1
+void
+aaaaa 3 1
+5
+)
+aaaaa 3 1
+5
+;
+aaaaa 3 1
+11
+
+
+aaaaa 4 1
+1
+extern
+aaaaa 4 1
+11
+ 
+aaaaa 4 1
+1
+void
+aaaaa 4 1
+11
+ 
+aaaaa 4 1
+2
+fork_init
+aaaaa 4 1
+5
+(
+aaaaa 4 1
+1
+void
+aaaaa 4 1
+5
+)
+aaaaa 4 1
+5
+;
+aaaaa 4 1
+11
+
+
+aaaaa 5 1
+1
+extern
+aaaaa 5 1
+11
+ 
+aaaaa 5 1
+1
+void
+aaaaa 5 1
+11
+ 
+aaaaa 5 1
+2
+radix_tree_init
+aaaaa 5 1
+5
+(
+aaaaa 5 1
+1
+void
+aaaaa 5 1
+5
+)
+aaaaa 5 1
+5
+;
+aaaaa 5 1
+11
+
+
+aaaaa 6 1
+11
+
+
+aaaaa 7 1
+6
+/*
+ * Debug helper: via this flag we know that we are in 'early bootup code'
+ * where only the boot processor is running with IRQ disabled.  This means
+ * two things - IRQ must not be enabled before the flag is cleared and some
+ * operations which are not allowed with IRQ disabled are allowed while the
+ * flag is set.
+ */
+new line counter reached: 13
+aaaaa 13 11
+11
+
+
+aaaaa 14 11
+2
+bool
+aaaaa 14 11
+11
+ 
+aaaaa 14 11
+2
+early_boot_irqs_disabled
+aaaaa 14 11
+11
+ 
+aaaaa 14 11
+2
+__read_mostly
+aaaaa 14 11
+5
+;
+aaaaa 14 11
+11
+
+
+aaaaa 15 11
+11
+
+
+aaaaa 16 11
+1
+enum
+aaaaa 16 11
+11
+ 
+aaaaa 16 11
+2
+system_states
+aaaaa 16 11
+11
+ 
+aaaaa 16 11
+2
+system_state
+aaaaa 16 11
+11
+ 
+aaaaa 16 11
+2
+__read_mostly
+aaaaa 16 11
+5
+;
+aaaaa 16 11
+11
+
+
+aaaaa 17 11
+2
+EXPORT_SYMBOL
+aaaaa 17 11
+5
+(
+aaaaa 17 11
+2
+system_state
+aaaaa 17 11
+5
+)
+aaaaa 17 11
+5
+;
+aaaaa 17 11
+11
+
+
+aaaaa 18 11
+11
+
+
+aaaaa 19 11
+6
+/*
+ * Boot command-line arguments
+ */
+new line counter reached: 21
+aaaaa 21 21
+11
+
+
+aaaaa 22 21
+7
+#define MAX_INIT_ARGS CONFIG_INIT_ENV_ARG_LIMIT
+aaaaa 22 21
+11
+
+
+aaaaa 23 21
+7
+#define MAX_INIT_ENVS CONFIG_INIT_ENV_ARG_LIMIT
+aaaaa 23 21
+11
+
+
+aaaaa 24 21
+11
+
+
+aaaaa 25 21
+1
+extern
+aaaaa 25 21
+11
+ 
+aaaaa 25 21
+1
+void
+aaaaa 25 21
+11
+ 
+aaaaa 25 21
+2
+time_init
+aaaaa 25 21
+5
+(
+aaaaa 25 21
+1
+void
+aaaaa 25 21
+5
+)
+aaaaa 25 21
+5
+;
+aaaaa 25 21
+11
+
+
+aaaaa 26 21
+6
+/* Default late time init is NULL. archs can override this later. */
+aaaaa 26 21
+11
+
+
+aaaaa 27 21
+1
+void
+aaaaa 27 21
+11
+ 
+aaaaa 27 21
+5
+(
+aaaaa 27 21
+4
+*
+aaaaa 27 21
+2
+__initdata
+aaaaa 27 21
+11
+ 
+aaaaa 27 21
+2
+late_time_init
+aaaaa 27 21
+5
+)
+aaaaa 27 21
+5
+(
+aaaaa 27 21
+1
+void
+aaaaa 27 21
+5
+)
+aaaaa 27 21
+5
+;
+aaaaa 27 21
+11
+
+
+aaaaa 28 21
+11
+
+
+aaaaa 29 21
+6
+/* Untouched command line saved by arch-specific code. */
+aaaaa 29 21
+11
+
+
+aaaaa 30 21
+1
+char
+aaaaa 30 21
+11
+ 
+aaaaa 30 21
+2
+__initdata
+aaaaa 30 21
+11
+ 
+aaaaa 30 21
+2
+boot_command_line
+aaaaa 30 21
+5
+[
+aaaaa 30 21
+2
+COMMAND_LINE_SIZE
+aaaaa 30 21
+5
+]
+aaaaa 30 21
+5
+;
+aaaaa 30 21
+11
+
+
+new line counter reached: 31
+aaaaa 31 31
+6
+/* Untouched saved command line (eg. for /proc) */
+aaaaa 31 31
+11
+
+
+aaaaa 32 31
+1
+char
+aaaaa 32 31
+11
+ 
+aaaaa 32 31
+4
+*
+aaaaa 32 31
+2
+saved_command_line
+aaaaa 32 31
+5
+;
+aaaaa 32 31
+11
+
+
+aaaaa 33 31
+6
+/* Command line for parameter parsing */
+aaaaa 33 31
+11
+
+
+aaaaa 34 31
+1
+static
+aaaaa 34 31
+11
+ 
+aaaaa 34 31
+1
+char
+aaaaa 34 31
+11
+ 
+aaaaa 34 31
+4
+*
+aaaaa 34 31
+2
+static_command_line
+aaaaa 34 31
+5
+;
+aaaaa 34 31
+11
+
+
+aaaaa 35 31
+6
+/* Command line for per-initcall parameter parsing */
+aaaaa 35 31
+11
+
+
+aaaaa 36 31
+1
+static
+aaaaa 36 31
+11
+ 
+aaaaa 36 31
+1
+char
+aaaaa 36 31
+11
+ 
+aaaaa 36 31
+4
+*
+aaaaa 36 31
+2
+initcall_command_line
+aaaaa 36 31
+5
+;
+aaaaa 36 31
+11
+
+
+aaaaa 37 31
+11
+
+
+aaaaa 38 31
+1
+static
+aaaaa 38 31
+11
+ 
+aaaaa 38 31
+1
+char
+aaaaa 38 31
+11
+ 
+aaaaa 38 31
+4
+*
+aaaaa 38 31
+2
+execute_command
+aaaaa 38 31
+5
+;
+aaaaa 38 31
+11
+
+
+aaaaa 39 31
+1
+static
+aaaaa 39 31
+11
+ 
+aaaaa 39 31
+1
+char
+aaaaa 39 31
+11
+ 
+aaaaa 39 31
+4
+*
+aaaaa 39 31
+2
+ramdisk_execute_command
+aaaaa 39 31
+5
+;
+aaaaa 39 31
+11
+
+
+aaaaa 40 31
+11
+
+
+new line counter reached: 41
+aaaaa 41 41
+6
+/*
+ * Used to generate warnings if static_key manipulation functions are used
+ * before jump_label_init is called.
+ */
+aaaaa 44 41
+11
+
+
+aaaaa 45 41
+2
+bool
+aaaaa 45 41
+11
+ 
+aaaaa 45 41
+2
+static_key_initialized
+aaaaa 45 41
+11
+ 
+aaaaa 45 41
+2
+__read_mostly
+aaaaa 45 41
+5
+;
+aaaaa 45 41
+11
+
+
+aaaaa 46 41
+2
+EXPORT_SYMBOL_GPL
+aaaaa 46 41
+5
+(
+aaaaa 46 41
+2
+static_key_initialized
+aaaaa 46 41
+5
+)
+aaaaa 46 41
+5
+;
+aaaaa 46 41
+11
+
+
+aaaaa 47 41
+11
+
+
+aaaaa 48 41
+6
+/*
+ * If set, this is an indication to the drivers that reset the underlying
+ * device before going ahead with the initialization otherwise driver might
+ * rely on the BIOS and skip the reset operation.
+ *
+ * This is useful if kernel is booting in an unreliable environment.
+ * For ex. kdump situation where previous kernel has crashed, BIOS has been
+ * skipped and devices will be in unknown state.
+ */
+new line counter reached: 56
+aaaaa 56 51
+11
+
+
+aaaaa 57 51
+1
+unsigned
+aaaaa 57 51
+11
+ 
+aaaaa 57 51
+1
+int
+aaaaa 57 51
+11
+ 
+aaaaa 57 51
+2
+reset_devices
+aaaaa 57 51
+5
+;
+aaaaa 57 51
+11
+
+
+aaaaa 58 51
+2
+EXPORT_SYMBOL
+aaaaa 58 51
+5
+(
+aaaaa 58 51
+2
+reset_devices
+aaaaa 58 51
+5
+)
+aaaaa 58 51
+5
+;
+aaaaa 58 51
+11
+
+
+aaaaa 59 51
+11
+
+
+aaaaa 60 51
+1
+static
+aaaaa 60 51
+11
+ 
+aaaaa 60 51
+1
+int
+aaaaa 60 51
+11
+ 
+aaaaa 60 51
+2
+__init
+aaaaa 60 51
+11
+ 
+aaaaa 60 51
+2
+set_reset_devices
+aaaaa 60 51
+5
+(
+aaaaa 60 51
+1
+char
+aaaaa 60 51
+11
+ 
+aaaaa 60 51
+4
+*
+aaaaa 60 51
+2
+str
+aaaaa 60 51
+5
+)
+aaaaa 60 51
+11
+
+
+new line counter reached: 61
+aaaaa 61 61
+5
+{
+aaaaa 61 61
+11
+
+
+aaaaa 62 61
+11
+	
+aaaaa 62 61
+2
+reset_devices
+aaaaa 62 61
+11
+ 
+aaaaa 62 61
+5
+=
+aaaaa 62 61
+11
+ 
+aaaaa 62 61
+3
+1
+aaaaa 62 61
+5
+;
+aaaaa 62 61
+11
+
+
+aaaaa 63 61
+11
+	
+aaaaa 63 61
+1
+return
+aaaaa 63 61
+11
+ 
+aaaaa 63 61
+3
+1
+aaaaa 63 61
+5
+;
+aaaaa 63 61
+11
+
+
+aaaaa 64 61
+5
+}
+aaaaa 64 61
+11
+
+
+aaaaa 65 61
+11
+
+
+aaaaa 66 61
+2
+__setup
+aaaaa 66 61
+5
+(
+aaaaa 66 61
+9
+"reset_devices"
+aaaaa 66 61
+5
+,
+aaaaa 66 61
+11
+ 
+aaaaa 66 61
+2
+set_reset_devices
+aaaaa 66 61
+5
+)
+aaaaa 66 61
+5
+;
+aaaaa 66 61
+11
+
+
+aaaaa 67 61
+11
+
+
+aaaaa 68 61
+1
+static
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+1
+const
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+1
+char
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+4
+*
+aaaaa 68 61
+2
+argv_init
+aaaaa 68 61
+5
+[
+aaaaa 68 61
+2
+MAX_INIT_ARGS
+aaaaa 68 61
+3
++2
+aaaaa 68 61
+5
+]
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+5
+=
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+5
+{
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+9
+"init"
+aaaaa 68 61
+5
+,
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+2
+NULL
+aaaaa 68 61
+5
+,
+aaaaa 68 61
+11
+ 
+aaaaa 68 61
+5
+}
+aaaaa 68 61
+5
+;
+aaaaa 68 61
+11
+
+
+aaaaa 69 61
+1
+const
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+1
+char
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+4
+*
+aaaaa 69 61
+2
+envp_init
+aaaaa 69 61
+5
+[
+aaaaa 69 61
+2
+MAX_INIT_ENVS
+aaaaa 69 61
+3
++2
+aaaaa 69 61
+5
+]
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+5
+=
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+5
+{
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+9
+"HOME=/"
+aaaaa 69 61
+5
+,
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+9
+"TERM=linux"
+aaaaa 69 61
+5
+,
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+2
+NULL
+aaaaa 69 61
+5
+,
+aaaaa 69 61
+11
+ 
+aaaaa 69 61
+5
+}
+aaaaa 69 61
+5
+;
+aaaaa 69 61
+11
+
+
+aaaaa 70 61
+1
+static
+aaaaa 70 61
+11
+ 
+aaaaa 70 61
+1
+const
+aaaaa 70 61
+11
+ 
+aaaaa 70 61
+1
+char
+aaaaa 70 61
+11
+ 
+aaaaa 70 61
+4
+*
+aaaaa 70 61
+2
+panic_later
+aaaaa 70 61
+5
+,
+aaaaa 70 61
+11
+ 
+aaaaa 70 61
+4
+*
+aaaaa 70 61
+2
+panic_param
+aaaaa 70 61
+5
+;
+aaaaa 70 61
+11
+
+
+new line counter reached: 71
+aaaaa 71 71
+11
+
+
+aaaaa 72 71
+1
+extern
+aaaaa 72 71
+11
+ 
+aaaaa 72 71
+1
+const
+aaaaa 72 71
+11
+ 
+aaaaa 72 71
+1
+struct
+aaaaa 72 71
+11
+ 
+aaaaa 72 71
+2
+obs_kernel_param
+aaaaa 72 71
+11
+ 
+aaaaa 72 71
+2
+__setup_start
+aaaaa 72 71
+5
+[
+aaaaa 72 71
+5
+]
+aaaaa 72 71
+5
+,
+aaaaa 72 71
+11
+ 
+aaaaa 72 71
+2
+__setup_end
+aaaaa 72 71
+5
+[
+aaaaa 72 71
+5
+]
+aaaaa 72 71
+5
+;
+aaaaa 72 71
+11
+
+
+aaaaa 73 71
+11
+
+
+aaaaa 74 71
+1
+static
+aaaaa 74 71
+11
+ 
+aaaaa 74 71
+2
+bool
+aaaaa 74 71
+11
+ 
+aaaaa 74 71
+2
+__init
+aaaaa 74 71
+11
+ 
+aaaaa 74 71
+2
+obsolete_checksetup
+aaaaa 74 71
+5
+(
+aaaaa 74 71
+1
+char
+aaaaa 74 71
+11
+ 
+aaaaa 74 71
+4
+*
+aaaaa 74 71
+2
+line
+aaaaa 74 71
+5
+)
+aaaaa 74 71
+11
+
+
+aaaaa 75 71
+5
+{
+aaaaa 75 71
+11
+
+
+aaaaa 76 71
+11
+	
+aaaaa 76 71
+1
+const
+aaaaa 76 71
+11
+ 
+aaaaa 76 71
+1
+struct
+aaaaa 76 71
+11
+ 
+aaaaa 76 71
+2
+obs_kernel_param
+aaaaa 76 71
+11
+ 
+aaaaa 76 71
+4
+*
+aaaaa 76 71
+2
+p
+aaaaa 76 71
+5
+;
+aaaaa 76 71
+11
+
+
+aaaaa 77 71
+11
+	
+aaaaa 77 71
+2
+bool
+aaaaa 77 71
+11
+ 
+aaaaa 77 71
+2
+had_early_param
+aaaaa 77 71
+11
+ 
+aaaaa 77 71
+5
+=
+aaaaa 77 71
+11
+ 
+aaaaa 77 71
+2
+false
+aaaaa 77 71
+5
+;
+aaaaa 77 71
+11
+
+
+aaaaa 78 71
+11
+
+
+aaaaa 79 71
+11
+	
+aaaaa 79 71
+2
+p
+aaaaa 79 71
+11
+ 
+aaaaa 79 71
+5
+=
+aaaaa 79 71
+11
+ 
+aaaaa 79 71
+2
+__setup_start
+aaaaa 79 71
+5
+;
+aaaaa 79 71
+11
+
+
+aaaaa 80 71
+11
+	
+aaaaa 80 71
+1
+do
+aaaaa 80 71
+11
+ 
+aaaaa 80 71
+5
+{
+aaaaa 80 71
+11
+
+
+new line counter reached: 81
+aaaaa 81 81
+11
+	
+aaaaa 81 81
+11
+	
+aaaaa 81 81
+1
+int
+aaaaa 81 81
+11
+ 
+aaaaa 81 81
+2
+n
+aaaaa 81 81
+11
+ 
+aaaaa 81 81
+5
+=
+aaaaa 81 81
+11
+ 
+aaaaa 81 81
+2
+strlen
+aaaaa 81 81
+5
+(
+aaaaa 81 81
+2
+p
+aaaaa 81 81
+4
+-
+aaaaa 81 81
+4
+>
+aaaaa 81 81
+2
+str
+aaaaa 81 81
+5
+)
+aaaaa 81 81
+5
+;
+aaaaa 81 81
+11
+
+
+aaaaa 82 81
+11
+	
+aaaaa 82 81
+11
+	
+aaaaa 82 81
+1
+if
+aaaaa 82 81
+11
+ 
+aaaaa 82 81
+5
+(
+aaaaa 82 81
+2
+parameqn
+aaaaa 82 81
+5
+(
+aaaaa 82 81
+2
+line
+aaaaa 82 81
+5
+,
+aaaaa 82 81
+11
+ 
+aaaaa 82 81
+2
+p
+aaaaa 82 81
+4
+-
+aaaaa 82 81
+4
+>
+aaaaa 82 81
+2
+str
+aaaaa 82 81
+5
+,
+aaaaa 82 81
+11
+ 
+aaaaa 82 81
+2
+n
+aaaaa 82 81
+5
+)
+aaaaa 82 81
+5
+)
+aaaaa 82 81
+11
+ 
+aaaaa 82 81
+5
+{
+aaaaa 82 81
+11
+
+
+aaaaa 83 81
+11
+	
+aaaaa 83 81
+11
+	
+aaaaa 83 81
+11
+	
+aaaaa 83 81
+1
+if
+aaaaa 83 81
+11
+ 
+aaaaa 83 81
+5
+(
+aaaaa 83 81
+2
+p
+aaaaa 83 81
+4
+-
+aaaaa 83 81
+4
+>
+aaaaa 83 81
+2
+early
+aaaaa 83 81
+5
+)
+aaaaa 83 81
+11
+ 
+aaaaa 83 81
+5
+{
+aaaaa 83 81
+11
+
+
+aaaaa 84 81
+11
+	
+aaaaa 84 81
+11
+	
+aaaaa 84 81
+11
+	
+aaaaa 84 81
+11
+	
+aaaaa 84 81
+6
+/* Already done in parse_early_param?
+				 * (Needs exact match on param part).
+				 * Keep iterating, as we can have early
+				 * params and __setups of same names 8( */
+aaaaa 87 81
+11
+
+
+aaaaa 88 81
+11
+	
+aaaaa 88 81
+11
+	
+aaaaa 88 81
+11
+	
+aaaaa 88 81
+11
+	
+aaaaa 88 81
+1
+if
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+5
+(
+aaaaa 88 81
+2
+line
+aaaaa 88 81
+5
+[
+aaaaa 88 81
+2
+n
+aaaaa 88 81
+5
+]
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+4
+==
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+8
+'\0'
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+4
+||
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+2
+line
+aaaaa 88 81
+5
+[
+aaaaa 88 81
+2
+n
+aaaaa 88 81
+5
+]
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+4
+==
+aaaaa 88 81
+11
+ 
+aaaaa 88 81
+8
+'='
+aaaaa 88 81
+5
+)
+aaaaa 88 81
+11
+
+
+aaaaa 89 81
+11
+	
+aaaaa 89 81
+11
+	
+aaaaa 89 81
+11
+	
+aaaaa 89 81
+11
+	
+aaaaa 89 81
+11
+	
+aaaaa 89 81
+2
+had_early_param
+aaaaa 89 81
+11
+ 
+aaaaa 89 81
+5
+=
+aaaaa 89 81
+11
+ 
+aaaaa 89 81
+2
+true
+aaaaa 89 81
+5
+;
+aaaaa 89 81
+11
+
+
+aaaaa 90 81
+11
+	
+aaaaa 90 81
+11
+	
+aaaaa 90 81
+11
+	
+aaaaa 90 81
+5
+}
+aaaaa 90 81
+11
+ 
+aaaaa 90 81
+1
+else
+aaaaa 90 81
+11
+ 
+aaaaa 90 81
+1
+if
+aaaaa 90 81
+11
+ 
+aaaaa 90 81
+5
+(
+aaaaa 90 81
+4
+!
+aaaaa 90 81
+2
+p
+aaaaa 90 81
+4
+-
+aaaaa 90 81
+4
+>
+aaaaa 90 81
+2
+setup_func
+aaaaa 90 81
+5
+)
+aaaaa 90 81
+11
+ 
+aaaaa 90 81
+5
+{
+aaaaa 90 81
+11
+
+
+new line counter reached: 91
+aaaaa 91 91
+11
+	
+aaaaa 91 91
+11
+	
+aaaaa 91 91
+11
+	
+aaaaa 91 91
+11
+	
+aaaaa 91 91
+2
+pr_warn
+aaaaa 91 91
+5
+(
+aaaaa 91 91
+9
+"Parameter %s is obsolete, ignored\n"
+aaaaa 91 91
+5
+,
+aaaaa 91 91
+11
+
+
+aaaaa 92 91
+11
+	
+aaaaa 92 91
+11
+	
+aaaaa 92 91
+11
+	
+aaaaa 92 91
+11
+	
+aaaaa 92 91
+11
+	
+aaaaa 92 91
+2
+p
+aaaaa 92 91
+4
+-
+aaaaa 92 91
+4
+>
+aaaaa 92 91
+2
+str
+aaaaa 92 91
+5
+)
+aaaaa 92 91
+5
+;
+aaaaa 92 91
+11
+
+
+aaaaa 93 91
+11
+	
+aaaaa 93 91
+11
+	
+aaaaa 93 91
+11
+	
+aaaaa 93 91
+11
+	
+aaaaa 93 91
+1
+return
+aaaaa 93 91
+11
+ 
+aaaaa 93 91
+2
+true
+aaaaa 93 91
+5
+;
+aaaaa 93 91
+11
+
+
+aaaaa 94 91
+11
+	
+aaaaa 94 91
+11
+	
+aaaaa 94 91
+11
+	
+aaaaa 94 91
+5
+}
+aaaaa 94 91
+11
+ 
+aaaaa 94 91
+1
+else
+aaaaa 94 91
+11
+ 
+aaaaa 94 91
+1
+if
+aaaaa 94 91
+11
+ 
+aaaaa 94 91
+5
+(
+aaaaa 94 91
+2
+p
+aaaaa 94 91
+4
+-
+aaaaa 94 91
+4
+>
+aaaaa 94 91
+2
+setup_func
+aaaaa 94 91
+5
+(
+aaaaa 94 91
+2
+line
+aaaaa 94 91
+11
+ 
+aaaaa 94 91
+4
++
+aaaaa 94 91
+11
+ 
+aaaaa 94 91
+2
+n
+aaaaa 94 91
+5
+)
+aaaaa 94 91
+5
+)
+aaaaa 94 91
+11
+
+
+aaaaa 95 91
+11
+	
+aaaaa 95 91
+11
+	
+aaaaa 95 91
+11
+	
+aaaaa 95 91
+11
+	
+aaaaa 95 91
+1
+return
+aaaaa 95 91
+11
+ 
+aaaaa 95 91
+2
+true
+aaaaa 95 91
+5
+;
+aaaaa 95 91
+11
+
+
+aaaaa 96 91
+11
+	
+aaaaa 96 91
+11
+	
+aaaaa 96 91
+5
+}
+aaaaa 96 91
+11
+
+
+aaaaa 97 91
+11
+	
+aaaaa 97 91
+11
+	
+aaaaa 97 91
+2
+p
+aaaaa 97 91
+4
+++
+aaaaa 97 91
+5
+;
+aaaaa 97 91
+11
+
+
+aaaaa 98 91
+11
+	
+aaaaa 98 91
+5
+}
+aaaaa 98 91
+11
+ 
+aaaaa 98 91
+1
+while
+aaaaa 98 91
+11
+ 
+aaaaa 98 91
+5
+(
+aaaaa 98 91
+2
+p
+aaaaa 98 91
+11
+ 
+aaaaa 98 91
+4
+<
+aaaaa 98 91
+11
+ 
+aaaaa 98 91
+2
+__setup_end
+aaaaa 98 91
+5
+)
+aaaaa 98 91
+5
+;
+aaaaa 98 91
+11
+
+
+aaaaa 99 91
+11
+
+
+aaaaa 100 91
+11
+	
+aaaaa 100 91
+1
+return
+aaaaa 100 91
+11
+ 
+aaaaa 100 91
+2
+had_early_param
+aaaaa 100 91
+5
+;
+aaaaa 100 91
+11
+
+
+new line counter reached: 101
+aaaaa 101 101
+5
+}
+aaaaa 101 101
+11
+
+
+aaaaa 102 101
+11
+
+
+aaaaa 103 101
+6
+/*
+ * This should be approx 2 Bo*oMips to start (note initial shift), and will
+ * still work even if initially too large, it will just take slightly longer
+ */
+aaaaa 106 101
+11
+
+
+aaaaa 107 101
+1
+unsigned
+aaaaa 107 101
+11
+ 
+aaaaa 107 101
+1
+long
+aaaaa 107 101
+11
+ 
+aaaaa 107 101
+2
+loops_per_jiffy
+aaaaa 107 101
+11
+ 
+aaaaa 107 101
+5
+=
+aaaaa 107 101
+11
+ 
+aaaaa 107 101
+5
+(
+aaaaa 107 101
+3
+1
+aaaaa 107 101
+4
+<<
+aaaaa 107 101
+3
+12
+aaaaa 107 101
+5
+)
+aaaaa 107 101
+5
+;
+aaaaa 107 101
+11
+
+
+aaaaa 108 101
+2
+EXPORT_SYMBOL
+aaaaa 108 101
+5
+(
+aaaaa 108 101
+2
+loops_per_jiffy
+aaaaa 108 101
+5
+)
+aaaaa 108 101
+5
+;
+aaaaa 108 101
+11
+
+
+aaaaa 109 101
+11
+
+
+aaaaa 110 101
+1
+static
+aaaaa 110 101
+11
+ 
+aaaaa 110 101
+1
+int
+aaaaa 110 101
+11
+ 
+aaaaa 110 101
+2
+__init
+aaaaa 110 101
+11
+ 
+aaaaa 110 101
+2
+debug_kernel
+aaaaa 110 101
+5
+(
+aaaaa 110 101
+1
+char
+aaaaa 110 101
+11
+ 
+aaaaa 110 101
+4
+*
+aaaaa 110 101
+2
+str
+aaaaa 110 101
+5
+)
+aaaaa 110 101
+11
+
+
+new line counter reached: 111
+aaaaa 111 111
+5
+{
+aaaaa 111 111
+11
+
+
+aaaaa 112 111
+11
+	
+aaaaa 112 111
+2
+console_loglevel
+aaaaa 112 111
+11
+ 
+aaaaa 112 111
+5
+=
+aaaaa 112 111
+11
+ 
+aaaaa 112 111
+2
+CONSOLE_LOGLEVEL_DEBUG
+aaaaa 112 111
+5
+;
+aaaaa 112 111
+11
+
+
+aaaaa 113 111
+11
+	
+aaaaa 113 111
+1
+return
+aaaaa 113 111
+11
+ 
+aaaaa 113 111
+3
+0
+aaaaa 113 111
+5
+;
+aaaaa 113 111
+11
+
+
+aaaaa 114 111
+5
+}
+aaaaa 114 111
+11
+
+
+aaaaa 115 111
+11
+
+
+aaaaa 116 111
+1
+static
+aaaaa 116 111
+11
+ 
+aaaaa 116 111
+1
+int
+aaaaa 116 111
+11
+ 
+aaaaa 116 111
+2
+__init
+aaaaa 116 111
+11
+ 
+aaaaa 116 111
+2
+quiet_kernel
+aaaaa 116 111
+5
+(
+aaaaa 116 111
+1
+char
+aaaaa 116 111
+11
+ 
+aaaaa 116 111
+4
+*
+aaaaa 116 111
+2
+str
+aaaaa 116 111
+5
+)
+aaaaa 116 111
+11
+
+
+aaaaa 117 111
+5
+{
+aaaaa 117 111
+11
+
+
+aaaaa 118 111
+11
+	
+aaaaa 118 111
+2
+console_loglevel
+aaaaa 118 111
+11
+ 
+aaaaa 118 111
+5
+=
+aaaaa 118 111
+11
+ 
+aaaaa 118 111
+2
+CONSOLE_LOGLEVEL_QUIET
+aaaaa 118 111
+5
+;
+aaaaa 118 111
+11
+
+
+aaaaa 119 111
+11
+	
+aaaaa 119 111
+1
+return
+aaaaa 119 111
+11
+ 
+aaaaa 119 111
+3
+0
+aaaaa 119 111
+5
+;
+aaaaa 119 111
+11
+
+
+aaaaa 120 111
+5
+}
+aaaaa 120 111
+11
+
+
+new line counter reached: 121
+aaaaa 121 121
+11
+
+
+aaaaa 122 121
+2
+early_param
+aaaaa 122 121
+5
+(
+aaaaa 122 121
+9
+"debug"
+aaaaa 122 121
+5
+,
+aaaaa 122 121
+11
+ 
+aaaaa 122 121
+2
+debug_kernel
+aaaaa 122 121
+5
+)
+aaaaa 122 121
+5
+;
+aaaaa 122 121
+11
+
+
+aaaaa 123 121
+2
+early_param
+aaaaa 123 121
+5
+(
+aaaaa 123 121
+9
+"quiet"
+aaaaa 123 121
+5
+,
+aaaaa 123 121
+11
+ 
+aaaaa 123 121
+2
+quiet_kernel
+aaaaa 123 121
+5
+)
+aaaaa 123 121
+5
+;
+aaaaa 123 121
+11
+
+
+aaaaa 124 121
+11
+
+
+aaaaa 125 121
+1
+static
+aaaaa 125 121
+11
+ 
+aaaaa 125 121
+1
+int
+aaaaa 125 121
+11
+ 
+aaaaa 125 121
+2
+__init
+aaaaa 125 121
+11
+ 
+aaaaa 125 121
+2
+loglevel
+aaaaa 125 121
+5
+(
+aaaaa 125 121
+1
+char
+aaaaa 125 121
+11
+ 
+aaaaa 125 121
+4
+*
+aaaaa 125 121
+2
+str
+aaaaa 125 121
+5
+)
+aaaaa 125 121
+11
+
+
+aaaaa 126 121
+5
+{
+aaaaa 126 121
+11
+
+
+aaaaa 127 121
+11
+	
+aaaaa 127 121
+1
+int
+aaaaa 127 121
+11
+ 
+aaaaa 127 121
+2
+newlevel
+aaaaa 127 121
+5
+;
+aaaaa 127 121
+11
+
+
+aaaaa 128 121
+11
+
+
+aaaaa 129 121
+11
+	
+aaaaa 129 121
+6
+/*
+	 * Only update loglevel value when a correct setting was passed,
+	 * to prevent blind crashes (when loglevel being set to 0) that
+	 * are quite hard to debug
+	 */
+new line counter reached: 133
+aaaaa 133 131
+11
+
+
+aaaaa 134 131
+11
+	
+aaaaa 134 131
+1
+if
+aaaaa 134 131
+11
+ 
+aaaaa 134 131
+5
+(
+aaaaa 134 131
+2
+get_option
+aaaaa 134 131
+5
+(
+aaaaa 134 131
+4
+&
+aaaaa 134 131
+2
+str
+aaaaa 134 131
+5
+,
+aaaaa 134 131
+11
+ 
+aaaaa 134 131
+4
+&
+aaaaa 134 131
+2
+newlevel
+aaaaa 134 131
+5
+)
+aaaaa 134 131
+5
+)
+aaaaa 134 131
+11
+ 
+aaaaa 134 131
+5
+{
+aaaaa 134 131
+11
+
+
+aaaaa 135 131
+11
+	
+aaaaa 135 131
+11
+	
+aaaaa 135 131
+2
+console_loglevel
+aaaaa 135 131
+11
+ 
+aaaaa 135 131
+5
+=
+aaaaa 135 131
+11
+ 
+aaaaa 135 131
+2
+newlevel
+aaaaa 135 131
+5
+;
+aaaaa 135 131
+11
+
+
+aaaaa 136 131
+11
+	
+aaaaa 136 131
+11
+	
+aaaaa 136 131
+1
+return
+aaaaa 136 131
+11
+ 
+aaaaa 136 131
+3
+0
+aaaaa 136 131
+5
+;
+aaaaa 136 131
+11
+
+
+aaaaa 137 131
+11
+	
+aaaaa 137 131
+5
+}
+aaaaa 137 131
+11
+
+
+aaaaa 138 131
+11
+
+
+aaaaa 139 131
+11
+	
+aaaaa 139 131
+1
+return
+aaaaa 139 131
+11
+ 
+aaaaa 139 131
+4
+-
+aaaaa 139 131
+2
+EINVAL
+aaaaa 139 131
+5
+;
+aaaaa 139 131
+11
+
+
+aaaaa 140 131
+5
+}
+aaaaa 140 131
+11
+
+
+new line counter reached: 141
+aaaaa 141 141
+11
+
+
+aaaaa 142 141
+2
+early_param
+aaaaa 142 141
+5
+(
+aaaaa 142 141
+9
+"loglevel"
+aaaaa 142 141
+5
+,
+aaaaa 142 141
+11
+ 
+aaaaa 142 141
+2
+loglevel
+aaaaa 142 141
+5
+)
+aaaaa 142 141
+5
+;
+aaaaa 142 141
+11
+
+
+aaaaa 143 141
+11
+
+
+aaaaa 144 141
+6
+/* Change NUL term back to "=", to make "param" the whole string. */
+aaaaa 144 141
+11
+
+
+aaaaa 145 141
+1
+static
+aaaaa 145 141
+11
+ 
+aaaaa 145 141
+1
+int
+aaaaa 145 141
+11
+ 
+aaaaa 145 141
+2
+__init
+aaaaa 145 141
+11
+ 
+aaaaa 145 141
+2
+repair_env_string
+aaaaa 145 141
+5
+(
+aaaaa 145 141
+1
+char
+aaaaa 145 141
+11
+ 
+aaaaa 145 141
+4
+*
+aaaaa 145 141
+2
+param
+aaaaa 145 141
+5
+,
+aaaaa 145 141
+11
+ 
+aaaaa 145 141
+1
+char
+aaaaa 145 141
+11
+ 
+aaaaa 145 141
+4
+*
+aaaaa 145 141
+2
+val
+aaaaa 145 141
+5
+,
+aaaaa 145 141
+11
+
+
+aaaaa 146 141
+11
+	
+aaaaa 146 141
+11
+	
+aaaaa 146 141
+11
+	
+aaaaa 146 141
+11
+	
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+1
+const
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+1
+char
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+4
+*
+aaaaa 146 141
+2
+unused
+aaaaa 146 141
+5
+,
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+1
+void
+aaaaa 146 141
+11
+ 
+aaaaa 146 141
+4
+*
+aaaaa 146 141
+2
+arg
+aaaaa 146 141
+5
+)
+aaaaa 146 141
+11
+
+
+aaaaa 147 141
+5
+{
+aaaaa 147 141
+11
+
+
+aaaaa 148 141
+11
+	
+aaaaa 148 141
+1
+if
+aaaaa 148 141
+11
+ 
+aaaaa 148 141
+5
+(
+aaaaa 148 141
+2
+val
+aaaaa 148 141
+5
+)
+aaaaa 148 141
+11
+ 
+aaaaa 148 141
+5
+{
+aaaaa 148 141
+11
+
+
+aaaaa 149 141
+11
+	
+aaaaa 149 141
+11
+	
+aaaaa 149 141
+6
+/* param=val or param="val"? */
+aaaaa 149 141
+11
+
+
+aaaaa 150 141
+11
+	
+aaaaa 150 141
+11
+	
+aaaaa 150 141
+1
+if
+aaaaa 150 141
+11
+ 
+aaaaa 150 141
+5
+(
+aaaaa 150 141
+2
+val
+aaaaa 150 141
+11
+ 
+aaaaa 150 141
+4
+==
+aaaaa 150 141
+11
+ 
+aaaaa 150 141
+2
+param
+aaaaa 150 141
+4
++
+aaaaa 150 141
+2
+strlen
+aaaaa 150 141
+5
+(
+aaaaa 150 141
+2
+param
+aaaaa 150 141
+5
+)
+aaaaa 150 141
+3
++1
+aaaaa 150 141
+5
+)
+aaaaa 150 141
+11
+
+
+new line counter reached: 151
+aaaaa 151 151
+11
+	
+aaaaa 151 151
+11
+	
+aaaaa 151 151
+11
+	
+aaaaa 151 151
+2
+val
+aaaaa 151 151
+5
+[
+aaaaa 151 151
+3
+-1
+aaaaa 151 151
+5
+]
+aaaaa 151 151
+11
+ 
+aaaaa 151 151
+5
+=
+aaaaa 151 151
+11
+ 
+aaaaa 151 151
+8
+'='
+aaaaa 151 151
+5
+;
+aaaaa 151 151
+11
+
+
+aaaaa 152 151
+11
+	
+aaaaa 152 151
+11
+	
+aaaaa 152 151
+1
+else
+aaaaa 152 151
+11
+ 
+aaaaa 152 151
+1
+if
+aaaaa 152 151
+11
+ 
+aaaaa 152 151
+5
+(
+aaaaa 152 151
+2
+val
+aaaaa 152 151
+11
+ 
+aaaaa 152 151
+4
+==
+aaaaa 152 151
+11
+ 
+aaaaa 152 151
+2
+param
+aaaaa 152 151
+4
++
+aaaaa 152 151
+2
+strlen
+aaaaa 152 151
+5
+(
+aaaaa 152 151
+2
+param
+aaaaa 152 151
+5
+)
+aaaaa 152 151
+3
++2
+aaaaa 152 151
+5
+)
+aaaaa 152 151
+11
+ 
+aaaaa 152 151
+5
+{
+aaaaa 152 151
+11
+
+
+aaaaa 153 151
+11
+	
+aaaaa 153 151
+11
+	
+aaaaa 153 151
+11
+	
+aaaaa 153 151
+2
+val
+aaaaa 153 151
+5
+[
+aaaaa 153 151
+3
+-2
+aaaaa 153 151
+5
+]
+aaaaa 153 151
+11
+ 
+aaaaa 153 151
+5
+=
+aaaaa 153 151
+11
+ 
+aaaaa 153 151
+8
+'='
+aaaaa 153 151
+5
+;
+aaaaa 153 151
+11
+
+
+aaaaa 154 151
+11
+	
+aaaaa 154 151
+11
+	
+aaaaa 154 151
+11
+	
+aaaaa 154 151
+2
+memmove
+aaaaa 154 151
+5
+(
+aaaaa 154 151
+2
+val
+aaaaa 154 151
+3
+-1
+aaaaa 154 151
+5
+,
+aaaaa 154 151
+11
+ 
+aaaaa 154 151
+2
+val
+aaaaa 154 151
+5
+,
+aaaaa 154 151
+11
+ 
+aaaaa 154 151
+2
+strlen
+aaaaa 154 151
+5
+(
+aaaaa 154 151
+2
+val
+aaaaa 154 151
+5
+)
+aaaaa 154 151
+3
++1
+aaaaa 154 151
+5
+)
+aaaaa 154 151
+5
+;
+aaaaa 154 151
+11
+
+
+aaaaa 155 151
+11
+	
+aaaaa 155 151
+11
+	
+aaaaa 155 151
+11
+	
+aaaaa 155 151
+2
+val
+aaaaa 155 151
+4
+--
+aaaaa 155 151
+5
+;
+aaaaa 155 151
+11
+
+
+aaaaa 156 151
+11
+	
+aaaaa 156 151
+11
+	
+aaaaa 156 151
+5
+}
+aaaaa 156 151
+11
+ 
+aaaaa 156 151
+1
+else
+aaaaa 156 151
+11
+
+
+aaaaa 157 151
+11
+	
+aaaaa 157 151
+11
+	
+aaaaa 157 151
+11
+	
+aaaaa 157 151
+2
+BUG
+aaaaa 157 151
+5
+(
+aaaaa 157 151
+5
+)
+aaaaa 157 151
+5
+;
+aaaaa 157 151
+11
+
+
+aaaaa 158 151
+11
+	
+aaaaa 158 151
+5
+}
+aaaaa 158 151
+11
+
+
+aaaaa 159 151
+11
+	
+aaaaa 159 151
+1
+return
+aaaaa 159 151
+11
+ 
+aaaaa 159 151
+3
+0
+aaaaa 159 151
+5
+;
+aaaaa 159 151
+11
+
+
+aaaaa 160 151
+5
+}
+aaaaa 160 151
+11
+
+
+new line counter reached: 161
+aaaaa 161 161
+11
+
+
+aaaaa 162 161
+6
+/* Anything after -- gets handed straight to init. */
+aaaaa 162 161
+11
+
+
+aaaaa 163 161
+1
+static
+aaaaa 163 161
+11
+ 
+aaaaa 163 161
+1
+int
+aaaaa 163 161
+11
+ 
+aaaaa 163 161
+2
+__init
+aaaaa 163 161
+11
+ 
+aaaaa 163 161
+2
+set_init_arg
+aaaaa 163 161
+5
+(
+aaaaa 163 161
+1
+char
+aaaaa 163 161
+11
+ 
+aaaaa 163 161
+4
+*
+aaaaa 163 161
+2
+param
+aaaaa 163 161
+5
+,
+aaaaa 163 161
+11
+ 
+aaaaa 163 161
+1
+char
+aaaaa 163 161
+11
+ 
+aaaaa 163 161
+4
+*
+aaaaa 163 161
+2
+val
+aaaaa 163 161
+5
+,
+aaaaa 163 161
+11
+
+
+aaaaa 164 161
+11
+	
+aaaaa 164 161
+11
+	
+aaaaa 164 161
+11
+	
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+1
+const
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+1
+char
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+4
+*
+aaaaa 164 161
+2
+unused
+aaaaa 164 161
+5
+,
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+1
+void
+aaaaa 164 161
+11
+ 
+aaaaa 164 161
+4
+*
+aaaaa 164 161
+2
+arg
+aaaaa 164 161
+5
+)
+aaaaa 164 161
+11
+
+
+aaaaa 165 161
+5
+{
+aaaaa 165 161
+11
+
+
+aaaaa 166 161
+11
+	
+aaaaa 166 161
+1
+unsigned
+aaaaa 166 161
+11
+ 
+aaaaa 166 161
+1
+int
+aaaaa 166 161
+11
+ 
+aaaaa 166 161
+2
+i
+aaaaa 166 161
+5
+;
+aaaaa 166 161
+11
+
+
+aaaaa 167 161
+11
+
+
+aaaaa 168 161
+11
+	
+aaaaa 168 161
+1
+if
+aaaaa 168 161
+11
+ 
+aaaaa 168 161
+5
+(
+aaaaa 168 161
+2
+panic_later
+aaaaa 168 161
+5
+)
+aaaaa 168 161
+11
+
+
+aaaaa 169 161
+11
+	
+aaaaa 169 161
+11
+	
+aaaaa 169 161
+1
+return
+aaaaa 169 161
+11
+ 
+aaaaa 169 161
+3
+0
+aaaaa 169 161
+5
+;
+aaaaa 169 161
+11
+
+
+aaaaa 170 161
+11
+
+
+new line counter reached: 171
+aaaaa 171 171
+11
+	
+aaaaa 171 171
+2
+repair_env_string
+aaaaa 171 171
+5
+(
+aaaaa 171 171
+2
+param
+aaaaa 171 171
+5
+,
+aaaaa 171 171
+11
+ 
+aaaaa 171 171
+2
+val
+aaaaa 171 171
+5
+,
+aaaaa 171 171
+11
+ 
+aaaaa 171 171
+2
+unused
+aaaaa 171 171
+5
+,
+aaaaa 171 171
+11
+ 
+aaaaa 171 171
+2
+NULL
+aaaaa 171 171
+5
+)
+aaaaa 171 171
+5
+;
+aaaaa 171 171
+11
+
+
+aaaaa 172 171
+11
+
+
+aaaaa 173 171
+11
+	
+aaaaa 173 171
+1
+for
+aaaaa 173 171
+11
+ 
+aaaaa 173 171
+5
+(
+aaaaa 173 171
+2
+i
+aaaaa 173 171
+11
+ 
+aaaaa 173 171
+5
+=
+aaaaa 173 171
+11
+ 
+aaaaa 173 171
+3
+0
+aaaaa 173 171
+5
+;
+aaaaa 173 171
+11
+ 
+aaaaa 173 171
+2
+argv_init
+aaaaa 173 171
+5
+[
+aaaaa 173 171
+2
+i
+aaaaa 173 171
+5
+]
+aaaaa 173 171
+5
+;
+aaaaa 173 171
+11
+ 
+aaaaa 173 171
+2
+i
+aaaaa 173 171
+4
+++
+aaaaa 173 171
+5
+)
+aaaaa 173 171
+11
+ 
+aaaaa 173 171
+5
+{
+aaaaa 173 171
+11
+
+
+aaaaa 174 171
+11
+	
+aaaaa 174 171
+11
+	
+aaaaa 174 171
+1
+if
+aaaaa 174 171
+11
+ 
+aaaaa 174 171
+5
+(
+aaaaa 174 171
+2
+i
+aaaaa 174 171
+11
+ 
+aaaaa 174 171
+4
+==
+aaaaa 174 171
+11
+ 
+aaaaa 174 171
+2
+MAX_INIT_ARGS
+aaaaa 174 171
+5
+)
+aaaaa 174 171
+11
+ 
+aaaaa 174 171
+5
+{
+aaaaa 174 171
+11
+
+
+aaaaa 175 171
+11
+	
+aaaaa 175 171
+11
+	
+aaaaa 175 171
+11
+	
+aaaaa 175 171
+2
+panic_later
+aaaaa 175 171
+11
+ 
+aaaaa 175 171
+5
+=
+aaaaa 175 171
+11
+ 
+aaaaa 175 171
+9
+"init"
+aaaaa 175 171
+5
+;
+aaaaa 175 171
+11
+
+
+aaaaa 176 171
+11
+	
+aaaaa 176 171
+11
+	
+aaaaa 176 171
+11
+	
+aaaaa 176 171
+2
+panic_param
+aaaaa 176 171
+11
+ 
+aaaaa 176 171
+5
+=
+aaaaa 176 171
+11
+ 
+aaaaa 176 171
+2
+param
+aaaaa 176 171
+5
+;
+aaaaa 176 171
+11
+
+
+aaaaa 177 171
+11
+	
+aaaaa 177 171
+11
+	
+aaaaa 177 171
+11
+	
+aaaaa 177 171
+1
+return
+aaaaa 177 171
+11
+ 
+aaaaa 177 171
+3
+0
+aaaaa 177 171
+5
+;
+aaaaa 177 171
+11
+
+
+aaaaa 178 171
+11
+	
+aaaaa 178 171
+11
+	
+aaaaa 178 171
+5
+}
+aaaaa 178 171
+11
+
+
+aaaaa 179 171
+11
+	
+aaaaa 179 171
+5
+}
+aaaaa 179 171
+11
+
+
+aaaaa 180 171
+11
+	
+aaaaa 180 171
+2
+argv_init
+aaaaa 180 171
+5
+[
+aaaaa 180 171
+2
+i
+aaaaa 180 171
+5
+]
+aaaaa 180 171
+11
+ 
+aaaaa 180 171
+5
+=
+aaaaa 180 171
+11
+ 
+aaaaa 180 171
+2
+param
+aaaaa 180 171
+5
+;
+aaaaa 180 171
+11
+
+
+new line counter reached: 181
+aaaaa 181 181
+11
+	
+aaaaa 181 181
+1
+return
+aaaaa 181 181
+11
+ 
+aaaaa 181 181
+3
+0
+aaaaa 181 181
+5
+;
+aaaaa 181 181
+11
+
+
+aaaaa 182 181
+5
+}
+aaaaa 182 181
+11
+
+
+aaaaa 183 181
+11
+
+
+aaaaa 184 181
+6
+/*
+ * Unknown boot options get handed to init, unless they look like
+ * unused parameters (modprobe will find them in /proc/cmdline).
+ */
+aaaaa 187 181
+11
+
+
+aaaaa 188 181
+1
+static
+aaaaa 188 181
+11
+ 
+aaaaa 188 181
+1
+int
+aaaaa 188 181
+11
+ 
+aaaaa 188 181
+2
+__init
+aaaaa 188 181
+11
+ 
+aaaaa 188 181
+2
+unknown_bootoption
+aaaaa 188 181
+5
+(
+aaaaa 188 181
+1
+char
+aaaaa 188 181
+11
+ 
+aaaaa 188 181
+4
+*
+aaaaa 188 181
+2
+param
+aaaaa 188 181
+5
+,
+aaaaa 188 181
+11
+ 
+aaaaa 188 181
+1
+char
+aaaaa 188 181
+11
+ 
+aaaaa 188 181
+4
+*
+aaaaa 188 181
+2
+val
+aaaaa 188 181
+5
+,
+aaaaa 188 181
+11
+
+
+aaaaa 189 181
+11
+	
+aaaaa 189 181
+11
+	
+aaaaa 189 181
+11
+	
+aaaaa 189 181
+11
+	
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+1
+const
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+1
+char
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+4
+*
+aaaaa 189 181
+2
+unused
+aaaaa 189 181
+5
+,
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+1
+void
+aaaaa 189 181
+11
+ 
+aaaaa 189 181
+4
+*
+aaaaa 189 181
+2
+arg
+aaaaa 189 181
+5
+)
+aaaaa 189 181
+11
+
+
+aaaaa 190 181
+5
+{
+aaaaa 190 181
+11
+
+
+new line counter reached: 191
+aaaaa 191 191
+11
+	
+aaaaa 191 191
+2
+repair_env_string
+aaaaa 191 191
+5
+(
+aaaaa 191 191
+2
+param
+aaaaa 191 191
+5
+,
+aaaaa 191 191
+11
+ 
+aaaaa 191 191
+2
+val
+aaaaa 191 191
+5
+,
+aaaaa 191 191
+11
+ 
+aaaaa 191 191
+2
+unused
+aaaaa 191 191
+5
+,
+aaaaa 191 191
+11
+ 
+aaaaa 191 191
+2
+NULL
+aaaaa 191 191
+5
+)
+aaaaa 191 191
+5
+;
+aaaaa 191 191
+11
+
+
+aaaaa 192 191
+11
+
+
+aaaaa 193 191
+11
+	
+aaaaa 193 191
+6
+/* Handle obsolete-style parameters */
+aaaaa 193 191
+11
+
+
+aaaaa 194 191
+11
+	
+aaaaa 194 191
+1
+if
+aaaaa 194 191
+11
+ 
+aaaaa 194 191
+5
+(
+aaaaa 194 191
+2
+obsolete_checksetup
+aaaaa 194 191
+5
+(
+aaaaa 194 191
+2
+param
+aaaaa 194 191
+5
+)
+aaaaa 194 191
+5
+)
+aaaaa 194 191
+11
+
+
+aaaaa 195 191
+11
+	
+aaaaa 195 191
+11
+	
+aaaaa 195 191
+1
+return
+aaaaa 195 191
+11
+ 
+aaaaa 195 191
+3
+0
+aaaaa 195 191
+5
+;
+aaaaa 195 191
+11
+
+
+aaaaa 196 191
+11
+
+
+aaaaa 197 191
+11
+	
+aaaaa 197 191
+6
+/* Unused module parameter. */
+aaaaa 197 191
+11
+
+
+aaaaa 198 191
+11
+	
+aaaaa 198 191
+1
+if
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+5
+(
+aaaaa 198 191
+2
+strchr
+aaaaa 198 191
+5
+(
+aaaaa 198 191
+2
+param
+aaaaa 198 191
+5
+,
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+8
+'.'
+aaaaa 198 191
+5
+)
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+4
+&&
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+5
+(
+aaaaa 198 191
+4
+!
+aaaaa 198 191
+2
+val
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+4
+||
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+2
+strchr
+aaaaa 198 191
+5
+(
+aaaaa 198 191
+2
+param
+aaaaa 198 191
+5
+,
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+8
+'.'
+aaaaa 198 191
+5
+)
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+4
+<
+aaaaa 198 191
+11
+ 
+aaaaa 198 191
+2
+val
+aaaaa 198 191
+5
+)
+aaaaa 198 191
+5
+)
+aaaaa 198 191
+11
+
+
+aaaaa 199 191
+11
+	
+aaaaa 199 191
+11
+	
+aaaaa 199 191
+1
+return
+aaaaa 199 191
+11
+ 
+aaaaa 199 191
+3
+0
+aaaaa 199 191
+5
+;
+aaaaa 199 191
+11
+
+
+aaaaa 200 191
+11
+
+
+new line counter reached: 201
+aaaaa 201 201
+11
+	
+aaaaa 201 201
+1
+if
+aaaaa 201 201
+11
+ 
+aaaaa 201 201
+5
+(
+aaaaa 201 201
+2
+panic_later
+aaaaa 201 201
+5
+)
+aaaaa 201 201
+11
+
+
+aaaaa 202 201
+11
+	
+aaaaa 202 201
+11
+	
+aaaaa 202 201
+1
+return
+aaaaa 202 201
+11
+ 
+aaaaa 202 201
+3
+0
+aaaaa 202 201
+5
+;
+aaaaa 202 201
+11
+
+
+aaaaa 203 201
+11
+
+
+aaaaa 204 201
+11
+	
+aaaaa 204 201
+1
+if
+aaaaa 204 201
+11
+ 
+aaaaa 204 201
+5
+(
+aaaaa 204 201
+2
+val
+aaaaa 204 201
+5
+)
+aaaaa 204 201
+11
+ 
+aaaaa 204 201
+5
+{
+aaaaa 204 201
+11
+
+
+aaaaa 205 201
+11
+	
+aaaaa 205 201
+11
+	
+aaaaa 205 201
+6
+/* Environment option */
+aaaaa 205 201
+11
+
+
+aaaaa 206 201
+11
+	
+aaaaa 206 201
+11
+	
+aaaaa 206 201
+1
+unsigned
+aaaaa 206 201
+11
+ 
+aaaaa 206 201
+1
+int
+aaaaa 206 201
+11
+ 
+aaaaa 206 201
+2
+i
+aaaaa 206 201
+5
+;
+aaaaa 206 201
+11
+
+
+aaaaa 207 201
+11
+	
+aaaaa 207 201
+11
+	
+aaaaa 207 201
+1
+for
+aaaaa 207 201
+11
+ 
+aaaaa 207 201
+5
+(
+aaaaa 207 201
+2
+i
+aaaaa 207 201
+11
+ 
+aaaaa 207 201
+5
+=
+aaaaa 207 201
+11
+ 
+aaaaa 207 201
+3
+0
+aaaaa 207 201
+5
+;
+aaaaa 207 201
+11
+ 
+aaaaa 207 201
+2
+envp_init
+aaaaa 207 201
+5
+[
+aaaaa 207 201
+2
+i
+aaaaa 207 201
+5
+]
+aaaaa 207 201
+5
+;
+aaaaa 207 201
+11
+ 
+aaaaa 207 201
+2
+i
+aaaaa 207 201
+4
+++
+aaaaa 207 201
+5
+)
+aaaaa 207 201
+11
+ 
+aaaaa 207 201
+5
+{
+aaaaa 207 201
+11
+
+
+aaaaa 208 201
+11
+	
+aaaaa 208 201
+11
+	
+aaaaa 208 201
+11
+	
+aaaaa 208 201
+1
+if
+aaaaa 208 201
+11
+ 
+aaaaa 208 201
+5
+(
+aaaaa 208 201
+2
+i
+aaaaa 208 201
+11
+ 
+aaaaa 208 201
+4
+==
+aaaaa 208 201
+11
+ 
+aaaaa 208 201
+2
+MAX_INIT_ENVS
+aaaaa 208 201
+5
+)
+aaaaa 208 201
+11
+ 
+aaaaa 208 201
+5
+{
+aaaaa 208 201
+11
+
+
+aaaaa 209 201
+11
+	
+aaaaa 209 201
+11
+	
+aaaaa 209 201
+11
+	
+aaaaa 209 201
+11
+	
+aaaaa 209 201
+2
+panic_later
+aaaaa 209 201
+11
+ 
+aaaaa 209 201
+5
+=
+aaaaa 209 201
+11
+ 
+aaaaa 209 201
+9
+"env"
+aaaaa 209 201
+5
+;
+aaaaa 209 201
+11
+
+
+aaaaa 210 201
+11
+	
+aaaaa 210 201
+11
+	
+aaaaa 210 201
+11
+	
+aaaaa 210 201
+11
+	
+aaaaa 210 201
+2
+panic_param
+aaaaa 210 201
+11
+ 
+aaaaa 210 201
+5
+=
+aaaaa 210 201
+11
+ 
+aaaaa 210 201
+2
+param
+aaaaa 210 201
+5
+;
+aaaaa 210 201
+11
+
+
+new line counter reached: 211
+aaaaa 211 211
+11
+	
+aaaaa 211 211
+11
+	
+aaaaa 211 211
+11
+	
+aaaaa 211 211
+5
+}
+aaaaa 211 211
+11
+
+
+aaaaa 212 211
+11
+	
+aaaaa 212 211
+11
+	
+aaaaa 212 211
+11
+	
+aaaaa 212 211
+1
+if
+aaaaa 212 211
+11
+ 
+aaaaa 212 211
+5
+(
+aaaaa 212 211
+4
+!
+aaaaa 212 211
+2
+strncmp
+aaaaa 212 211
+5
+(
+aaaaa 212 211
+2
+param
+aaaaa 212 211
+5
+,
+aaaaa 212 211
+11
+ 
+aaaaa 212 211
+2
+envp_init
+aaaaa 212 211
+5
+[
+aaaaa 212 211
+2
+i
+aaaaa 212 211
+5
+]
+aaaaa 212 211
+5
+,
+aaaaa 212 211
+11
+ 
+aaaaa 212 211
+2
+val
+aaaaa 212 211
+11
+ 
+aaaaa 212 211
+4
+-
+aaaaa 212 211
+11
+ 
+aaaaa 212 211
+2
+param
+aaaaa 212 211
+5
+)
+aaaaa 212 211
+5
+)
+aaaaa 212 211
+11
+
+
+aaaaa 213 211
+11
+	
+aaaaa 213 211
+11
+	
+aaaaa 213 211
+11
+	
+aaaaa 213 211
+11
+	
+aaaaa 213 211
+1
+break
+aaaaa 213 211
+5
+;
+aaaaa 213 211
+11
+
+
+aaaaa 214 211
+11
+	
+aaaaa 214 211
+11
+	
+aaaaa 214 211
+5
+}
+aaaaa 214 211
+11
+
+
+aaaaa 215 211
+11
+	
+aaaaa 215 211
+11
+	
+aaaaa 215 211
+2
+envp_init
+aaaaa 215 211
+5
+[
+aaaaa 215 211
+2
+i
+aaaaa 215 211
+5
+]
+aaaaa 215 211
+11
+ 
+aaaaa 215 211
+5
+=
+aaaaa 215 211
+11
+ 
+aaaaa 215 211
+2
+param
+aaaaa 215 211
+5
+;
+aaaaa 215 211
+11
+
+
+aaaaa 216 211
+11
+	
+aaaaa 216 211
+5
+}
+aaaaa 216 211
+11
+ 
+aaaaa 216 211
+1
+else
+aaaaa 216 211
+11
+ 
+aaaaa 216 211
+5
+{
+aaaaa 216 211
+11
+
+
+aaaaa 217 211
+11
+	
+aaaaa 217 211
+11
+	
+aaaaa 217 211
+6
+/* Command line option */
+aaaaa 217 211
+11
+
+
+aaaaa 218 211
+11
+	
+aaaaa 218 211
+11
+	
+aaaaa 218 211
+1
+unsigned
+aaaaa 218 211
+11
+ 
+aaaaa 218 211
+1
+int
+aaaaa 218 211
+11
+ 
+aaaaa 218 211
+2
+i
+aaaaa 218 211
+5
+;
+aaaaa 218 211
+11
+
+
+aaaaa 219 211
+11
+	
+aaaaa 219 211
+11
+	
+aaaaa 219 211
+1
+for
+aaaaa 219 211
+11
+ 
+aaaaa 219 211
+5
+(
+aaaaa 219 211
+2
+i
+aaaaa 219 211
+11
+ 
+aaaaa 219 211
+5
+=
+aaaaa 219 211
+11
+ 
+aaaaa 219 211
+3
+0
+aaaaa 219 211
+5
+;
+aaaaa 219 211
+11
+ 
+aaaaa 219 211
+2
+argv_init
+aaaaa 219 211
+5
+[
+aaaaa 219 211
+2
+i
+aaaaa 219 211
+5
+]
+aaaaa 219 211
+5
+;
+aaaaa 219 211
+11
+ 
+aaaaa 219 211
+2
+i
+aaaaa 219 211
+4
+++
+aaaaa 219 211
+5
+)
+aaaaa 219 211
+11
+ 
+aaaaa 219 211
+5
+{
+aaaaa 219 211
+11
+
+
+aaaaa 220 211
+11
+	
+aaaaa 220 211
+11
+	
+aaaaa 220 211
+11
+	
+aaaaa 220 211
+1
+if
+aaaaa 220 211
+11
+ 
+aaaaa 220 211
+5
+(
+aaaaa 220 211
+2
+i
+aaaaa 220 211
+11
+ 
+aaaaa 220 211
+4
+==
+aaaaa 220 211
+11
+ 
+aaaaa 220 211
+2
+MAX_INIT_ARGS
+aaaaa 220 211
+5
+)
+aaaaa 220 211
+11
+ 
+aaaaa 220 211
+5
+{
+aaaaa 220 211
+11
+
+
+new line counter reached: 221
+aaaaa 221 221
+11
+	
+aaaaa 221 221
+11
+	
+aaaaa 221 221
+11
+	
+aaaaa 221 221
+11
+	
+aaaaa 221 221
+2
+panic_later
+aaaaa 221 221
+11
+ 
+aaaaa 221 221
+5
+=
+aaaaa 221 221
+11
+ 
+aaaaa 221 221
+9
+"init"
+aaaaa 221 221
+5
+;
+aaaaa 221 221
+11
+
+
+aaaaa 222 221
+11
+	
+aaaaa 222 221
+11
+	
+aaaaa 222 221
+11
+	
+aaaaa 222 221
+11
+	
+aaaaa 222 221
+2
+panic_param
+aaaaa 222 221
+11
+ 
+aaaaa 222 221
+5
+=
+aaaaa 222 221
+11
+ 
+aaaaa 222 221
+2
+param
+aaaaa 222 221
+5
+;
+aaaaa 222 221
+11
+
+
+aaaaa 223 221
+11
+	
+aaaaa 223 221
+11
+	
+aaaaa 223 221
+11
+	
+aaaaa 223 221
+5
+}
+aaaaa 223 221
+11
+
+
+aaaaa 224 221
+11
+	
+aaaaa 224 221
+11
+	
+aaaaa 224 221
+5
+}
+aaaaa 224 221
+11
+
+
+aaaaa 225 221
+11
+	
+aaaaa 225 221
+11
+	
+aaaaa 225 221
+2
+argv_init
+aaaaa 225 221
+5
+[
+aaaaa 225 221
+2
+i
+aaaaa 225 221
+5
+]
+aaaaa 225 221
+11
+ 
+aaaaa 225 221
+5
+=
+aaaaa 225 221
+11
+ 
+aaaaa 225 221
+2
+param
+aaaaa 225 221
+5
+;
+aaaaa 225 221
+11
+
+
+aaaaa 226 221
+11
+	
+aaaaa 226 221
+5
+}
+aaaaa 226 221
+11
+
+
+aaaaa 227 221
+11
+	
+aaaaa 227 221
+1
+return
+aaaaa 227 221
+11
+ 
+aaaaa 227 221
+3
+0
+aaaaa 227 221
+5
+;
+aaaaa 227 221
+11
+
+
+aaaaa 228 221
+5
+}
+aaaaa 228 221
+11
+
+
+aaaaa 229 221
+11
+
+
+aaaaa 230 221
+1
+static
+aaaaa 230 221
+11
+ 
+aaaaa 230 221
+1
+int
+aaaaa 230 221
+11
+ 
+aaaaa 230 221
+2
+__init
+aaaaa 230 221
+11
+ 
+aaaaa 230 221
+2
+init_setup
+aaaaa 230 221
+5
+(
+aaaaa 230 221
+1
+char
+aaaaa 230 221
+11
+ 
+aaaaa 230 221
+4
+*
+aaaaa 230 221
+2
+str
+aaaaa 230 221
+5
+)
+aaaaa 230 221
+11
+
+
+new line counter reached: 231
+aaaaa 231 231
+5
+{
+aaaaa 231 231
+11
+
+
+aaaaa 232 231
+11
+	
+aaaaa 232 231
+1
+unsigned
+aaaaa 232 231
+11
+ 
+aaaaa 232 231
+1
+int
+aaaaa 232 231
+11
+ 
+aaaaa 232 231
+2
+i
+aaaaa 232 231
+5
+;
+aaaaa 232 231
+11
+
+
+aaaaa 233 231
+11
+
+
+aaaaa 234 231
+11
+	
+aaaaa 234 231
+2
+execute_command
+aaaaa 234 231
+11
+ 
+aaaaa 234 231
+5
+=
+aaaaa 234 231
+11
+ 
+aaaaa 234 231
+2
+str
+aaaaa 234 231
+5
+;
+aaaaa 234 231
+11
+
+
+aaaaa 235 231
+11
+	
+aaaaa 235 231
+6
+/*
+	 * In case LILO is going to boot us with default command line,
+	 * it prepends "auto" before the whole cmdline which makes
+	 * the shell think it should execute a script with such name.
+	 * So we ignore all arguments entered _before_ init=... [MJ]
+	 */
+aaaaa 240 231
+11
+
+
+new line counter reached: 241
+aaaaa 241 241
+11
+	
+aaaaa 241 241
+1
+for
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+5
+(
+aaaaa 241 241
+2
+i
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+5
+=
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+3
+1
+aaaaa 241 241
+5
+;
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+2
+i
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+4
+<
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+2
+MAX_INIT_ARGS
+aaaaa 241 241
+5
+;
+aaaaa 241 241
+11
+ 
+aaaaa 241 241
+2
+i
+aaaaa 241 241
+4
+++
+aaaaa 241 241
+5
+)
+aaaaa 241 241
+11
+
+
+aaaaa 242 241
+11
+	
+aaaaa 242 241
+11
+	
+aaaaa 242 241
+2
+argv_init
+aaaaa 242 241
+5
+[
+aaaaa 242 241
+2
+i
+aaaaa 242 241
+5
+]
+aaaaa 242 241
+11
+ 
+aaaaa 242 241
+5
+=
+aaaaa 242 241
+11
+ 
+aaaaa 242 241
+2
+NULL
+aaaaa 242 241
+5
+;
+aaaaa 242 241
+11
+
+
+aaaaa 243 241
+11
+	
+aaaaa 243 241
+1
+return
+aaaaa 243 241
+11
+ 
+aaaaa 243 241
+3
+1
+aaaaa 243 241
+5
+;
+aaaaa 243 241
+11
+
+
+aaaaa 244 241
+5
+}
+aaaaa 244 241
+11
+
+
+aaaaa 245 241
+2
+__setup
+aaaaa 245 241
+5
+(
+aaaaa 245 241
+9
+"init="
+aaaaa 245 241
+5
+,
+aaaaa 245 241
+11
+ 
+aaaaa 245 241
+2
+init_setup
+aaaaa 245 241
+5
+)
+aaaaa 245 241
+5
+;
+aaaaa 245 241
+11
+
+
+aaaaa 246 241
+11
+
+
+aaaaa 247 241
+1
+static
+aaaaa 247 241
+11
+ 
+aaaaa 247 241
+1
+int
+aaaaa 247 241
+11
+ 
+aaaaa 247 241
+2
+__init
+aaaaa 247 241
+11
+ 
+aaaaa 247 241
+2
+rdinit_setup
+aaaaa 247 241
+5
+(
+aaaaa 247 241
+1
+char
+aaaaa 247 241
+11
+ 
+aaaaa 247 241
+4
+*
+aaaaa 247 241
+2
+str
+aaaaa 247 241
+5
+)
+aaaaa 247 241
+11
+
+
+aaaaa 248 241
+5
+{
+aaaaa 248 241
+11
+
+
+aaaaa 249 241
+11
+	
+aaaaa 249 241
+1
+unsigned
+aaaaa 249 241
+11
+ 
+aaaaa 249 241
+1
+int
+aaaaa 249 241
+11
+ 
+aaaaa 249 241
+2
+i
+aaaaa 249 241
+5
+;
+aaaaa 249 241
+11
+
+
+aaaaa 250 241
+11
+
+
+new line counter reached: 251
+aaaaa 251 251
+11
+	
+aaaaa 251 251
+2
+ramdisk_execute_command
+aaaaa 251 251
+11
+ 
+aaaaa 251 251
+5
+=
+aaaaa 251 251
+11
+ 
+aaaaa 251 251
+2
+str
+aaaaa 251 251
+5
+;
+aaaaa 251 251
+11
+
+
+aaaaa 252 251
+11
+	
+aaaaa 252 251
+6
+/* See "auto" comment in init_setup */
+aaaaa 252 251
+11
+
+
+aaaaa 253 251
+11
+	
+aaaaa 253 251
+1
+for
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+5
+(
+aaaaa 253 251
+2
+i
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+5
+=
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+3
+1
+aaaaa 253 251
+5
+;
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+2
+i
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+4
+<
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+2
+MAX_INIT_ARGS
+aaaaa 253 251
+5
+;
+aaaaa 253 251
+11
+ 
+aaaaa 253 251
+2
+i
+aaaaa 253 251
+4
+++
+aaaaa 253 251
+5
+)
+aaaaa 253 251
+11
+
+
+aaaaa 254 251
+11
+	
+aaaaa 254 251
+11
+	
+aaaaa 254 251
+2
+argv_init
+aaaaa 254 251
+5
+[
+aaaaa 254 251
+2
+i
+aaaaa 254 251
+5
+]
+aaaaa 254 251
+11
+ 
+aaaaa 254 251
+5
+=
+aaaaa 254 251
+11
+ 
+aaaaa 254 251
+2
+NULL
+aaaaa 254 251
+5
+;
+aaaaa 254 251
+11
+
+
+aaaaa 255 251
+11
+	
+aaaaa 255 251
+1
+return
+aaaaa 255 251
+11
+ 
+aaaaa 255 251
+3
+1
+aaaaa 255 251
+5
+;
+aaaaa 255 251
+11
+
+
+aaaaa 256 251
+5
+}
+aaaaa 256 251
+11
+
+
+aaaaa 257 251
+2
+__setup
+aaaaa 257 251
+5
+(
+aaaaa 257 251
+9
+"rdinit="
+aaaaa 257 251
+5
+,
+aaaaa 257 251
+11
+ 
+aaaaa 257 251
+2
+rdinit_setup
+aaaaa 257 251
+5
+)
+aaaaa 257 251
+5
+;
+aaaaa 257 251
+11
+
+
+aaaaa 258 251
+11
+
+
+aaaaa 259 251
+7
+#ifndef CONFIG_SMP
+aaaaa 259 251
+11
+
+
+aaaaa 260 251
+1
+static
+aaaaa 260 251
+11
+ 
+aaaaa 260 251
+1
+const
+aaaaa 260 251
+11
+ 
+aaaaa 260 251
+1
+unsigned
+aaaaa 260 251
+11
+ 
+aaaaa 260 251
+1
+int
+aaaaa 260 251
+11
+ 
+aaaaa 260 251
+2
+setup_max_cpus
+aaaaa 260 251
+11
+ 
+aaaaa 260 251
+5
+=
+aaaaa 260 251
+11
+ 
+aaaaa 260 251
+2
+NR_CPUS
+aaaaa 260 251
+5
+;
+aaaaa 260 251
+11
+
+
+new line counter reached: 261
+aaaaa 261 261
+1
+static
+aaaaa 261 261
+11
+ 
+aaaaa 261 261
+2
+inline
+aaaaa 261 261
+11
+ 
+aaaaa 261 261
+1
+void
+aaaaa 261 261
+11
+ 
+aaaaa 261 261
+2
+setup_nr_cpu_ids
+aaaaa 261 261
+5
+(
+aaaaa 261 261
+1
+void
+aaaaa 261 261
+5
+)
+aaaaa 261 261
+11
+ 
+aaaaa 261 261
+5
+{
+aaaaa 261 261
+11
+ 
+aaaaa 261 261
+5
+}
+aaaaa 261 261
+11
+
+
+aaaaa 262 261
+1
+static
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+2
+inline
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+1
+void
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+2
+smp_prepare_cpus
+aaaaa 262 261
+5
+(
+aaaaa 262 261
+1
+unsigned
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+1
+int
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+2
+maxcpus
+aaaaa 262 261
+5
+)
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+5
+{
+aaaaa 262 261
+11
+ 
+aaaaa 262 261
+5
+}
+aaaaa 262 261
+11
+
+
+aaaaa 263 261
+7
+#endif
+aaaaa 263 261
+11
+
+
+aaaaa 264 261
+11
+
+
+aaaaa 265 261
+6
+/*
+ * We need to store the untouched command line for future reference.
+ * We also need to store the touched command line since the parameter
+ * parsing is performed in place, and we should allow a component to
+ * store reference of name/value for future reference.
+ */
+aaaaa 270 261
+11
+
+
+new line counter reached: 271
+aaaaa 271 271
+1
+static
+aaaaa 271 271
+11
+ 
+aaaaa 271 271
+1
+void
+aaaaa 271 271
+11
+ 
+aaaaa 271 271
+2
+__init
+aaaaa 271 271
+11
+ 
+aaaaa 271 271
+2
+setup_command_line
+aaaaa 271 271
+5
+(
+aaaaa 271 271
+1
+char
+aaaaa 271 271
+11
+ 
+aaaaa 271 271
+4
+*
+aaaaa 271 271
+2
+command_line
+aaaaa 271 271
+5
+)
+aaaaa 271 271
+11
+
+
+aaaaa 272 271
+5
+{
+aaaaa 272 271
+11
+
+
+aaaaa 273 271
+11
+	
+aaaaa 273 271
+2
+saved_command_line
+aaaaa 273 271
+11
+ 
+aaaaa 273 271
+5
+=
+aaaaa 273 271
+11
+
+
+aaaaa 274 271
+11
+	
+aaaaa 274 271
+11
+	
+aaaaa 274 271
+2
+memblock_virt_alloc
+aaaaa 274 271
+5
+(
+aaaaa 274 271
+2
+strlen
+aaaaa 274 271
+5
+(
+aaaaa 274 271
+2
+boot_command_line
+aaaaa 274 271
+5
+)
+aaaaa 274 271
+11
+ 
+aaaaa 274 271
+4
++
+aaaaa 274 271
+11
+ 
+aaaaa 274 271
+3
+1
+aaaaa 274 271
+5
+,
+aaaaa 274 271
+11
+ 
+aaaaa 274 271
+3
+0
+aaaaa 274 271
+5
+)
+aaaaa 274 271
+5
+;
+aaaaa 274 271
+11
+
+
+aaaaa 275 271
+11
+	
+aaaaa 275 271
+2
+initcall_command_line
+aaaaa 275 271
+11
+ 
+aaaaa 275 271
+5
+=
+aaaaa 275 271
+11
+
+
+aaaaa 276 271
+11
+	
+aaaaa 276 271
+11
+	
+aaaaa 276 271
+2
+memblock_virt_alloc
+aaaaa 276 271
+5
+(
+aaaaa 276 271
+2
+strlen
+aaaaa 276 271
+5
+(
+aaaaa 276 271
+2
+boot_command_line
+aaaaa 276 271
+5
+)
+aaaaa 276 271
+11
+ 
+aaaaa 276 271
+4
++
+aaaaa 276 271
+11
+ 
+aaaaa 276 271
+3
+1
+aaaaa 276 271
+5
+,
+aaaaa 276 271
+11
+ 
+aaaaa 276 271
+3
+0
+aaaaa 276 271
+5
+)
+aaaaa 276 271
+5
+;
+aaaaa 276 271
+11
+
+
+aaaaa 277 271
+11
+	
+aaaaa 277 271
+2
+static_command_line
+aaaaa 277 271
+11
+ 
+aaaaa 277 271
+5
+=
+aaaaa 277 271
+11
+ 
+aaaaa 277 271
+2
+memblock_virt_alloc
+aaaaa 277 271
+5
+(
+aaaaa 277 271
+2
+strlen
+aaaaa 277 271
+5
+(
+aaaaa 277 271
+2
+command_line
+aaaaa 277 271
+5
+)
+aaaaa 277 271
+11
+ 
+aaaaa 277 271
+4
++
+aaaaa 277 271
+11
+ 
+aaaaa 277 271
+3
+1
+aaaaa 277 271
+5
+,
+aaaaa 277 271
+11
+ 
+aaaaa 277 271
+3
+0
+aaaaa 277 271
+5
+)
+aaaaa 277 271
+5
+;
+aaaaa 277 271
+11
+
+
+aaaaa 278 271
+11
+	
+aaaaa 278 271
+2
+strcpy
+aaaaa 278 271
+5
+(
+aaaaa 278 271
+2
+saved_command_line
+aaaaa 278 271
+5
+,
+aaaaa 278 271
+11
+ 
+aaaaa 278 271
+2
+boot_command_line
+aaaaa 278 271
+5
+)
+aaaaa 278 271
+5
+;
+aaaaa 278 271
+11
+
+
+aaaaa 279 271
+11
+	
+aaaaa 279 271
+2
+strcpy
+aaaaa 279 271
+5
+(
+aaaaa 279 271
+2
+static_command_line
+aaaaa 279 271
+5
+,
+aaaaa 279 271
+11
+ 
+aaaaa 279 271
+2
+command_line
+aaaaa 279 271
+5
+)
+aaaaa 279 271
+5
+;
+aaaaa 279 271
+11
+
+
+aaaaa 280 271
+5
+}
+aaaaa 280 271
+11
+
+
+new line counter reached: 281
+aaaaa 281 281
+11
+
+
+aaaaa 282 281
+6
+/*
+ * We need to finalize in a non-__init function or else race conditions
+ * between the root thread and the init thread may cause start_kernel to
+ * be reaped by free_initmem before the root thread has proceeded to
+ * cpu_idle.
+ *
+ * gcc-3.4 accidentally inlines this function, so use noinline.
+ */
+aaaaa 289 281
+11
+
+
+aaaaa 290 281
+11
+
+
+new line counter reached: 291
+aaaaa 291 291
+1
+static
+aaaaa 291 291
+11
+ 
+aaaaa 291 291
+2
+__initdata
+aaaaa 291 291
+11
+ 
+aaaaa 291 291
+2
+DECLARE_COMPLETION
+aaaaa 291 291
+5
+(
+aaaaa 291 291
+2
+kthreadd_done
+aaaaa 291 291
+5
+)
+aaaaa 291 291
+5
+;
+aaaaa 291 291
+11
+
+
+aaaaa 292 291
+11
+
+
+aaaaa 293 291
+1
+static
+aaaaa 293 291
+11
+ 
+aaaaa 293 291
+2
+noinline
+aaaaa 293 291
+11
+ 
+aaaaa 293 291
+1
+void
+aaaaa 293 291
+11
+ 
+aaaaa 293 291
+2
+__ref
+aaaaa 293 291
+11
+ 
+aaaaa 293 291
+2
+rest_init
+aaaaa 293 291
+5
+(
+aaaaa 293 291
+1
+void
+aaaaa 293 291
+5
+)
+aaaaa 293 291
+11
+
+
+aaaaa 294 291
+5
+{
+aaaaa 294 291
+11
+
+
+aaaaa 295 291
+11
+	
+aaaaa 295 291
+1
+struct
+aaaaa 295 291
+11
+ 
+aaaaa 295 291
+2
+task_struct
+aaaaa 295 291
+11
+ 
+aaaaa 295 291
+4
+*
+aaaaa 295 291
+2
+tsk
+aaaaa 295 291
+5
+;
+aaaaa 295 291
+11
+
+
+aaaaa 296 291
+11
+	
+aaaaa 296 291
+1
+int
+aaaaa 296 291
+11
+ 
+aaaaa 296 291
+2
+pid
+aaaaa 296 291
+5
+;
+aaaaa 296 291
+11
+
+
+aaaaa 297 291
+11
+
+
+aaaaa 298 291
+11
+	
+aaaaa 298 291
+2
+rcu_scheduler_starting
+aaaaa 298 291
+5
+(
+aaaaa 298 291
+5
+)
+aaaaa 298 291
+5
+;
+aaaaa 298 291
+11
+
+
+aaaaa 299 291
+11
+	
+aaaaa 299 291
+6
+/*
+	 * We need to spawn init first so that it obtains pid 1, however
+	 * the init task will end up wanting to create kthreads, which, if
+	 * we schedule it before we create kthreadd, will OOPS.
+	 */
+new line counter reached: 303
+aaaaa 303 301
+11
+
+
+aaaaa 304 301
+11
+	
+aaaaa 304 301
+2
+pid
+aaaaa 304 301
+11
+ 
+aaaaa 304 301
+5
+=
+aaaaa 304 301
+11
+ 
+aaaaa 304 301
+2
+kernel_thread
+aaaaa 304 301
+5
+(
+aaaaa 304 301
+2
+kernel_init
+aaaaa 304 301
+5
+,
+aaaaa 304 301
+11
+ 
+aaaaa 304 301
+2
+NULL
+aaaaa 304 301
+5
+,
+aaaaa 304 301
+11
+ 
+aaaaa 304 301
+2
+CLONE_FS
+aaaaa 304 301
+5
+)
+aaaaa 304 301
+5
+;
+aaaaa 304 301
+11
+
+
+aaaaa 305 301
+11
+	
+aaaaa 305 301
+6
+/*
+	 * Pin init on the boot CPU. Task migration is not properly working
+	 * until sched_init_smp() has been run. It will set the allowed
+	 * CPUs for init to the non isolated CPUs.
+	 */
+aaaaa 309 301
+11
+
+
+aaaaa 310 301
+11
+	
+aaaaa 310 301
+2
+rcu_read_lock
+aaaaa 310 301
+5
+(
+aaaaa 310 301
+5
+)
+aaaaa 310 301
+5
+;
+aaaaa 310 301
+11
+
+
+new line counter reached: 311
+aaaaa 311 311
+11
+	
+aaaaa 311 311
+2
+tsk
+aaaaa 311 311
+11
+ 
+aaaaa 311 311
+5
+=
+aaaaa 311 311
+11
+ 
+aaaaa 311 311
+2
+find_task_by_pid_ns
+aaaaa 311 311
+5
+(
+aaaaa 311 311
+2
+pid
+aaaaa 311 311
+5
+,
+aaaaa 311 311
+11
+ 
+aaaaa 311 311
+4
+&
+aaaaa 311 311
+2
+init_pid_ns
+aaaaa 311 311
+5
+)
+aaaaa 311 311
+5
+;
+aaaaa 311 311
+11
+
+
+aaaaa 312 311
+11
+	
+aaaaa 312 311
+2
+set_cpus_allowed_ptr
+aaaaa 312 311
+5
+(
+aaaaa 312 311
+2
+tsk
+aaaaa 312 311
+5
+,
+aaaaa 312 311
+11
+ 
+aaaaa 312 311
+2
+cpumask_of
+aaaaa 312 311
+5
+(
+aaaaa 312 311
+2
+smp_processor_id
+aaaaa 312 311
+5
+(
+aaaaa 312 311
+5
+)
+aaaaa 312 311
+5
+)
+aaaaa 312 311
+5
+)
+aaaaa 312 311
+5
+;
+aaaaa 312 311
+11
+
+
+aaaaa 313 311
+11
+	
+aaaaa 313 311
+2
+rcu_read_unlock
+aaaaa 313 311
+5
+(
+aaaaa 313 311
+5
+)
+aaaaa 313 311
+5
+;
+aaaaa 313 311
+11
+
+
+aaaaa 314 311
+11
+
+
+aaaaa 315 311
+11
+	
+aaaaa 315 311
+2
+numa_default_policy
+aaaaa 315 311
+5
+(
+aaaaa 315 311
+5
+)
+aaaaa 315 311
+5
+;
+aaaaa 315 311
+11
+
+
+aaaaa 316 311
+11
+	
+aaaaa 316 311
+2
+pid
+aaaaa 316 311
+11
+ 
+aaaaa 316 311
+5
+=
+aaaaa 316 311
+11
+ 
+aaaaa 316 311
+2
+kernel_thread
+aaaaa 316 311
+5
+(
+aaaaa 316 311
+2
+kthreadd
+aaaaa 316 311
+5
+,
+aaaaa 316 311
+11
+ 
+aaaaa 316 311
+2
+NULL
+aaaaa 316 311
+5
+,
+aaaaa 316 311
+11
+ 
+aaaaa 316 311
+2
+CLONE_FS
+aaaaa 316 311
+11
+ 
+aaaaa 316 311
+4
+|
+aaaaa 316 311
+11
+ 
+aaaaa 316 311
+2
+CLONE_FILES
+aaaaa 316 311
+5
+)
+aaaaa 316 311
+5
+;
+aaaaa 316 311
+11
+
+
+aaaaa 317 311
+11
+	
+aaaaa 317 311
+2
+rcu_read_lock
+aaaaa 317 311
+5
+(
+aaaaa 317 311
+5
+)
+aaaaa 317 311
+5
+;
+aaaaa 317 311
+11
+
+
+aaaaa 318 311
+11
+	
+aaaaa 318 311
+2
+kthreadd_task
+aaaaa 318 311
+11
+ 
+aaaaa 318 311
+5
+=
+aaaaa 318 311
+11
+ 
+aaaaa 318 311
+2
+find_task_by_pid_ns
+aaaaa 318 311
+5
+(
+aaaaa 318 311
+2
+pid
+aaaaa 318 311
+5
+,
+aaaaa 318 311
+11
+ 
+aaaaa 318 311
+4
+&
+aaaaa 318 311
+2
+init_pid_ns
+aaaaa 318 311
+5
+)
+aaaaa 318 311
+5
+;
+aaaaa 318 311
+11
+
+
+aaaaa 319 311
+11
+	
+aaaaa 319 311
+2
+rcu_read_unlock
+aaaaa 319 311
+5
+(
+aaaaa 319 311
+5
+)
+aaaaa 319 311
+5
+;
+aaaaa 319 311
+11
+
+
+aaaaa 320 311
+11
+
+
+new line counter reached: 321
+aaaaa 321 321
+11
+	
+aaaaa 321 321
+6
+/*
+	 * Enable might_sleep() and smp_processor_id() checks.
+	 * They cannot be enabled earlier because with CONFIG_PRREMPT=y
+	 * kernel_thread() would trigger might_sleep() splats. With
+	 * CONFIG_PREEMPT_VOLUNTARY=y the init task might have scheduled
+	 * already, but it's stuck on the kthreadd_done completion.
+	 */
+aaaaa 327 321
+11
+
+
+aaaaa 328 321
+11
+	
+aaaaa 328 321
+2
+system_state
+aaaaa 328 321
+11
+ 
+aaaaa 328 321
+5
+=
+aaaaa 328 321
+11
+ 
+aaaaa 328 321
+2
+SYSTEM_SCHEDULING
+aaaaa 328 321
+5
+;
+aaaaa 328 321
+11
+
+
+aaaaa 329 321
+11
+
+
+aaaaa 330 321
+11
+	
+aaaaa 330 321
+2
+complete
+aaaaa 330 321
+5
+(
+aaaaa 330 321
+4
+&
+aaaaa 330 321
+2
+kthreadd_done
+aaaaa 330 321
+5
+)
+aaaaa 330 321
+5
+;
+aaaaa 330 321
+11
+
+
+new line counter reached: 331
+aaaaa 331 331
+11
+
+
+aaaaa 332 331
+11
+	
+aaaaa 332 331
+6
+/*
+	 * The boot idle thread must execute schedule()
+	 * at least once to get things moving:
+	 */
+aaaaa 335 331
+11
+
+
+aaaaa 336 331
+11
+	
+aaaaa 336 331
+2
+schedule_preempt_disabled
+aaaaa 336 331
+5
+(
+aaaaa 336 331
+5
+)
+aaaaa 336 331
+5
+;
+aaaaa 336 331
+11
+
+
+aaaaa 337 331
+11
+	
+aaaaa 337 331
+6
+/* Call into cpu_idle with preempt disabled */
+aaaaa 337 331
+11
+
+
+aaaaa 338 331
+11
+	
+aaaaa 338 331
+2
+cpu_startup_entry
+aaaaa 338 331
+5
+(
+aaaaa 338 331
+2
+CPUHP_ONLINE
+aaaaa 338 331
+5
+)
+aaaaa 338 331
+5
+;
+aaaaa 338 331
+11
+
+
+aaaaa 339 331
+5
+}
+aaaaa 339 331
+11
+
+
+aaaaa 340 331
+11
+
+
+new line counter reached: 341
+aaaaa 341 341
+6
+/* Check for early params. */
+aaaaa 341 341
+11
+
+
+aaaaa 342 341
+1
+static
+aaaaa 342 341
+11
+ 
+aaaaa 342 341
+1
+int
+aaaaa 342 341
+11
+ 
+aaaaa 342 341
+2
+__init
+aaaaa 342 341
+11
+ 
+aaaaa 342 341
+2
+do_early_param
+aaaaa 342 341
+5
+(
+aaaaa 342 341
+1
+char
+aaaaa 342 341
+11
+ 
+aaaaa 342 341
+4
+*
+aaaaa 342 341
+2
+param
+aaaaa 342 341
+5
+,
+aaaaa 342 341
+11
+ 
+aaaaa 342 341
+1
+char
+aaaaa 342 341
+11
+ 
+aaaaa 342 341
+4
+*
+aaaaa 342 341
+2
+val
+aaaaa 342 341
+5
+,
+aaaaa 342 341
+11
+
+
+aaaaa 343 341
+11
+	
+aaaaa 343 341
+11
+	
+aaaaa 343 341
+11
+	
+aaaaa 343 341
+11
+	
+aaaaa 343 341
+11
+ 
+aaaaa 343 341
+1
+const
+aaaaa 343 341
+11
+ 
+aaaaa 343 341
+1
+char
+aaaaa 343 341
+11
+ 
+aaaaa 343 341
+4
+*
+aaaaa 343 341
+2
+unused
+aaaaa 343 341
+5
+,
+aaaaa 343 341
+11
+ 
+aaaaa 343 341
+1
+void
+aaaaa 343 341
+11
+ 
+aaaaa 343 341
+4
+*
+aaaaa 343 341
+2
+arg
+aaaaa 343 341
+5
+)
+aaaaa 343 341
+11
+
+
+aaaaa 344 341
+5
+{
+aaaaa 344 341
+11
+
+
+aaaaa 345 341
+11
+	
+aaaaa 345 341
+1
+const
+aaaaa 345 341
+11
+ 
+aaaaa 345 341
+1
+struct
+aaaaa 345 341
+11
+ 
+aaaaa 345 341
+2
+obs_kernel_param
+aaaaa 345 341
+11
+ 
+aaaaa 345 341
+4
+*
+aaaaa 345 341
+2
+p
+aaaaa 345 341
+5
+;
+aaaaa 345 341
+11
+
+
+aaaaa 346 341
+11
+
+
+aaaaa 347 341
+11
+	
+aaaaa 347 341
+1
+for
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+5
+(
+aaaaa 347 341
+2
+p
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+5
+=
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+2
+__setup_start
+aaaaa 347 341
+5
+;
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+2
+p
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+4
+<
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+2
+__setup_end
+aaaaa 347 341
+5
+;
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+2
+p
+aaaaa 347 341
+4
+++
+aaaaa 347 341
+5
+)
+aaaaa 347 341
+11
+ 
+aaaaa 347 341
+5
+{
+aaaaa 347 341
+11
+
+
+aaaaa 348 341
+11
+	
+aaaaa 348 341
+11
+	
+aaaaa 348 341
+1
+if
+aaaaa 348 341
+11
+ 
+aaaaa 348 341
+5
+(
+aaaaa 348 341
+5
+(
+aaaaa 348 341
+2
+p
+aaaaa 348 341
+4
+-
+aaaaa 348 341
+4
+>
+aaaaa 348 341
+2
+early
+aaaaa 348 341
+11
+ 
+aaaaa 348 341
+4
+&&
+aaaaa 348 341
+11
+ 
+aaaaa 348 341
+2
+parameq
+aaaaa 348 341
+5
+(
+aaaaa 348 341
+2
+param
+aaaaa 348 341
+5
+,
+aaaaa 348 341
+11
+ 
+aaaaa 348 341
+2
+p
+aaaaa 348 341
+4
+-
+aaaaa 348 341
+4
+>
+aaaaa 348 341
+2
+str
+aaaaa 348 341
+5
+)
+aaaaa 348 341
+5
+)
+aaaaa 348 341
+11
+ 
+aaaaa 348 341
+4
+||
+aaaaa 348 341
+11
+
+
+aaaaa 349 341
+11
+	
+aaaaa 349 341
+11
+	
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+5
+(
+aaaaa 349 341
+2
+strcmp
+aaaaa 349 341
+5
+(
+aaaaa 349 341
+2
+param
+aaaaa 349 341
+5
+,
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+9
+"console"
+aaaaa 349 341
+5
+)
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+4
+==
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+3
+0
+aaaaa 349 341
+11
+ 
+aaaaa 349 341
+4
+&&
+aaaaa 349 341
+11
+
+
+aaaaa 350 341
+11
+	
+aaaaa 350 341
+11
+	
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+2
+strcmp
+aaaaa 350 341
+5
+(
+aaaaa 350 341
+2
+p
+aaaaa 350 341
+4
+-
+aaaaa 350 341
+4
+>
+aaaaa 350 341
+2
+str
+aaaaa 350 341
+5
+,
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+9
+"earlycon"
+aaaaa 350 341
+5
+)
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+4
+==
+aaaaa 350 341
+11
+ 
+aaaaa 350 341
+3
+0
+aaaaa 350 341
+5
+)
+aaaaa 350 341
+11
+
+
+new line counter reached: 351
+aaaaa 351 351
+11
+	
+aaaaa 351 351
+11
+	
+aaaaa 351 351
+5
+)
+aaaaa 351 351
+11
+ 
+aaaaa 351 351
+5
+{
+aaaaa 351 351
+11
+
+
+aaaaa 352 351
+11
+	
+aaaaa 352 351
+11
+	
+aaaaa 352 351
+11
+	
+aaaaa 352 351
+1
+if
+aaaaa 352 351
+11
+ 
+aaaaa 352 351
+5
+(
+aaaaa 352 351
+2
+p
+aaaaa 352 351
+4
+-
+aaaaa 352 351
+4
+>
+aaaaa 352 351
+2
+setup_func
+aaaaa 352 351
+5
+(
+aaaaa 352 351
+2
+val
+aaaaa 352 351
+5
+)
+aaaaa 352 351
+11
+ 
+aaaaa 352 351
+4
+!=
+aaaaa 352 351
+11
+ 
+aaaaa 352 351
+3
+0
+aaaaa 352 351
+5
+)
+aaaaa 352 351
+11
+
+
+aaaaa 353 351
+11
+	
+aaaaa 353 351
+11
+	
+aaaaa 353 351
+11
+	
+aaaaa 353 351
+11
+	
+aaaaa 353 351
+2
+pr_warn
+aaaaa 353 351
+5
+(
+aaaaa 353 351
+9
+"Malformed early option '%s'\n"
+aaaaa 353 351
+5
+,
+aaaaa 353 351
+11
+ 
+aaaaa 353 351
+2
+param
+aaaaa 353 351
+5
+)
+aaaaa 353 351
+5
+;
+aaaaa 353 351
+11
+
+
+aaaaa 354 351
+11
+	
+aaaaa 354 351
+11
+	
+aaaaa 354 351
+5
+}
+aaaaa 354 351
+11
+
+
+aaaaa 355 351
+11
+	
+aaaaa 355 351
+5
+}
+aaaaa 355 351
+11
+
+
+aaaaa 356 351
+11
+	
+aaaaa 356 351
+6
+/* We accept everything at this stage. */
+aaaaa 356 351
+11
+
+
+aaaaa 357 351
+11
+	
+aaaaa 357 351
+1
+return
+aaaaa 357 351
+11
+ 
+aaaaa 357 351
+3
+0
+aaaaa 357 351
+5
+;
+aaaaa 357 351
+11
+
+
+aaaaa 358 351
+5
+}
+aaaaa 358 351
+11
+
+
+aaaaa 359 351
+11
+
+
+aaaaa 360 351
+1
+void
+aaaaa 360 351
+11
+ 
+aaaaa 360 351
+2
+__init
+aaaaa 360 351
+11
+ 
+aaaaa 360 351
+2
+parse_early_options
+aaaaa 360 351
+5
+(
+aaaaa 360 351
+1
+char
+aaaaa 360 351
+11
+ 
+aaaaa 360 351
+4
+*
+aaaaa 360 351
+2
+cmdline
+aaaaa 360 351
+5
+)
+aaaaa 360 351
+11
+
+
+new line counter reached: 361
+aaaaa 361 361
+5
+{
+aaaaa 361 361
+11
+
+
+aaaaa 362 361
+11
+	
+aaaaa 362 361
+2
+parse_args
+aaaaa 362 361
+5
+(
+aaaaa 362 361
+9
+"early options"
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+ 
+aaaaa 362 361
+2
+cmdline
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+ 
+aaaaa 362 361
+2
+NULL
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+ 
+aaaaa 362 361
+3
+0
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+ 
+aaaaa 362 361
+3
+0
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+ 
+aaaaa 362 361
+3
+0
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+ 
+aaaaa 362 361
+2
+NULL
+aaaaa 362 361
+5
+,
+aaaaa 362 361
+11
+
+
+aaaaa 363 361
+11
+	
+aaaaa 363 361
+11
+	
+aaaaa 363 361
+11
+ 
+aaaaa 363 361
+11
+ 
+aaaaa 363 361
+11
+ 
+aaaaa 363 361
+2
+do_early_param
+aaaaa 363 361
+5
+)
+aaaaa 363 361
+5
+;
+aaaaa 363 361
+11
+
+
+aaaaa 364 361
+5
+}
+aaaaa 364 361
+11
+
+
+aaaaa 365 361
+11
+
+
+aaaaa 366 361
+6
+/* Arch code calls this early on, or if not, just before other parsing. */
+aaaaa 366 361
+11
+
+
+aaaaa 367 361
+1
+void
+aaaaa 367 361
+11
+ 
+aaaaa 367 361
+2
+__init
+aaaaa 367 361
+11
+ 
+aaaaa 367 361
+2
+parse_early_param
+aaaaa 367 361
+5
+(
+aaaaa 367 361
+1
+void
+aaaaa 367 361
+5
+)
+aaaaa 367 361
+11
+
+
+aaaaa 368 361
+5
+{
+aaaaa 368 361
+11
+
+
+aaaaa 369 361
+11
+	
+aaaaa 369 361
+1
+static
+aaaaa 369 361
+11
+ 
+aaaaa 369 361
+1
+int
+aaaaa 369 361
+11
+ 
+aaaaa 369 361
+2
+done
+aaaaa 369 361
+11
+ 
+aaaaa 369 361
+2
+__initdata
+aaaaa 369 361
+5
+;
+aaaaa 369 361
+11
+
+
+aaaaa 370 361
+11
+	
+aaaaa 370 361
+1
+static
+aaaaa 370 361
+11
+ 
+aaaaa 370 361
+1
+char
+aaaaa 370 361
+11
+ 
+aaaaa 370 361
+2
+tmp_cmdline
+aaaaa 370 361
+5
+[
+aaaaa 370 361
+2
+COMMAND_LINE_SIZE
+aaaaa 370 361
+5
+]
+aaaaa 370 361
+11
+ 
+aaaaa 370 361
+2
+__initdata
+aaaaa 370 361
+5
+;
+aaaaa 370 361
+11
+
+
+new line counter reached: 371
+aaaaa 371 371
+11
+
+
+aaaaa 372 371
+11
+	
+aaaaa 372 371
+1
+if
+aaaaa 372 371
+11
+ 
+aaaaa 372 371
+5
+(
+aaaaa 372 371
+2
+done
+aaaaa 372 371
+5
+)
+aaaaa 372 371
+11
+
+
+aaaaa 373 371
+11
+	
+aaaaa 373 371
+11
+	
+aaaaa 373 371
+1
+return
+aaaaa 373 371
+5
+;
+aaaaa 373 371
+11
+
+
+aaaaa 374 371
+11
+
+
+aaaaa 375 371
+11
+	
+aaaaa 375 371
+6
+/* All fall through to do_early_param. */
+aaaaa 375 371
+11
+
+
+aaaaa 376 371
+11
+	
+aaaaa 376 371
+2
+strlcpy
+aaaaa 376 371
+5
+(
+aaaaa 376 371
+2
+tmp_cmdline
+aaaaa 376 371
+5
+,
+aaaaa 376 371
+11
+ 
+aaaaa 376 371
+2
+boot_command_line
+aaaaa 376 371
+5
+,
+aaaaa 376 371
+11
+ 
+aaaaa 376 371
+2
+COMMAND_LINE_SIZE
+aaaaa 376 371
+5
+)
+aaaaa 376 371
+5
+;
+aaaaa 376 371
+11
+
+
+aaaaa 377 371
+11
+	
+aaaaa 377 371
+2
+parse_early_options
+aaaaa 377 371
+5
+(
+aaaaa 377 371
+2
+tmp_cmdline
+aaaaa 377 371
+5
+)
+aaaaa 377 371
+5
+;
+aaaaa 377 371
+11
+
+
+aaaaa 378 371
+11
+	
+aaaaa 378 371
+2
+done
+aaaaa 378 371
+11
+ 
+aaaaa 378 371
+5
+=
+aaaaa 378 371
+11
+ 
+aaaaa 378 371
+3
+1
+aaaaa 378 371
+5
+;
+aaaaa 378 371
+11
+
+
+aaaaa 379 371
+5
+}
+aaaaa 379 371
+11
+
+
+aaaaa 380 371
+11
+
+
+new line counter reached: 381
+aaaaa 381 381
+1
+void
+aaaaa 381 381
+11
+ 
+aaaaa 381 381
+2
+__init
+aaaaa 381 381
+11
+ 
+aaaaa 381 381
+2
+__weak
+aaaaa 381 381
+11
+ 
+aaaaa 381 381
+2
+arch_post_acpi_subsys_init
+aaaaa 381 381
+5
+(
+aaaaa 381 381
+1
+void
+aaaaa 381 381
+5
+)
+aaaaa 381 381
+11
+ 
+aaaaa 381 381
+5
+{
+aaaaa 381 381
+11
+ 
+aaaaa 381 381
+5
+}
+aaaaa 381 381
+11
+
+
+aaaaa 382 381
+11
+
+
+aaaaa 383 381
+1
+void
+aaaaa 383 381
+11
+ 
+aaaaa 383 381
+2
+__init
+aaaaa 383 381
+11
+ 
+aaaaa 383 381
+2
+__weak
+aaaaa 383 381
+11
+ 
+aaaaa 383 381
+2
+smp_setup_processor_id
+aaaaa 383 381
+5
+(
+aaaaa 383 381
+1
+void
+aaaaa 383 381
+5
+)
+aaaaa 383 381
+11
+
+
+aaaaa 384 381
+5
+{
+aaaaa 384 381
+11
+
+
+aaaaa 385 381
+5
+}
+aaaaa 385 381
+11
+
+
+aaaaa 386 381
+11
+
+
+aaaaa 387 381
+7
+# if THREAD_SIZE >= PAGE_SIZE
+aaaaa 387 381
+11
+
+
+aaaaa 388 381
+1
+void
+aaaaa 388 381
+11
+ 
+aaaaa 388 381
+2
+__init
+aaaaa 388 381
+11
+ 
+aaaaa 388 381
+2
+__weak
+aaaaa 388 381
+11
+ 
+aaaaa 388 381
+2
+thread_stack_cache_init
+aaaaa 388 381
+5
+(
+aaaaa 388 381
+1
+void
+aaaaa 388 381
+5
+)
+aaaaa 388 381
+11
+
+
+aaaaa 389 381
+5
+{
+aaaaa 389 381
+11
+
+
+aaaaa 390 381
+5
+}
+aaaaa 390 381
+11
+
+
+new line counter reached: 391
+aaaaa 391 391
+7
+#endif
+aaaaa 391 391
+11
+
+
+aaaaa 392 391
+11
+
+
+aaaaa 393 391
+1
+void
+aaaaa 393 391
+11
+ 
+aaaaa 393 391
+2
+__init
+aaaaa 393 391
+11
+ 
+aaaaa 393 391
+2
+__weak
+aaaaa 393 391
+11
+ 
+aaaaa 393 391
+2
+mem_encrypt_init
+aaaaa 393 391
+5
+(
+aaaaa 393 391
+1
+void
+aaaaa 393 391
+5
+)
+aaaaa 393 391
+11
+ 
+aaaaa 393 391
+5
+{
+aaaaa 393 391
+11
+ 
+aaaaa 393 391
+5
+}
+aaaaa 393 391
+11
+
+
+aaaaa 394 391
+11
+
+
+aaaaa 395 391
+6
+/*
+ * Set up kernel memory allocators
+ */
+aaaaa 397 391
+11
+
+
+aaaaa 398 391
+1
+static
+aaaaa 398 391
+11
+ 
+aaaaa 398 391
+1
+void
+aaaaa 398 391
+11
+ 
+aaaaa 398 391
+2
+__init
+aaaaa 398 391
+11
+ 
+aaaaa 398 391
+2
+mm_init
+aaaaa 398 391
+5
+(
+aaaaa 398 391
+1
+void
+aaaaa 398 391
+5
+)
+aaaaa 398 391
+11
+
+
+aaaaa 399 391
+5
+{
+aaaaa 399 391
+11
+
+
+aaaaa 400 391
+11
+	
+aaaaa 400 391
+6
+/*
+	 * page_ext requires contiguous pages,
+	 * bigger than MAX_ORDER unless SPARSEMEM.
+	 */
+new line counter reached: 403
+aaaaa 403 401
+11
+
+
+aaaaa 404 401
+11
+	
+aaaaa 404 401
+2
+page_ext_init_flatmem
+aaaaa 404 401
+5
+(
+aaaaa 404 401
+5
+)
+aaaaa 404 401
+5
+;
+aaaaa 404 401
+11
+
+
+aaaaa 405 401
+11
+	
+aaaaa 405 401
+2
+mem_init
+aaaaa 405 401
+5
+(
+aaaaa 405 401
+5
+)
+aaaaa 405 401
+5
+;
+aaaaa 405 401
+11
+
+
+aaaaa 406 401
+11
+	
+aaaaa 406 401
+2
+kmem_cache_init
+aaaaa 406 401
+5
+(
+aaaaa 406 401
+5
+)
+aaaaa 406 401
+5
+;
+aaaaa 406 401
+11
+
+
+aaaaa 407 401
+11
+	
+aaaaa 407 401
+2
+pgtable_init
+aaaaa 407 401
+5
+(
+aaaaa 407 401
+5
+)
+aaaaa 407 401
+5
+;
+aaaaa 407 401
+11
+
+
+aaaaa 408 401
+11
+	
+aaaaa 408 401
+2
+vmalloc_init
+aaaaa 408 401
+5
+(
+aaaaa 408 401
+5
+)
+aaaaa 408 401
+5
+;
+aaaaa 408 401
+11
+
+
+aaaaa 409 401
+11
+	
+aaaaa 409 401
+2
+ioremap_huge_init
+aaaaa 409 401
+5
+(
+aaaaa 409 401
+5
+)
+aaaaa 409 401
+5
+;
+aaaaa 409 401
+11
+
+
+aaaaa 410 401
+5
+}
+aaaaa 410 401
+11
+
+
+new line counter reached: 411
+aaaaa 411 411
+11
+
+
+aaaaa 412 411
+2
+asmlinkage
+aaaaa 412 411
+11
+ 
+aaaaa 412 411
+2
+__visible
+aaaaa 412 411
+11
+ 
+aaaaa 412 411
+1
+void
+aaaaa 412 411
+11
+ 
+aaaaa 412 411
+2
+__init
+aaaaa 412 411
+11
+ 
+aaaaa 412 411
+2
+start_kernel
+aaaaa 412 411
+5
+(
+aaaaa 412 411
+1
+void
+aaaaa 412 411
+5
+)
+aaaaa 412 411
+11
+
+
+aaaaa 413 411
+5
+{
+aaaaa 413 411
+11
+
+
+aaaaa 414 411
+11
+	
+aaaaa 414 411
+1
+char
+aaaaa 414 411
+11
+ 
+aaaaa 414 411
+4
+*
+aaaaa 414 411
+2
+command_line
+aaaaa 414 411
+5
+;
+aaaaa 414 411
+11
+
+
+aaaaa 415 411
+11
+	
+aaaaa 415 411
+1
+char
+aaaaa 415 411
+11
+ 
+aaaaa 415 411
+4
+*
+aaaaa 415 411
+2
+after_dashes
+aaaaa 415 411
+5
+;
+aaaaa 415 411
+11
+
+
+aaaaa 416 411
+11
+
+
+aaaaa 417 411
+11
+	
+aaaaa 417 411
+2
+set_task_stack_end_magic
+aaaaa 417 411
+5
+(
+aaaaa 417 411
+4
+&
+aaaaa 417 411
+2
+init_task
+aaaaa 417 411
+5
+)
+aaaaa 417 411
+5
+;
+aaaaa 417 411
+11
+
+
+aaaaa 418 411
+11
+	
+aaaaa 418 411
+2
+smp_setup_processor_id
+aaaaa 418 411
+5
+(
+aaaaa 418 411
+5
+)
+aaaaa 418 411
+5
+;
+aaaaa 418 411
+11
+
+
+aaaaa 419 411
+11
+	
+aaaaa 419 411
+2
+debug_objects_early_init
+aaaaa 419 411
+5
+(
+aaaaa 419 411
+5
+)
+aaaaa 419 411
+5
+;
+aaaaa 419 411
+11
+
+
+aaaaa 420 411
+11
+
+
+new line counter reached: 421
+aaaaa 421 421
+11
+	
+aaaaa 421 421
+2
+cgroup_init_early
+aaaaa 421 421
+5
+(
+aaaaa 421 421
+5
+)
+aaaaa 421 421
+5
+;
+aaaaa 421 421
+11
+
+
+aaaaa 422 421
+11
+
+
+aaaaa 423 421
+11
+	
+aaaaa 423 421
+2
+local_irq_disable
+aaaaa 423 421
+5
+(
+aaaaa 423 421
+5
+)
+aaaaa 423 421
+5
+;
+aaaaa 423 421
+11
+
+
+aaaaa 424 421
+11
+	
+aaaaa 424 421
+2
+early_boot_irqs_disabled
+aaaaa 424 421
+11
+ 
+aaaaa 424 421
+5
+=
+aaaaa 424 421
+11
+ 
+aaaaa 424 421
+2
+true
+aaaaa 424 421
+5
+;
+aaaaa 424 421
+11
+
+
+aaaaa 425 421
+11
+
+
+aaaaa 426 421
+11
+	
+aaaaa 426 421
+6
+/*
+	 * Interrupts are still disabled. Do necessary setups, then
+	 * enable them.
+	 */
+aaaaa 429 421
+11
+
+
+aaaaa 430 421
+11
+	
+aaaaa 430 421
+2
+boot_cpu_init
+aaaaa 430 421
+5
+(
+aaaaa 430 421
+5
+)
+aaaaa 430 421
+5
+;
+aaaaa 430 421
+11
+
+
+new line counter reached: 431
+aaaaa 431 431
+11
+	
+aaaaa 431 431
+2
+page_address_init
+aaaaa 431 431
+5
+(
+aaaaa 431 431
+5
+)
+aaaaa 431 431
+5
+;
+aaaaa 431 431
+11
+
+
+aaaaa 432 431
+11
+	
+aaaaa 432 431
+2
+pr_notice
+aaaaa 432 431
+5
+(
+aaaaa 432 431
+9
+"%s"
+aaaaa 432 431
+5
+,
+aaaaa 432 431
+11
+ 
+aaaaa 432 431
+2
+linux_banner
+aaaaa 432 431
+5
+)
+aaaaa 432 431
+5
+;
+aaaaa 432 431
+11
+
+
+aaaaa 433 431
+11
+	
+aaaaa 433 431
+2
+setup_arch
+aaaaa 433 431
+5
+(
+aaaaa 433 431
+4
+&
+aaaaa 433 431
+2
+command_line
+aaaaa 433 431
+5
+)
+aaaaa 433 431
+5
+;
+aaaaa 433 431
+11
+
+
+aaaaa 434 431
+11
+	
+aaaaa 434 431
+6
+/*
+	 * Set up the the initial canary and entropy after arch
+	 * and after adding latent and command line entropy.
+	 */
+aaaaa 437 431
+11
+
+
+aaaaa 438 431
+11
+	
+aaaaa 438 431
+2
+add_latent_entropy
+aaaaa 438 431
+5
+(
+aaaaa 438 431
+5
+)
+aaaaa 438 431
+5
+;
+aaaaa 438 431
+11
+
+
+aaaaa 439 431
+11
+	
+aaaaa 439 431
+2
+add_device_randomness
+aaaaa 439 431
+5
+(
+aaaaa 439 431
+2
+command_line
+aaaaa 439 431
+5
+,
+aaaaa 439 431
+11
+ 
+aaaaa 439 431
+2
+strlen
+aaaaa 439 431
+5
+(
+aaaaa 439 431
+2
+command_line
+aaaaa 439 431
+5
+)
+aaaaa 439 431
+5
+)
+aaaaa 439 431
+5
+;
+aaaaa 439 431
+11
+
+
+aaaaa 440 431
+11
+	
+aaaaa 440 431
+2
+boot_init_stack_canary
+aaaaa 440 431
+5
+(
+aaaaa 440 431
+5
+)
+aaaaa 440 431
+5
+;
+aaaaa 440 431
+11
+
+
+new line counter reached: 441
+aaaaa 441 441
+11
+	
+aaaaa 441 441
+2
+mm_init_cpumask
+aaaaa 441 441
+5
+(
+aaaaa 441 441
+4
+&
+aaaaa 441 441
+2
+init_mm
+aaaaa 441 441
+5
+)
+aaaaa 441 441
+5
+;
+aaaaa 441 441
+11
+
+
+aaaaa 442 441
+11
+	
+aaaaa 442 441
+2
+setup_command_line
+aaaaa 442 441
+5
+(
+aaaaa 442 441
+2
+command_line
+aaaaa 442 441
+5
+)
+aaaaa 442 441
+5
+;
+aaaaa 442 441
+11
+
+
+aaaaa 443 441
+11
+	
+aaaaa 443 441
+2
+setup_nr_cpu_ids
+aaaaa 443 441
+5
+(
+aaaaa 443 441
+5
+)
+aaaaa 443 441
+5
+;
+aaaaa 443 441
+11
+
+
+aaaaa 444 441
+11
+	
+aaaaa 444 441
+2
+setup_per_cpu_areas
+aaaaa 444 441
+5
+(
+aaaaa 444 441
+5
+)
+aaaaa 444 441
+5
+;
+aaaaa 444 441
+11
+
+
+aaaaa 445 441
+11
+	
+aaaaa 445 441
+2
+boot_cpu_state_init
+aaaaa 445 441
+5
+(
+aaaaa 445 441
+5
+)
+aaaaa 445 441
+5
+;
+aaaaa 445 441
+11
+
+
+aaaaa 446 441
+11
+	
+aaaaa 446 441
+2
+smp_prepare_boot_cpu
+aaaaa 446 441
+5
+(
+aaaaa 446 441
+5
+)
+aaaaa 446 441
+5
+;
+aaaaa 446 441
+11
+	
+aaaaa 446 441
+6
+/* arch-specific boot-cpu hooks */
+aaaaa 446 441
+11
+
+
+aaaaa 447 441
+11
+
+
+aaaaa 448 441
+11
+	
+aaaaa 448 441
+2
+build_all_zonelists
+aaaaa 448 441
+5
+(
+aaaaa 448 441
+2
+NULL
+aaaaa 448 441
+5
+)
+aaaaa 448 441
+5
+;
+aaaaa 448 441
+11
+
+
+aaaaa 449 441
+11
+	
+aaaaa 449 441
+2
+page_alloc_init
+aaaaa 449 441
+5
+(
+aaaaa 449 441
+5
+)
+aaaaa 449 441
+5
+;
+aaaaa 449 441
+11
+
+
+aaaaa 450 441
+11
+
+
+new line counter reached: 451
+aaaaa 451 451
+11
+	
+aaaaa 451 451
+2
+pr_notice
+aaaaa 451 451
+5
+(
+aaaaa 451 451
+9
+"Kernel command line: %s\n"
+aaaaa 451 451
+5
+,
+aaaaa 451 451
+11
+ 
+aaaaa 451 451
+2
+boot_command_line
+aaaaa 451 451
+5
+)
+aaaaa 451 451
+5
+;
+aaaaa 451 451
+11
+
+
+aaaaa 452 451
+11
+	
+aaaaa 452 451
+2
+parse_early_param
+aaaaa 452 451
+5
+(
+aaaaa 452 451
+5
+)
+aaaaa 452 451
+5
+;
+aaaaa 452 451
+11
+
+
+aaaaa 453 451
+11
+	
+aaaaa 453 451
+2
+after_dashes
+aaaaa 453 451
+11
+ 
+aaaaa 453 451
+5
+=
+aaaaa 453 451
+11
+ 
+aaaaa 453 451
+2
+parse_args
+aaaaa 453 451
+5
+(
+aaaaa 453 451
+9
+"Booting kernel"
+aaaaa 453 451
+5
+,
+aaaaa 453 451
+11
+
+
+aaaaa 454 451
+11
+	
+aaaaa 454 451
+11
+	
+aaaaa 454 451
+11
+	
+aaaaa 454 451
+11
+	
+aaaaa 454 451
+11
+ 
+aaaaa 454 451
+11
+ 
+aaaaa 454 451
+2
+static_command_line
+aaaaa 454 451
+5
+,
+aaaaa 454 451
+11
+ 
+aaaaa 454 451
+2
+__start___param
+aaaaa 454 451
+5
+,
+aaaaa 454 451
+11
+
+
+aaaaa 455 451
+11
+	
+aaaaa 455 451
+11
+	
+aaaaa 455 451
+11
+	
+aaaaa 455 451
+11
+	
+aaaaa 455 451
+11
+ 
+aaaaa 455 451
+11
+ 
+aaaaa 455 451
+2
+__stop___param
+aaaaa 455 451
+11
+ 
+aaaaa 455 451
+4
+-
+aaaaa 455 451
+11
+ 
+aaaaa 455 451
+2
+__start___param
+aaaaa 455 451
+5
+,
+aaaaa 455 451
+11
+
+
+aaaaa 456 451
+11
+	
+aaaaa 456 451
+11
+	
+aaaaa 456 451
+11
+	
+aaaaa 456 451
+11
+	
+aaaaa 456 451
+11
+ 
+aaaaa 456 451
+11
+ 
+aaaaa 456 451
+3
+-1
+aaaaa 456 451
+5
+,
+aaaaa 456 451
+11
+ 
+aaaaa 456 451
+3
+-1
+aaaaa 456 451
+5
+,
+aaaaa 456 451
+11
+ 
+aaaaa 456 451
+2
+NULL
+aaaaa 456 451
+5
+,
+aaaaa 456 451
+11
+ 
+aaaaa 456 451
+4
+&
+aaaaa 456 451
+2
+unknown_bootoption
+aaaaa 456 451
+5
+)
+aaaaa 456 451
+5
+;
+aaaaa 456 451
+11
+
+
+aaaaa 457 451
+11
+	
+aaaaa 457 451
+1
+if
+aaaaa 457 451
+11
+ 
+aaaaa 457 451
+5
+(
+aaaaa 457 451
+4
+!
+aaaaa 457 451
+2
+IS_ERR_OR_NULL
+aaaaa 457 451
+5
+(
+aaaaa 457 451
+2
+after_dashes
+aaaaa 457 451
+5
+)
+aaaaa 457 451
+5
+)
+aaaaa 457 451
+11
+
+
+aaaaa 458 451
+11
+	
+aaaaa 458 451
+11
+	
+aaaaa 458 451
+2
+parse_args
+aaaaa 458 451
+5
+(
+aaaaa 458 451
+9
+"Setting init args"
+aaaaa 458 451
+5
+,
+aaaaa 458 451
+11
+ 
+aaaaa 458 451
+2
+after_dashes
+aaaaa 458 451
+5
+,
+aaaaa 458 451
+11
+ 
+aaaaa 458 451
+2
+NULL
+aaaaa 458 451
+5
+,
+aaaaa 458 451
+11
+ 
+aaaaa 458 451
+3
+0
+aaaaa 458 451
+5
+,
+aaaaa 458 451
+11
+ 
+aaaaa 458 451
+3
+-1
+aaaaa 458 451
+5
+,
+aaaaa 458 451
+11
+ 
+aaaaa 458 451
+3
+-1
+aaaaa 458 451
+5
+,
+aaaaa 458 451
+11
+
+
+aaaaa 459 451
+11
+	
+aaaaa 459 451
+11
+	
+aaaaa 459 451
+11
+	
+aaaaa 459 451
+11
+ 
+aaaaa 459 451
+11
+ 
+aaaaa 459 451
+11
+ 
+aaaaa 459 451
+2
+NULL
+aaaaa 459 451
+5
+,
+aaaaa 459 451
+11
+ 
+aaaaa 459 451
+2
+set_init_arg
+aaaaa 459 451
+5
+)
+aaaaa 459 451
+5
+;
+aaaaa 459 451
+11
+
+
+aaaaa 460 451
+11
+
+
+new line counter reached: 461
+aaaaa 461 461
+11
+	
+aaaaa 461 461
+2
+jump_label_init
+aaaaa 461 461
+5
+(
+aaaaa 461 461
+5
+)
+aaaaa 461 461
+5
+;
+aaaaa 461 461
+11
+
+
+aaaaa 462 461
+11
+
+
+aaaaa 463 461
+11
+	
+aaaaa 463 461
+6
+/*
+	 * These use large bootmem allocations and must precede
+	 * kmem_cache_init()
+	 */
+aaaaa 466 461
+11
+
+
+aaaaa 467 461
+11
+	
+aaaaa 467 461
+2
+setup_log_buf
+aaaaa 467 461
+5
+(
+aaaaa 467 461
+3
+0
+aaaaa 467 461
+5
+)
+aaaaa 467 461
+5
+;
+aaaaa 467 461
+11
+
+
+aaaaa 468 461
+11
+	
+aaaaa 468 461
+2
+pidhash_init
+aaaaa 468 461
+5
+(
+aaaaa 468 461
+5
+)
+aaaaa 468 461
+5
+;
+aaaaa 468 461
+11
+
+
+aaaaa 469 461
+11
+	
+aaaaa 469 461
+2
+vfs_caches_init_early
+aaaaa 469 461
+5
+(
+aaaaa 469 461
+5
+)
+aaaaa 469 461
+5
+;
+aaaaa 469 461
+11
+
+
+aaaaa 470 461
+11
+	
+aaaaa 470 461
+2
+sort_main_extable
+aaaaa 470 461
+5
+(
+aaaaa 470 461
+5
+)
+aaaaa 470 461
+5
+;
+aaaaa 470 461
+11
+
+
+new line counter reached: 471
+aaaaa 471 471
+11
+	
+aaaaa 471 471
+2
+trap_init
+aaaaa 471 471
+5
+(
+aaaaa 471 471
+5
+)
+aaaaa 471 471
+5
+;
+aaaaa 471 471
+11
+
+
+aaaaa 472 471
+11
+	
+aaaaa 472 471
+2
+mm_init
+aaaaa 472 471
+5
+(
+aaaaa 472 471
+5
+)
+aaaaa 472 471
+5
+;
+aaaaa 472 471
+11
+
+
+aaaaa 473 471
+11
+
+
+aaaaa 474 471
+11
+	
+aaaaa 474 471
+2
+ftrace_init
+aaaaa 474 471
+5
+(
+aaaaa 474 471
+5
+)
+aaaaa 474 471
+5
+;
+aaaaa 474 471
+11
+
+
+aaaaa 475 471
+11
+
+
+aaaaa 476 471
+11
+	
+aaaaa 476 471
+6
+/* trace_printk can be enabled here */
+aaaaa 476 471
+11
+
+
+aaaaa 477 471
+11
+	
+aaaaa 477 471
+2
+early_trace_init
+aaaaa 477 471
+5
+(
+aaaaa 477 471
+5
+)
+aaaaa 477 471
+5
+;
+aaaaa 477 471
+11
+
+
+aaaaa 478 471
+11
+
+
+aaaaa 479 471
+11
+	
+aaaaa 479 471
+6
+/*
+	 * Set up the scheduler prior starting any interrupts (such as the
+	 * timer interrupt). Full topology setup happens at smp_init()
+	 * time - but meanwhile we still have a functioning scheduler.
+	 */
+new line counter reached: 483
+aaaaa 483 481
+11
+
+
+aaaaa 484 481
+11
+	
+aaaaa 484 481
+2
+sched_init
+aaaaa 484 481
+5
+(
+aaaaa 484 481
+5
+)
+aaaaa 484 481
+5
+;
+aaaaa 484 481
+11
+
+
+aaaaa 485 481
+11
+	
+aaaaa 485 481
+6
+/*
+	 * Disable preemption - early bootup scheduling is extremely
+	 * fragile until we cpu_idle() for the first time.
+	 */
+aaaaa 488 481
+11
+
+
+aaaaa 489 481
+11
+	
+aaaaa 489 481
+2
+preempt_disable
+aaaaa 489 481
+5
+(
+aaaaa 489 481
+5
+)
+aaaaa 489 481
+5
+;
+aaaaa 489 481
+11
+
+
+aaaaa 490 481
+11
+	
+aaaaa 490 481
+1
+if
+aaaaa 490 481
+11
+ 
+aaaaa 490 481
+5
+(
+aaaaa 490 481
+2
+WARN
+aaaaa 490 481
+5
+(
+aaaaa 490 481
+4
+!
+aaaaa 490 481
+2
+irqs_disabled
+aaaaa 490 481
+5
+(
+aaaaa 490 481
+5
+)
+aaaaa 490 481
+5
+,
+aaaaa 490 481
+11
+
+
+new line counter reached: 491
+aaaaa 491 491
+11
+	
+aaaaa 491 491
+11
+	
+aaaaa 491 491
+11
+ 
+aaaaa 491 491
+9
+"Interrupts were enabled *very* early, fixing it\n"
+aaaaa 491 491
+5
+)
+aaaaa 491 491
+5
+)
+aaaaa 491 491
+11
+
+
+aaaaa 492 491
+11
+	
+aaaaa 492 491
+11
+	
+aaaaa 492 491
+2
+local_irq_disable
+aaaaa 492 491
+5
+(
+aaaaa 492 491
+5
+)
+aaaaa 492 491
+5
+;
+aaaaa 492 491
+11
+
+
+aaaaa 493 491
+11
+	
+aaaaa 493 491
+2
+radix_tree_init
+aaaaa 493 491
+5
+(
+aaaaa 493 491
+5
+)
+aaaaa 493 491
+5
+;
+aaaaa 493 491
+11
+
+
+aaaaa 494 491
+11
+
+
+aaaaa 495 491
+11
+	
+aaaaa 495 491
+6
+/*
+	 * Allow workqueue creation and work item queueing/cancelling
+	 * early.  Work item execution depends on kthreads and starts after
+	 * workqueue_init().
+	 */
+aaaaa 499 491
+11
+
+
+aaaaa 500 491
+11
+	
+aaaaa 500 491
+2
+workqueue_init_early
+aaaaa 500 491
+5
+(
+aaaaa 500 491
+5
+)
+aaaaa 500 491
+5
+;
+aaaaa 500 491
+11
+
+
+new line counter reached: 501
+aaaaa 501 501
+11
+
+
+aaaaa 502 501
+11
+	
+aaaaa 502 501
+2
+rcu_init
+aaaaa 502 501
+5
+(
+aaaaa 502 501
+5
+)
+aaaaa 502 501
+5
+;
+aaaaa 502 501
+11
+
+
+aaaaa 503 501
+11
+
+
+aaaaa 504 501
+11
+	
+aaaaa 504 501
+6
+/* Trace events are available after this */
+aaaaa 504 501
+11
+
+
+aaaaa 505 501
+11
+	
+aaaaa 505 501
+2
+trace_init
+aaaaa 505 501
+5
+(
+aaaaa 505 501
+5
+)
+aaaaa 505 501
+5
+;
+aaaaa 505 501
+11
+
+
+aaaaa 506 501
+11
+
+
+aaaaa 507 501
+11
+	
+aaaaa 507 501
+2
+context_tracking_init
+aaaaa 507 501
+5
+(
+aaaaa 507 501
+5
+)
+aaaaa 507 501
+5
+;
+aaaaa 507 501
+11
+
+
+aaaaa 508 501
+11
+	
+aaaaa 508 501
+6
+/* init some links before init_ISA_irqs() */
+aaaaa 508 501
+11
+
+
+aaaaa 509 501
+11
+	
+aaaaa 509 501
+2
+early_irq_init
+aaaaa 509 501
+5
+(
+aaaaa 509 501
+5
+)
+aaaaa 509 501
+5
+;
+aaaaa 509 501
+11
+
+
+aaaaa 510 501
+11
+	
+aaaaa 510 501
+2
+init_IRQ
+aaaaa 510 501
+5
+(
+aaaaa 510 501
+5
+)
+aaaaa 510 501
+5
+;
+aaaaa 510 501
+11
+
+
+new line counter reached: 511
+aaaaa 511 511
+11
+	
+aaaaa 511 511
+2
+tick_init
+aaaaa 511 511
+5
+(
+aaaaa 511 511
+5
+)
+aaaaa 511 511
+5
+;
+aaaaa 511 511
+11
+
+
+aaaaa 512 511
+11
+	
+aaaaa 512 511
+2
+rcu_init_nohz
+aaaaa 512 511
+5
+(
+aaaaa 512 511
+5
+)
+aaaaa 512 511
+5
+;
+aaaaa 512 511
+11
+
+
+aaaaa 513 511
+11
+	
+aaaaa 513 511
+2
+init_timers
+aaaaa 513 511
+5
+(
+aaaaa 513 511
+5
+)
+aaaaa 513 511
+5
+;
+aaaaa 513 511
+11
+
+
+aaaaa 514 511
+11
+	
+aaaaa 514 511
+2
+hrtimers_init
+aaaaa 514 511
+5
+(
+aaaaa 514 511
+5
+)
+aaaaa 514 511
+5
+;
+aaaaa 514 511
+11
+
+
+aaaaa 515 511
+11
+	
+aaaaa 515 511
+2
+softirq_init
+aaaaa 515 511
+5
+(
+aaaaa 515 511
+5
+)
+aaaaa 515 511
+5
+;
+aaaaa 515 511
+11
+
+
+aaaaa 516 511
+11
+	
+aaaaa 516 511
+2
+timekeeping_init
+aaaaa 516 511
+5
+(
+aaaaa 516 511
+5
+)
+aaaaa 516 511
+5
+;
+aaaaa 516 511
+11
+
+
+aaaaa 517 511
+11
+	
+aaaaa 517 511
+2
+time_init
+aaaaa 517 511
+5
+(
+aaaaa 517 511
+5
+)
+aaaaa 517 511
+5
+;
+aaaaa 517 511
+11
+
+
+aaaaa 518 511
+11
+	
+aaaaa 518 511
+2
+sched_clock_postinit
+aaaaa 518 511
+5
+(
+aaaaa 518 511
+5
+)
+aaaaa 518 511
+5
+;
+aaaaa 518 511
+11
+
+
+aaaaa 519 511
+11
+	
+aaaaa 519 511
+2
+printk_safe_init
+aaaaa 519 511
+5
+(
+aaaaa 519 511
+5
+)
+aaaaa 519 511
+5
+;
+aaaaa 519 511
+11
+
+
+aaaaa 520 511
+11
+	
+aaaaa 520 511
+2
+perf_event_init
+aaaaa 520 511
+5
+(
+aaaaa 520 511
+5
+)
+aaaaa 520 511
+5
+;
+aaaaa 520 511
+11
+
+
+new line counter reached: 521
+aaaaa 521 521
+11
+	
+aaaaa 521 521
+2
+profile_init
+aaaaa 521 521
+5
+(
+aaaaa 521 521
+5
+)
+aaaaa 521 521
+5
+;
+aaaaa 521 521
+11
+
+
+aaaaa 522 521
+11
+	
+aaaaa 522 521
+2
+call_function_init
+aaaaa 522 521
+5
+(
+aaaaa 522 521
+5
+)
+aaaaa 522 521
+5
+;
+aaaaa 522 521
+11
+
+
+aaaaa 523 521
+11
+	
+aaaaa 523 521
+2
+WARN
+aaaaa 523 521
+5
+(
+aaaaa 523 521
+4
+!
+aaaaa 523 521
+2
+irqs_disabled
+aaaaa 523 521
+5
+(
+aaaaa 523 521
+5
+)
+aaaaa 523 521
+5
+,
+aaaaa 523 521
+11
+ 
+aaaaa 523 521
+9
+"Interrupts were enabled early\n"
+aaaaa 523 521
+5
+)
+aaaaa 523 521
+5
+;
+aaaaa 523 521
+11
+
+
+aaaaa 524 521
+11
+	
+aaaaa 524 521
+2
+early_boot_irqs_disabled
+aaaaa 524 521
+11
+ 
+aaaaa 524 521
+5
+=
+aaaaa 524 521
+11
+ 
+aaaaa 524 521
+2
+false
+aaaaa 524 521
+5
+;
+aaaaa 524 521
+11
+
+
+aaaaa 525 521
+11
+	
+aaaaa 525 521
+2
+local_irq_enable
+aaaaa 525 521
+5
+(
+aaaaa 525 521
+5
+)
+aaaaa 525 521
+5
+;
+aaaaa 525 521
+11
+
+
+aaaaa 526 521
+11
+
+
+aaaaa 527 521
+11
+	
+aaaaa 527 521
+2
+kmem_cache_init_late
+aaaaa 527 521
+5
+(
+aaaaa 527 521
+5
+)
+aaaaa 527 521
+5
+;
+aaaaa 527 521
+11
+
+
+aaaaa 528 521
+11
+
+
+aaaaa 529 521
+11
+	
+aaaaa 529 521
+6
+/*
+	 * HACK ALERT! This is early. We're enabling the console before
+	 * we've done PCI setups etc, and console_init() must be aware of
+	 * this. But we do want output early, in case something goes wrong.
+	 */
+new line counter reached: 533
+aaaaa 533 531
+11
+
+
+aaaaa 534 531
+11
+	
+aaaaa 534 531
+2
+console_init
+aaaaa 534 531
+5
+(
+aaaaa 534 531
+5
+)
+aaaaa 534 531
+5
+;
+aaaaa 534 531
+11
+
+
+aaaaa 535 531
+11
+	
+aaaaa 535 531
+1
+if
+aaaaa 535 531
+11
+ 
+aaaaa 535 531
+5
+(
+aaaaa 535 531
+2
+panic_later
+aaaaa 535 531
+5
+)
+aaaaa 535 531
+11
+
+
+aaaaa 536 531
+11
+	
+aaaaa 536 531
+11
+	
+aaaaa 536 531
+2
+panic
+aaaaa 536 531
+5
+(
+aaaaa 536 531
+9
+"Too many boot %s vars at `%s'"
+aaaaa 536 531
+5
+,
+aaaaa 536 531
+11
+ 
+aaaaa 536 531
+2
+panic_later
+aaaaa 536 531
+5
+,
+aaaaa 536 531
+11
+
+
+aaaaa 537 531
+11
+	
+aaaaa 537 531
+11
+	
+aaaaa 537 531
+11
+ 
+aaaaa 537 531
+11
+ 
+aaaaa 537 531
+11
+ 
+aaaaa 537 531
+11
+ 
+aaaaa 537 531
+11
+ 
+aaaaa 537 531
+11
+ 
+aaaaa 537 531
+2
+panic_param
+aaaaa 537 531
+5
+)
+aaaaa 537 531
+5
+;
+aaaaa 537 531
+11
+
+
+aaaaa 538 531
+11
+
+
+aaaaa 539 531
+11
+	
+aaaaa 539 531
+2
+lockdep_info
+aaaaa 539 531
+5
+(
+aaaaa 539 531
+5
+)
+aaaaa 539 531
+5
+;
+aaaaa 539 531
+11
+
+
+aaaaa 540 531
+11
+
+
+new line counter reached: 541
+aaaaa 541 541
+11
+	
+aaaaa 541 541
+6
+/*
+	 * Need to run this when irqs are enabled, because it wants
+	 * to self-test [hard/soft]-irqs on/off lock inversion bugs
+	 * too:
+	 */
+aaaaa 545 541
+11
+
+
+aaaaa 546 541
+11
+	
+aaaaa 546 541
+2
+locking_selftest
+aaaaa 546 541
+5
+(
+aaaaa 546 541
+5
+)
+aaaaa 546 541
+5
+;
+aaaaa 546 541
+11
+
+
+aaaaa 547 541
+11
+
+
+aaaaa 548 541
+11
+	
+aaaaa 548 541
+6
+/*
+	 * This needs to be called before any devices perform DMA
+	 * operations that might use the SWIOTLB bounce buffers. It will
+	 * mark the bounce buffers as decrypted so that their usage will
+	 * not cause "plain-text" data to be decrypted when accessed.
+	 */
+new line counter reached: 553
+aaaaa 553 551
+11
+
+
+aaaaa 554 551
+11
+	
+aaaaa 554 551
+2
+mem_encrypt_init
+aaaaa 554 551
+5
+(
+aaaaa 554 551
+5
+)
+aaaaa 554 551
+5
+;
+aaaaa 554 551
+11
+
+
+aaaaa 555 551
+11
+
+
+aaaaa 556 551
+7
+#ifdef CONFIG_BLK_DEV_INITRD
+aaaaa 556 551
+11
+
+
+aaaaa 557 551
+11
+	
+aaaaa 557 551
+1
+if
+aaaaa 557 551
+11
+ 
+aaaaa 557 551
+5
+(
+aaaaa 557 551
+2
+initrd_start
+aaaaa 557 551
+11
+ 
+aaaaa 557 551
+4
+&&
+aaaaa 557 551
+11
+ 
+aaaaa 557 551
+4
+!
+aaaaa 557 551
+2
+initrd_below_start_ok
+aaaaa 557 551
+11
+ 
+aaaaa 557 551
+4
+&&
+aaaaa 557 551
+11
+
+
+aaaaa 558 551
+11
+	
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+2
+page_to_pfn
+aaaaa 558 551
+5
+(
+aaaaa 558 551
+2
+virt_to_page
+aaaaa 558 551
+5
+(
+aaaaa 558 551
+5
+(
+aaaaa 558 551
+1
+void
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+4
+*
+aaaaa 558 551
+5
+)
+aaaaa 558 551
+2
+initrd_start
+aaaaa 558 551
+5
+)
+aaaaa 558 551
+5
+)
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+4
+<
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+2
+min_low_pfn
+aaaaa 558 551
+5
+)
+aaaaa 558 551
+11
+ 
+aaaaa 558 551
+5
+{
+aaaaa 558 551
+11
+
+
+aaaaa 559 551
+11
+	
+aaaaa 559 551
+11
+	
+aaaaa 559 551
+2
+pr_crit
+aaaaa 559 551
+5
+(
+aaaaa 559 551
+9
+"initrd overwritten (0x%08lx < 0x%08lx) - disabling it.\n"
+aaaaa 559 551
+5
+,
+aaaaa 559 551
+11
+
+
+aaaaa 560 551
+11
+	
+aaaaa 560 551
+11
+	
+aaaaa 560 551
+11
+ 
+aaaaa 560 551
+11
+ 
+aaaaa 560 551
+11
+ 
+aaaaa 560 551
+11
+ 
+aaaaa 560 551
+2
+page_to_pfn
+aaaaa 560 551
+5
+(
+aaaaa 560 551
+2
+virt_to_page
+aaaaa 560 551
+5
+(
+aaaaa 560 551
+5
+(
+aaaaa 560 551
+1
+void
+aaaaa 560 551
+11
+ 
+aaaaa 560 551
+4
+*
+aaaaa 560 551
+5
+)
+aaaaa 560 551
+2
+initrd_start
+aaaaa 560 551
+5
+)
+aaaaa 560 551
+5
+)
+aaaaa 560 551
+5
+,
+aaaaa 560 551
+11
+
+
+new line counter reached: 561
+aaaaa 561 561
+11
+	
+aaaaa 561 561
+11
+	
+aaaaa 561 561
+11
+ 
+aaaaa 561 561
+11
+ 
+aaaaa 561 561
+11
+ 
+aaaaa 561 561
+11
+ 
+aaaaa 561 561
+2
+min_low_pfn
+aaaaa 561 561
+5
+)
+aaaaa 561 561
+5
+;
+aaaaa 561 561
+11
+
+
+aaaaa 562 561
+11
+	
+aaaaa 562 561
+11
+	
+aaaaa 562 561
+2
+initrd_start
+aaaaa 562 561
+11
+ 
+aaaaa 562 561
+5
+=
+aaaaa 562 561
+11
+ 
+aaaaa 562 561
+3
+0
+aaaaa 562 561
+5
+;
+aaaaa 562 561
+11
+
+
+aaaaa 563 561
+11
+	
+aaaaa 563 561
+5
+}
+aaaaa 563 561
+11
+
+
+aaaaa 564 561
+7
+#endif
+aaaaa 564 561
+11
+
+
+aaaaa 565 561
+11
+	
+aaaaa 565 561
+2
+page_ext_init
+aaaaa 565 561
+5
+(
+aaaaa 565 561
+5
+)
+aaaaa 565 561
+5
+;
+aaaaa 565 561
+11
+
+
+aaaaa 566 561
+11
+	
+aaaaa 566 561
+2
+kmemleak_init
+aaaaa 566 561
+5
+(
+aaaaa 566 561
+5
+)
+aaaaa 566 561
+5
+;
+aaaaa 566 561
+11
+
+
+aaaaa 567 561
+11
+	
+aaaaa 567 561
+2
+debug_objects_mem_init
+aaaaa 567 561
+5
+(
+aaaaa 567 561
+5
+)
+aaaaa 567 561
+5
+;
+aaaaa 567 561
+11
+
+
+aaaaa 568 561
+11
+	
+aaaaa 568 561
+2
+setup_per_cpu_pageset
+aaaaa 568 561
+5
+(
+aaaaa 568 561
+5
+)
+aaaaa 568 561
+5
+;
+aaaaa 568 561
+11
+
+
+aaaaa 569 561
+11
+	
+aaaaa 569 561
+2
+numa_policy_init
+aaaaa 569 561
+5
+(
+aaaaa 569 561
+5
+)
+aaaaa 569 561
+5
+;
+aaaaa 569 561
+11
+
+
+aaaaa 570 561
+11
+	
+aaaaa 570 561
+1
+if
+aaaaa 570 561
+11
+ 
+aaaaa 570 561
+5
+(
+aaaaa 570 561
+2
+late_time_init
+aaaaa 570 561
+5
+)
+aaaaa 570 561
+11
+
+
+new line counter reached: 571
+aaaaa 571 571
+11
+	
+aaaaa 571 571
+11
+	
+aaaaa 571 571
+2
+late_time_init
+aaaaa 571 571
+5
+(
+aaaaa 571 571
+5
+)
+aaaaa 571 571
+5
+;
+aaaaa 571 571
+11
+
+
+aaaaa 572 571
+11
+	
+aaaaa 572 571
+2
+calibrate_delay
+aaaaa 572 571
+5
+(
+aaaaa 572 571
+5
+)
+aaaaa 572 571
+5
+;
+aaaaa 572 571
+11
+
+
+aaaaa 573 571
+11
+	
+aaaaa 573 571
+2
+pidmap_init
+aaaaa 573 571
+5
+(
+aaaaa 573 571
+5
+)
+aaaaa 573 571
+5
+;
+aaaaa 573 571
+11
+
+
+aaaaa 574 571
+11
+	
+aaaaa 574 571
+2
+anon_vma_init
+aaaaa 574 571
+5
+(
+aaaaa 574 571
+5
+)
+aaaaa 574 571
+5
+;
+aaaaa 574 571
+11
+
+
+aaaaa 575 571
+11
+	
+aaaaa 575 571
+2
+acpi_early_init
+aaaaa 575 571
+5
+(
+aaaaa 575 571
+5
+)
+aaaaa 575 571
+5
+;
+aaaaa 575 571
+11
+
+
+aaaaa 576 571
+7
+#ifdef CONFIG_X86
+aaaaa 576 571
+11
+
+
+aaaaa 577 571
+11
+	
+aaaaa 577 571
+1
+if
+aaaaa 577 571
+11
+ 
+aaaaa 577 571
+5
+(
+aaaaa 577 571
+2
+efi_enabled
+aaaaa 577 571
+5
+(
+aaaaa 577 571
+2
+EFI_RUNTIME_SERVICES
+aaaaa 577 571
+5
+)
+aaaaa 577 571
+5
+)
+aaaaa 577 571
+11
+
+
+aaaaa 578 571
+11
+	
+aaaaa 578 571
+11
+	
+aaaaa 578 571
+2
+efi_enter_virtual_mode
+aaaaa 578 571
+5
+(
+aaaaa 578 571
+5
+)
+aaaaa 578 571
+5
+;
+aaaaa 578 571
+11
+
+
+aaaaa 579 571
+7
+#endif
+aaaaa 579 571
+11
+
+
+aaaaa 580 571
+7
+#ifdef CONFIG_X86_ESPFIX64
+aaaaa 580 571
+11
+
+
+new line counter reached: 581
+aaaaa 581 581
+11
+	
+aaaaa 581 581
+6
+/* Should be run before the first non-init thread is created */
+aaaaa 581 581
+11
+
+
+aaaaa 582 581
+11
+	
+aaaaa 582 581
+2
+init_espfix_bsp
+aaaaa 582 581
+5
+(
+aaaaa 582 581
+5
+)
+aaaaa 582 581
+5
+;
+aaaaa 582 581
+11
+
+
+aaaaa 583 581
+7
+#endif
+aaaaa 583 581
+11
+
+
+aaaaa 584 581
+11
+	
+aaaaa 584 581
+2
+thread_stack_cache_init
+aaaaa 584 581
+5
+(
+aaaaa 584 581
+5
+)
+aaaaa 584 581
+5
+;
+aaaaa 584 581
+11
+
+
+aaaaa 585 581
+11
+	
+aaaaa 585 581
+2
+cred_init
+aaaaa 585 581
+5
+(
+aaaaa 585 581
+5
+)
+aaaaa 585 581
+5
+;
+aaaaa 585 581
+11
+
+
+aaaaa 586 581
+11
+	
+aaaaa 586 581
+2
+fork_init
+aaaaa 586 581
+5
+(
+aaaaa 586 581
+5
+)
+aaaaa 586 581
+5
+;
+aaaaa 586 581
+11
+
+
+aaaaa 587 581
+11
+	
+aaaaa 587 581
+2
+proc_caches_init
+aaaaa 587 581
+5
+(
+aaaaa 587 581
+5
+)
+aaaaa 587 581
+5
+;
+aaaaa 587 581
+11
+
+
+aaaaa 588 581
+11
+	
+aaaaa 588 581
+2
+buffer_init
+aaaaa 588 581
+5
+(
+aaaaa 588 581
+5
+)
+aaaaa 588 581
+5
+;
+aaaaa 588 581
+11
+
+
+aaaaa 589 581
+11
+	
+aaaaa 589 581
+2
+key_init
+aaaaa 589 581
+5
+(
+aaaaa 589 581
+5
+)
+aaaaa 589 581
+5
+;
+aaaaa 589 581
+11
+
+
+aaaaa 590 581
+11
+	
+aaaaa 590 581
+2
+security_init
+aaaaa 590 581
+5
+(
+aaaaa 590 581
+5
+)
+aaaaa 590 581
+5
+;
+aaaaa 590 581
+11
+
+
+new line counter reached: 591
+aaaaa 591 591
+11
+	
+aaaaa 591 591
+2
+dbg_late_init
+aaaaa 591 591
+5
+(
+aaaaa 591 591
+5
+)
+aaaaa 591 591
+5
+;
+aaaaa 591 591
+11
+
+
+aaaaa 592 591
+11
+	
+aaaaa 592 591
+2
+vfs_caches_init
+aaaaa 592 591
+5
+(
+aaaaa 592 591
+5
+)
+aaaaa 592 591
+5
+;
+aaaaa 592 591
+11
+
+
+aaaaa 593 591
+11
+	
+aaaaa 593 591
+2
+pagecache_init
+aaaaa 593 591
+5
+(
+aaaaa 593 591
+5
+)
+aaaaa 593 591
+5
+;
+aaaaa 593 591
+11
+
+
+aaaaa 594 591
+11
+	
+aaaaa 594 591
+2
+signals_init
+aaaaa 594 591
+5
+(
+aaaaa 594 591
+5
+)
+aaaaa 594 591
+5
+;
+aaaaa 594 591
+11
+
+
+aaaaa 595 591
+11
+	
+aaaaa 595 591
+2
+proc_root_init
+aaaaa 595 591
+5
+(
+aaaaa 595 591
+5
+)
+aaaaa 595 591
+5
+;
+aaaaa 595 591
+11
+
+
+aaaaa 596 591
+11
+	
+aaaaa 596 591
+2
+nsfs_init
+aaaaa 596 591
+5
+(
+aaaaa 596 591
+5
+)
+aaaaa 596 591
+5
+;
+aaaaa 596 591
+11
+
+
+aaaaa 597 591
+11
+	
+aaaaa 597 591
+2
+cpuset_init
+aaaaa 597 591
+5
+(
+aaaaa 597 591
+5
+)
+aaaaa 597 591
+5
+;
+aaaaa 597 591
+11
+
+
+aaaaa 598 591
+11
+	
+aaaaa 598 591
+2
+cgroup_init
+aaaaa 598 591
+5
+(
+aaaaa 598 591
+5
+)
+aaaaa 598 591
+5
+;
+aaaaa 598 591
+11
+
+
+aaaaa 599 591
+11
+	
+aaaaa 599 591
+2
+taskstats_init_early
+aaaaa 599 591
+5
+(
+aaaaa 599 591
+5
+)
+aaaaa 599 591
+5
+;
+aaaaa 599 591
+11
+
+
+aaaaa 600 591
+11
+	
+aaaaa 600 591
+2
+delayacct_init
+aaaaa 600 591
+5
+(
+aaaaa 600 591
+5
+)
+aaaaa 600 591
+5
+;
+aaaaa 600 591
+11
+
+
+new line counter reached: 601
+aaaaa 601 601
+11
+
+
+aaaaa 602 601
+11
+	
+aaaaa 602 601
+2
+check_bugs
+aaaaa 602 601
+5
+(
+aaaaa 602 601
+5
+)
+aaaaa 602 601
+5
+;
+aaaaa 602 601
+11
+
+
+aaaaa 603 601
+11
+
+
+aaaaa 604 601
+11
+	
+aaaaa 604 601
+2
+acpi_subsystem_init
+aaaaa 604 601
+5
+(
+aaaaa 604 601
+5
+)
+aaaaa 604 601
+5
+;
+aaaaa 604 601
+11
+
+
+aaaaa 605 601
+11
+	
+aaaaa 605 601
+2
+arch_post_acpi_subsys_init
+aaaaa 605 601
+5
+(
+aaaaa 605 601
+5
+)
+aaaaa 605 601
+5
+;
+aaaaa 605 601
+11
+
+
+aaaaa 606 601
+11
+	
+aaaaa 606 601
+2
+sfi_init_late
+aaaaa 606 601
+5
+(
+aaaaa 606 601
+5
+)
+aaaaa 606 601
+5
+;
+aaaaa 606 601
+11
+
+
+aaaaa 607 601
+11
+
+
+aaaaa 608 601
+11
+	
+aaaaa 608 601
+1
+if
+aaaaa 608 601
+11
+ 
+aaaaa 608 601
+5
+(
+aaaaa 608 601
+2
+efi_enabled
+aaaaa 608 601
+5
+(
+aaaaa 608 601
+2
+EFI_RUNTIME_SERVICES
+aaaaa 608 601
+5
+)
+aaaaa 608 601
+5
+)
+aaaaa 608 601
+11
+ 
+aaaaa 608 601
+5
+{
+aaaaa 608 601
+11
+
+
+aaaaa 609 601
+11
+	
+aaaaa 609 601
+11
+	
+aaaaa 609 601
+2
+efi_free_boot_services
+aaaaa 609 601
+5
+(
+aaaaa 609 601
+5
+)
+aaaaa 609 601
+5
+;
+aaaaa 609 601
+11
+
+
+aaaaa 610 601
+11
+	
+aaaaa 610 601
+5
+}
+aaaaa 610 601
+11
+
+
+new line counter reached: 611
+aaaaa 611 611
+11
+
+
+aaaaa 612 611
+11
+	
+aaaaa 612 611
+6
+/* Do the rest non-__init'ed, we're now alive */
+aaaaa 612 611
+11
+
+
+aaaaa 613 611
+11
+	
+aaaaa 613 611
+2
+rest_init
+aaaaa 613 611
+5
+(
+aaaaa 613 611
+5
+)
+aaaaa 613 611
+5
+;
+aaaaa 613 611
+11
+
+
+aaaaa 614 611
+5
+}
+aaaaa 614 611
+11
+
+
+aaaaa 615 611
+11
+
+
+aaaaa 616 611
+6
+/* Call all constructor functions linked into the kernel. */
+aaaaa 616 611
+11
+
+
+aaaaa 617 611
+1
+static
+aaaaa 617 611
+11
+ 
+aaaaa 617 611
+1
+void
+aaaaa 617 611
+11
+ 
+aaaaa 617 611
+2
+__init
+aaaaa 617 611
+11
+ 
+aaaaa 617 611
+2
+do_ctors
+aaaaa 617 611
+5
+(
+aaaaa 617 611
+1
+void
+aaaaa 617 611
+5
+)
+aaaaa 617 611
+11
+
+
+aaaaa 618 611
+5
+{
+aaaaa 618 611
+11
+
+
+aaaaa 619 611
+7
+#ifdef CONFIG_CONSTRUCTORS
+aaaaa 619 611
+11
+
+
+aaaaa 620 611
+11
+	
+aaaaa 620 611
+2
+ctor_fn_t
+aaaaa 620 611
+11
+ 
+aaaaa 620 611
+4
+*
+aaaaa 620 611
+2
+fn
+aaaaa 620 611
+11
+ 
+aaaaa 620 611
+5
+=
+aaaaa 620 611
+11
+ 
+aaaaa 620 611
+5
+(
+aaaaa 620 611
+2
+ctor_fn_t
+aaaaa 620 611
+11
+ 
+aaaaa 620 611
+4
+*
+aaaaa 620 611
+5
+)
+aaaaa 620 611
+11
+ 
+aaaaa 620 611
+2
+__ctors_start
+aaaaa 620 611
+5
+;
+aaaaa 620 611
+11
+
+
+new line counter reached: 621
+aaaaa 621 621
+11
+
+
+aaaaa 622 621
+11
+	
+aaaaa 622 621
+1
+for
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+5
+(
+aaaaa 622 621
+5
+;
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+2
+fn
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+4
+<
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+5
+(
+aaaaa 622 621
+2
+ctor_fn_t
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+4
+*
+aaaaa 622 621
+5
+)
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+2
+__ctors_end
+aaaaa 622 621
+5
+;
+aaaaa 622 621
+11
+ 
+aaaaa 622 621
+2
+fn
+aaaaa 622 621
+4
+++
+aaaaa 622 621
+5
+)
+aaaaa 622 621
+11
+
+
+aaaaa 623 621
+11
+	
+aaaaa 623 621
+11
+	
+aaaaa 623 621
+5
+(
+aaaaa 623 621
+4
+*
+aaaaa 623 621
+2
+fn
+aaaaa 623 621
+5
+)
+aaaaa 623 621
+5
+(
+aaaaa 623 621
+5
+)
+aaaaa 623 621
+5
+;
+aaaaa 623 621
+11
+
+
+aaaaa 624 621
+7
+#endif
+aaaaa 624 621
+11
+
+
+aaaaa 625 621
+5
+}
+aaaaa 625 621
+11
+
+
+aaaaa 626 621
+11
+
+
+aaaaa 627 621
+2
+bool
+aaaaa 627 621
+11
+ 
+aaaaa 627 621
+2
+initcall_debug
+aaaaa 627 621
+5
+;
+aaaaa 627 621
+11
+
+
+aaaaa 628 621
+2
+core_param
+aaaaa 628 621
+5
+(
+aaaaa 628 621
+2
+initcall_debug
+aaaaa 628 621
+5
+,
+aaaaa 628 621
+11
+ 
+aaaaa 628 621
+2
+initcall_debug
+aaaaa 628 621
+5
+,
+aaaaa 628 621
+11
+ 
+aaaaa 628 621
+2
+bool
+aaaaa 628 621
+5
+,
+aaaaa 628 621
+11
+ 
+aaaaa 628 621
+3
+0644
+aaaaa 628 621
+5
+)
+aaaaa 628 621
+5
+;
+aaaaa 628 621
+11
+
+
+aaaaa 629 621
+11
+
+
+aaaaa 630 621
+7
+#ifdef CONFIG_KALLSYMS
+aaaaa 630 621
+11
+
+
+new line counter reached: 631
+aaaaa 631 631
+1
+struct
+aaaaa 631 631
+11
+ 
+aaaaa 631 631
+2
+blacklist_entry
+aaaaa 631 631
+11
+ 
+aaaaa 631 631
+5
+{
+aaaaa 631 631
+11
+
+
+aaaaa 632 631
+11
+	
+aaaaa 632 631
+1
+struct
+aaaaa 632 631
+11
+ 
+aaaaa 632 631
+2
+list_head
+aaaaa 632 631
+11
+ 
+aaaaa 632 631
+2
+next
+aaaaa 632 631
+5
+;
+aaaaa 632 631
+11
+
+
+aaaaa 633 631
+11
+	
+aaaaa 633 631
+1
+char
+aaaaa 633 631
+11
+ 
+aaaaa 633 631
+4
+*
+aaaaa 633 631
+2
+buf
+aaaaa 633 631
+5
+;
+aaaaa 633 631
+11
+
+
+aaaaa 634 631
+5
+}
+aaaaa 634 631
+5
+;
+aaaaa 634 631
+11
+
+
+aaaaa 635 631
+11
+
+
+aaaaa 636 631
+1
+static
+aaaaa 636 631
+11
+ 
+aaaaa 636 631
+2
+__initdata_or_module
+aaaaa 636 631
+11
+ 
+aaaaa 636 631
+2
+LIST_HEAD
+aaaaa 636 631
+5
+(
+aaaaa 636 631
+2
+blacklisted_initcalls
+aaaaa 636 631
+5
+)
+aaaaa 636 631
+5
+;
+aaaaa 636 631
+11
+
+
+aaaaa 637 631
+11
+
+
+aaaaa 638 631
+1
+static
+aaaaa 638 631
+11
+ 
+aaaaa 638 631
+1
+int
+aaaaa 638 631
+11
+ 
+aaaaa 638 631
+2
+__init
+aaaaa 638 631
+11
+ 
+aaaaa 638 631
+2
+initcall_blacklist
+aaaaa 638 631
+5
+(
+aaaaa 638 631
+1
+char
+aaaaa 638 631
+11
+ 
+aaaaa 638 631
+4
+*
+aaaaa 638 631
+2
+str
+aaaaa 638 631
+5
+)
+aaaaa 638 631
+11
+
+
+aaaaa 639 631
+5
+{
+aaaaa 639 631
+11
+
+
+aaaaa 640 631
+11
+	
+aaaaa 640 631
+1
+char
+aaaaa 640 631
+11
+ 
+aaaaa 640 631
+4
+*
+aaaaa 640 631
+2
+str_entry
+aaaaa 640 631
+5
+;
+aaaaa 640 631
+11
+
+
+new line counter reached: 641
+aaaaa 641 641
+11
+	
+aaaaa 641 641
+1
+struct
+aaaaa 641 641
+11
+ 
+aaaaa 641 641
+2
+blacklist_entry
+aaaaa 641 641
+11
+ 
+aaaaa 641 641
+4
+*
+aaaaa 641 641
+2
+entry
+aaaaa 641 641
+5
+;
+aaaaa 641 641
+11
+
+
+aaaaa 642 641
+11
+
+
+aaaaa 643 641
+11
+	
+aaaaa 643 641
+6
+/* str argument is a comma-separated list of functions */
+aaaaa 643 641
+11
+
+
+aaaaa 644 641
+11
+	
+aaaaa 644 641
+1
+do
+aaaaa 644 641
+11
+ 
+aaaaa 644 641
+5
+{
+aaaaa 644 641
+11
+
+
+aaaaa 645 641
+11
+	
+aaaaa 645 641
+11
+	
+aaaaa 645 641
+2
+str_entry
+aaaaa 645 641
+11
+ 
+aaaaa 645 641
+5
+=
+aaaaa 645 641
+11
+ 
+aaaaa 645 641
+2
+strsep
+aaaaa 645 641
+5
+(
+aaaaa 645 641
+4
+&
+aaaaa 645 641
+2
+str
+aaaaa 645 641
+5
+,
+aaaaa 645 641
+11
+ 
+aaaaa 645 641
+9
+","
+aaaaa 645 641
+5
+)
+aaaaa 645 641
+5
+;
+aaaaa 645 641
+11
+
+
+aaaaa 646 641
+11
+	
+aaaaa 646 641
+11
+	
+aaaaa 646 641
+1
+if
+aaaaa 646 641
+11
+ 
+aaaaa 646 641
+5
+(
+aaaaa 646 641
+2
+str_entry
+aaaaa 646 641
+5
+)
+aaaaa 646 641
+11
+ 
+aaaaa 646 641
+5
+{
+aaaaa 646 641
+11
+
+
+aaaaa 647 641
+11
+	
+aaaaa 647 641
+11
+	
+aaaaa 647 641
+11
+	
+aaaaa 647 641
+2
+pr_debug
+aaaaa 647 641
+5
+(
+aaaaa 647 641
+9
+"blacklisting initcall %s\n"
+aaaaa 647 641
+5
+,
+aaaaa 647 641
+11
+ 
+aaaaa 647 641
+2
+str_entry
+aaaaa 647 641
+5
+)
+aaaaa 647 641
+5
+;
+aaaaa 647 641
+11
+
+
+aaaaa 648 641
+11
+	
+aaaaa 648 641
+11
+	
+aaaaa 648 641
+11
+	
+aaaaa 648 641
+2
+entry
+aaaaa 648 641
+11
+ 
+aaaaa 648 641
+5
+=
+aaaaa 648 641
+11
+ 
+aaaaa 648 641
+2
+alloc_bootmem
+aaaaa 648 641
+5
+(
+aaaaa 648 641
+1
+sizeof
+aaaaa 648 641
+5
+(
+aaaaa 648 641
+4
+*
+aaaaa 648 641
+2
+entry
+aaaaa 648 641
+5
+)
+aaaaa 648 641
+5
+)
+aaaaa 648 641
+5
+;
+aaaaa 648 641
+11
+
+
+aaaaa 649 641
+11
+	
+aaaaa 649 641
+11
+	
+aaaaa 649 641
+11
+	
+aaaaa 649 641
+2
+entry
+aaaaa 649 641
+4
+-
+aaaaa 649 641
+4
+>
+aaaaa 649 641
+2
+buf
+aaaaa 649 641
+11
+ 
+aaaaa 649 641
+5
+=
+aaaaa 649 641
+11
+ 
+aaaaa 649 641
+2
+alloc_bootmem
+aaaaa 649 641
+5
+(
+aaaaa 649 641
+2
+strlen
+aaaaa 649 641
+5
+(
+aaaaa 649 641
+2
+str_entry
+aaaaa 649 641
+5
+)
+aaaaa 649 641
+11
+ 
+aaaaa 649 641
+4
++
+aaaaa 649 641
+11
+ 
+aaaaa 649 641
+3
+1
+aaaaa 649 641
+5
+)
+aaaaa 649 641
+5
+;
+aaaaa 649 641
+11
+
+
+aaaaa 650 641
+11
+	
+aaaaa 650 641
+11
+	
+aaaaa 650 641
+11
+	
+aaaaa 650 641
+2
+strcpy
+aaaaa 650 641
+5
+(
+aaaaa 650 641
+2
+entry
+aaaaa 650 641
+4
+-
+aaaaa 650 641
+4
+>
+aaaaa 650 641
+2
+buf
+aaaaa 650 641
+5
+,
+aaaaa 650 641
+11
+ 
+aaaaa 650 641
+2
+str_entry
+aaaaa 650 641
+5
+)
+aaaaa 650 641
+5
+;
+aaaaa 650 641
+11
+
+
+new line counter reached: 651
+aaaaa 651 651
+11
+	
+aaaaa 651 651
+11
+	
+aaaaa 651 651
+11
+	
+aaaaa 651 651
+2
+list_add
+aaaaa 651 651
+5
+(
+aaaaa 651 651
+4
+&
+aaaaa 651 651
+2
+entry
+aaaaa 651 651
+4
+-
+aaaaa 651 651
+4
+>
+aaaaa 651 651
+2
+next
+aaaaa 651 651
+5
+,
+aaaaa 651 651
+11
+ 
+aaaaa 651 651
+4
+&
+aaaaa 651 651
+2
+blacklisted_initcalls
+aaaaa 651 651
+5
+)
+aaaaa 651 651
+5
+;
+aaaaa 651 651
+11
+
+
+aaaaa 652 651
+11
+	
+aaaaa 652 651
+11
+	
+aaaaa 652 651
+5
+}
+aaaaa 652 651
+11
+
+
+aaaaa 653 651
+11
+	
+aaaaa 653 651
+5
+}
+aaaaa 653 651
+11
+ 
+aaaaa 653 651
+1
+while
+aaaaa 653 651
+11
+ 
+aaaaa 653 651
+5
+(
+aaaaa 653 651
+2
+str_entry
+aaaaa 653 651
+5
+)
+aaaaa 653 651
+5
+;
+aaaaa 653 651
+11
+
+
+aaaaa 654 651
+11
+
+
+aaaaa 655 651
+11
+	
+aaaaa 655 651
+1
+return
+aaaaa 655 651
+11
+ 
+aaaaa 655 651
+3
+0
+aaaaa 655 651
+5
+;
+aaaaa 655 651
+11
+
+
+aaaaa 656 651
+5
+}
+aaaaa 656 651
+11
+
+
+aaaaa 657 651
+11
+
+
+aaaaa 658 651
+1
+static
+aaaaa 658 651
+11
+ 
+aaaaa 658 651
+2
+bool
+aaaaa 658 651
+11
+ 
+aaaaa 658 651
+2
+__init_or_module
+aaaaa 658 651
+11
+ 
+aaaaa 658 651
+2
+initcall_blacklisted
+aaaaa 658 651
+5
+(
+aaaaa 658 651
+2
+initcall_t
+aaaaa 658 651
+11
+ 
+aaaaa 658 651
+2
+fn
+aaaaa 658 651
+5
+)
+aaaaa 658 651
+11
+
+
+aaaaa 659 651
+5
+{
+aaaaa 659 651
+11
+
+
+aaaaa 660 651
+11
+	
+aaaaa 660 651
+1
+struct
+aaaaa 660 651
+11
+ 
+aaaaa 660 651
+2
+blacklist_entry
+aaaaa 660 651
+11
+ 
+aaaaa 660 651
+4
+*
+aaaaa 660 651
+2
+entry
+aaaaa 660 651
+5
+;
+aaaaa 660 651
+11
+
+
+new line counter reached: 661
+aaaaa 661 661
+11
+	
+aaaaa 661 661
+1
+char
+aaaaa 661 661
+11
+ 
+aaaaa 661 661
+2
+fn_name
+aaaaa 661 661
+5
+[
+aaaaa 661 661
+2
+KSYM_SYMBOL_LEN
+aaaaa 661 661
+5
+]
+aaaaa 661 661
+5
+;
+aaaaa 661 661
+11
+
+
+aaaaa 662 661
+11
+	
+aaaaa 662 661
+1
+unsigned
+aaaaa 662 661
+11
+ 
+aaaaa 662 661
+1
+long
+aaaaa 662 661
+11
+ 
+aaaaa 662 661
+2
+addr
+aaaaa 662 661
+5
+;
+aaaaa 662 661
+11
+
+
+aaaaa 663 661
+11
+
+
+aaaaa 664 661
+11
+	
+aaaaa 664 661
+1
+if
+aaaaa 664 661
+11
+ 
+aaaaa 664 661
+5
+(
+aaaaa 664 661
+2
+list_empty
+aaaaa 664 661
+5
+(
+aaaaa 664 661
+4
+&
+aaaaa 664 661
+2
+blacklisted_initcalls
+aaaaa 664 661
+5
+)
+aaaaa 664 661
+5
+)
+aaaaa 664 661
+11
+
+
+aaaaa 665 661
+11
+	
+aaaaa 665 661
+11
+	
+aaaaa 665 661
+1
+return
+aaaaa 665 661
+11
+ 
+aaaaa 665 661
+2
+false
+aaaaa 665 661
+5
+;
+aaaaa 665 661
+11
+
+
+aaaaa 666 661
+11
+
+
+aaaaa 667 661
+11
+	
+aaaaa 667 661
+2
+addr
+aaaaa 667 661
+11
+ 
+aaaaa 667 661
+5
+=
+aaaaa 667 661
+11
+ 
+aaaaa 667 661
+5
+(
+aaaaa 667 661
+1
+unsigned
+aaaaa 667 661
+11
+ 
+aaaaa 667 661
+1
+long
+aaaaa 667 661
+5
+)
+aaaaa 667 661
+11
+ 
+aaaaa 667 661
+2
+dereference_function_descriptor
+aaaaa 667 661
+5
+(
+aaaaa 667 661
+2
+fn
+aaaaa 667 661
+5
+)
+aaaaa 667 661
+5
+;
+aaaaa 667 661
+11
+
+
+aaaaa 668 661
+11
+	
+aaaaa 668 661
+2
+sprint_symbol_no_offset
+aaaaa 668 661
+5
+(
+aaaaa 668 661
+2
+fn_name
+aaaaa 668 661
+5
+,
+aaaaa 668 661
+11
+ 
+aaaaa 668 661
+2
+addr
+aaaaa 668 661
+5
+)
+aaaaa 668 661
+5
+;
+aaaaa 668 661
+11
+
+
+aaaaa 669 661
+11
+
+
+aaaaa 670 661
+11
+	
+aaaaa 670 661
+6
+/*
+	 * fn will be "function_name [module_name]" where [module_name] is not
+	 * displayed for built-in init functions.  Strip off the [module_name].
+	 */
+new line counter reached: 673
+aaaaa 673 671
+11
+
+
+aaaaa 674 671
+11
+	
+aaaaa 674 671
+2
+strreplace
+aaaaa 674 671
+5
+(
+aaaaa 674 671
+2
+fn_name
+aaaaa 674 671
+5
+,
+aaaaa 674 671
+11
+ 
+aaaaa 674 671
+8
+' '
+aaaaa 674 671
+5
+,
+aaaaa 674 671
+11
+ 
+aaaaa 674 671
+8
+'\0'
+aaaaa 674 671
+5
+)
+aaaaa 674 671
+5
+;
+aaaaa 674 671
+11
+
+
+aaaaa 675 671
+11
+
+
+aaaaa 676 671
+11
+	
+aaaaa 676 671
+2
+list_for_each_entry
+aaaaa 676 671
+5
+(
+aaaaa 676 671
+2
+entry
+aaaaa 676 671
+5
+,
+aaaaa 676 671
+11
+ 
+aaaaa 676 671
+4
+&
+aaaaa 676 671
+2
+blacklisted_initcalls
+aaaaa 676 671
+5
+,
+aaaaa 676 671
+11
+ 
+aaaaa 676 671
+2
+next
+aaaaa 676 671
+5
+)
+aaaaa 676 671
+11
+ 
+aaaaa 676 671
+5
+{
+aaaaa 676 671
+11
+
+
+aaaaa 677 671
+11
+	
+aaaaa 677 671
+11
+	
+aaaaa 677 671
+1
+if
+aaaaa 677 671
+11
+ 
+aaaaa 677 671
+5
+(
+aaaaa 677 671
+4
+!
+aaaaa 677 671
+2
+strcmp
+aaaaa 677 671
+5
+(
+aaaaa 677 671
+2
+fn_name
+aaaaa 677 671
+5
+,
+aaaaa 677 671
+11
+ 
+aaaaa 677 671
+2
+entry
+aaaaa 677 671
+4
+-
+aaaaa 677 671
+4
+>
+aaaaa 677 671
+2
+buf
+aaaaa 677 671
+5
+)
+aaaaa 677 671
+5
+)
+aaaaa 677 671
+11
+ 
+aaaaa 677 671
+5
+{
+aaaaa 677 671
+11
+
+
+aaaaa 678 671
+11
+	
+aaaaa 678 671
+11
+	
+aaaaa 678 671
+11
+	
+aaaaa 678 671
+2
+pr_debug
+aaaaa 678 671
+5
+(
+aaaaa 678 671
+9
+"initcall %s blacklisted\n"
+aaaaa 678 671
+5
+,
+aaaaa 678 671
+11
+ 
+aaaaa 678 671
+2
+fn_name
+aaaaa 678 671
+5
+)
+aaaaa 678 671
+5
+;
+aaaaa 678 671
+11
+
+
+aaaaa 679 671
+11
+	
+aaaaa 679 671
+11
+	
+aaaaa 679 671
+11
+	
+aaaaa 679 671
+1
+return
+aaaaa 679 671
+11
+ 
+aaaaa 679 671
+2
+true
+aaaaa 679 671
+5
+;
+aaaaa 679 671
+11
+
+
+aaaaa 680 671
+11
+	
+aaaaa 680 671
+11
+	
+aaaaa 680 671
+5
+}
+aaaaa 680 671
+11
+
+
+new line counter reached: 681
+aaaaa 681 681
+11
+	
+aaaaa 681 681
+5
+}
+aaaaa 681 681
+11
+
+
+aaaaa 682 681
+11
+
+
+aaaaa 683 681
+11
+	
+aaaaa 683 681
+1
+return
+aaaaa 683 681
+11
+ 
+aaaaa 683 681
+2
+false
+aaaaa 683 681
+5
+;
+aaaaa 683 681
+11
+
+
+aaaaa 684 681
+5
+}
+aaaaa 684 681
+11
+
+
+aaaaa 685 681
+7
+#else
+aaaaa 685 681
+11
+
+
+aaaaa 686 681
+1
+static
+aaaaa 686 681
+11
+ 
+aaaaa 686 681
+1
+int
+aaaaa 686 681
+11
+ 
+aaaaa 686 681
+2
+__init
+aaaaa 686 681
+11
+ 
+aaaaa 686 681
+2
+initcall_blacklist
+aaaaa 686 681
+5
+(
+aaaaa 686 681
+1
+char
+aaaaa 686 681
+11
+ 
+aaaaa 686 681
+4
+*
+aaaaa 686 681
+2
+str
+aaaaa 686 681
+5
+)
+aaaaa 686 681
+11
+
+
+aaaaa 687 681
+5
+{
+aaaaa 687 681
+11
+
+
+aaaaa 688 681
+11
+	
+aaaaa 688 681
+2
+pr_warn
+aaaaa 688 681
+5
+(
+aaaaa 688 681
+9
+"initcall_blacklist requires CONFIG_KALLSYMS\n"
+aaaaa 688 681
+5
+)
+aaaaa 688 681
+5
+;
+aaaaa 688 681
+11
+
+
+aaaaa 689 681
+11
+	
+aaaaa 689 681
+1
+return
+aaaaa 689 681
+11
+ 
+aaaaa 689 681
+3
+0
+aaaaa 689 681
+5
+;
+aaaaa 689 681
+11
+
+
+aaaaa 690 681
+5
+}
+aaaaa 690 681
+11
+
+
+new line counter reached: 691
+aaaaa 691 691
+11
+
+
+aaaaa 692 691
+1
+static
+aaaaa 692 691
+11
+ 
+aaaaa 692 691
+2
+bool
+aaaaa 692 691
+11
+ 
+aaaaa 692 691
+2
+__init_or_module
+aaaaa 692 691
+11
+ 
+aaaaa 692 691
+2
+initcall_blacklisted
+aaaaa 692 691
+5
+(
+aaaaa 692 691
+2
+initcall_t
+aaaaa 692 691
+11
+ 
+aaaaa 692 691
+2
+fn
+aaaaa 692 691
+5
+)
+aaaaa 692 691
+11
+
+
+aaaaa 693 691
+5
+{
+aaaaa 693 691
+11
+
+
+aaaaa 694 691
+11
+	
+aaaaa 694 691
+1
+return
+aaaaa 694 691
+11
+ 
+aaaaa 694 691
+2
+false
+aaaaa 694 691
+5
+;
+aaaaa 694 691
+11
+
+
+aaaaa 695 691
+5
+}
+aaaaa 695 691
+11
+
+
+aaaaa 696 691
+7
+#endif
+aaaaa 696 691
+11
+
+
+aaaaa 697 691
+2
+__setup
+aaaaa 697 691
+5
+(
+aaaaa 697 691
+9
+"initcall_blacklist="
+aaaaa 697 691
+5
+,
+aaaaa 697 691
+11
+ 
+aaaaa 697 691
+2
+initcall_blacklist
+aaaaa 697 691
+5
+)
+aaaaa 697 691
+5
+;
+aaaaa 697 691
+11
+
+
+aaaaa 698 691
+11
+
+
+aaaaa 699 691
+1
+static
+aaaaa 699 691
+11
+ 
+aaaaa 699 691
+1
+int
+aaaaa 699 691
+11
+ 
+aaaaa 699 691
+2
+__init_or_module
+aaaaa 699 691
+11
+ 
+aaaaa 699 691
+2
+do_one_initcall_debug
+aaaaa 699 691
+5
+(
+aaaaa 699 691
+2
+initcall_t
+aaaaa 699 691
+11
+ 
+aaaaa 699 691
+2
+fn
+aaaaa 699 691
+5
+)
+aaaaa 699 691
+11
+
+
+aaaaa 700 691
+5
+{
+aaaaa 700 691
+11
+
+
+new line counter reached: 701
+aaaaa 701 701
+11
+	
+aaaaa 701 701
+2
+ktime_t
+aaaaa 701 701
+11
+ 
+aaaaa 701 701
+2
+calltime
+aaaaa 701 701
+5
+,
+aaaaa 701 701
+11
+ 
+aaaaa 701 701
+2
+delta
+aaaaa 701 701
+5
+,
+aaaaa 701 701
+11
+ 
+aaaaa 701 701
+2
+rettime
+aaaaa 701 701
+5
+;
+aaaaa 701 701
+11
+
+
+aaaaa 702 701
+11
+	
+aaaaa 702 701
+1
+unsigned
+aaaaa 702 701
+11
+ 
+aaaaa 702 701
+1
+long
+aaaaa 702 701
+11
+ 
+aaaaa 702 701
+1
+long
+aaaaa 702 701
+11
+ 
+aaaaa 702 701
+2
+duration
+aaaaa 702 701
+5
+;
+aaaaa 702 701
+11
+
+
+aaaaa 703 701
+11
+	
+aaaaa 703 701
+1
+int
+aaaaa 703 701
+11
+ 
+aaaaa 703 701
+2
+ret
+aaaaa 703 701
+5
+;
+aaaaa 703 701
+11
+
+
+aaaaa 704 701
+11
+
+
+aaaaa 705 701
+11
+	
+aaaaa 705 701
+2
+printk
+aaaaa 705 701
+5
+(
+aaaaa 705 701
+2
+KERN_DEBUG
+aaaaa 705 701
+11
+ 
+aaaaa 705 701
+9
+"calling  %pF @ %i\n"
+aaaaa 705 701
+5
+,
+aaaaa 705 701
+11
+ 
+aaaaa 705 701
+2
+fn
+aaaaa 705 701
+5
+,
+aaaaa 705 701
+11
+ 
+aaaaa 705 701
+2
+task_pid_nr
+aaaaa 705 701
+5
+(
+aaaaa 705 701
+2
+current
+aaaaa 705 701
+5
+)
+aaaaa 705 701
+5
+)
+aaaaa 705 701
+5
+;
+aaaaa 705 701
+11
+
+
+aaaaa 706 701
+11
+	
+aaaaa 706 701
+2
+calltime
+aaaaa 706 701
+11
+ 
+aaaaa 706 701
+5
+=
+aaaaa 706 701
+11
+ 
+aaaaa 706 701
+2
+ktime_get
+aaaaa 706 701
+5
+(
+aaaaa 706 701
+5
+)
+aaaaa 706 701
+5
+;
+aaaaa 706 701
+11
+
+
+aaaaa 707 701
+11
+	
+aaaaa 707 701
+2
+ret
+aaaaa 707 701
+11
+ 
+aaaaa 707 701
+5
+=
+aaaaa 707 701
+11
+ 
+aaaaa 707 701
+2
+fn
+aaaaa 707 701
+5
+(
+aaaaa 707 701
+5
+)
+aaaaa 707 701
+5
+;
+aaaaa 707 701
+11
+
+
+aaaaa 708 701
+11
+	
+aaaaa 708 701
+2
+rettime
+aaaaa 708 701
+11
+ 
+aaaaa 708 701
+5
+=
+aaaaa 708 701
+11
+ 
+aaaaa 708 701
+2
+ktime_get
+aaaaa 708 701
+5
+(
+aaaaa 708 701
+5
+)
+aaaaa 708 701
+5
+;
+aaaaa 708 701
+11
+
+
+aaaaa 709 701
+11
+	
+aaaaa 709 701
+2
+delta
+aaaaa 709 701
+11
+ 
+aaaaa 709 701
+5
+=
+aaaaa 709 701
+11
+ 
+aaaaa 709 701
+2
+ktime_sub
+aaaaa 709 701
+5
+(
+aaaaa 709 701
+2
+rettime
+aaaaa 709 701
+5
+,
+aaaaa 709 701
+11
+ 
+aaaaa 709 701
+2
+calltime
+aaaaa 709 701
+5
+)
+aaaaa 709 701
+5
+;
+aaaaa 709 701
+11
+
+
+aaaaa 710 701
+11
+	
+aaaaa 710 701
+2
+duration
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+5
+=
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+5
+(
+aaaaa 710 701
+1
+unsigned
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+1
+long
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+1
+long
+aaaaa 710 701
+5
+)
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+2
+ktime_to_ns
+aaaaa 710 701
+5
+(
+aaaaa 710 701
+2
+delta
+aaaaa 710 701
+5
+)
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+4
+>>
+aaaaa 710 701
+11
+ 
+aaaaa 710 701
+3
+10
+aaaaa 710 701
+5
+;
+aaaaa 710 701
+11
+
+
+new line counter reached: 711
+aaaaa 711 711
+11
+	
+aaaaa 711 711
+2
+printk
+aaaaa 711 711
+5
+(
+aaaaa 711 711
+2
+KERN_DEBUG
+aaaaa 711 711
+11
+ 
+aaaaa 711 711
+9
+"initcall %pF returned %d after %lld usecs\n"
+aaaaa 711 711
+5
+,
+aaaaa 711 711
+11
+
+
+aaaaa 712 711
+11
+	
+aaaaa 712 711
+11
+	
+aaaaa 712 711
+11
+ 
+aaaaa 712 711
+2
+fn
+aaaaa 712 711
+5
+,
+aaaaa 712 711
+11
+ 
+aaaaa 712 711
+2
+ret
+aaaaa 712 711
+5
+,
+aaaaa 712 711
+11
+ 
+aaaaa 712 711
+2
+duration
+aaaaa 712 711
+5
+)
+aaaaa 712 711
+5
+;
+aaaaa 712 711
+11
+
+
+aaaaa 713 711
+11
+
+
+aaaaa 714 711
+11
+	
+aaaaa 714 711
+1
+return
+aaaaa 714 711
+11
+ 
+aaaaa 714 711
+2
+ret
+aaaaa 714 711
+5
+;
+aaaaa 714 711
+11
+
+
+aaaaa 715 711
+5
+}
+aaaaa 715 711
+11
+
+
+aaaaa 716 711
+11
+
+
+aaaaa 717 711
+1
+int
+aaaaa 717 711
+11
+ 
+aaaaa 717 711
+2
+__init_or_module
+aaaaa 717 711
+11
+ 
+aaaaa 717 711
+2
+do_one_initcall
+aaaaa 717 711
+5
+(
+aaaaa 717 711
+2
+initcall_t
+aaaaa 717 711
+11
+ 
+aaaaa 717 711
+2
+fn
+aaaaa 717 711
+5
+)
+aaaaa 717 711
+11
+
+
+aaaaa 718 711
+5
+{
+aaaaa 718 711
+11
+
+
+aaaaa 719 711
+11
+	
+aaaaa 719 711
+1
+int
+aaaaa 719 711
+11
+ 
+aaaaa 719 711
+2
+count
+aaaaa 719 711
+11
+ 
+aaaaa 719 711
+5
+=
+aaaaa 719 711
+11
+ 
+aaaaa 719 711
+2
+preempt_count
+aaaaa 719 711
+5
+(
+aaaaa 719 711
+5
+)
+aaaaa 719 711
+5
+;
+aaaaa 719 711
+11
+
+
+aaaaa 720 711
+11
+	
+aaaaa 720 711
+1
+int
+aaaaa 720 711
+11
+ 
+aaaaa 720 711
+2
+ret
+aaaaa 720 711
+5
+;
+aaaaa 720 711
+11
+
+
+new line counter reached: 721
+aaaaa 721 721
+11
+	
+aaaaa 721 721
+1
+char
+aaaaa 721 721
+11
+ 
+aaaaa 721 721
+2
+msgbuf
+aaaaa 721 721
+5
+[
+aaaaa 721 721
+3
+64
+aaaaa 721 721
+5
+]
+aaaaa 721 721
+5
+;
+aaaaa 721 721
+11
+
+
+aaaaa 722 721
+11
+
+
+aaaaa 723 721
+11
+	
+aaaaa 723 721
+1
+if
+aaaaa 723 721
+11
+ 
+aaaaa 723 721
+5
+(
+aaaaa 723 721
+2
+initcall_blacklisted
+aaaaa 723 721
+5
+(
+aaaaa 723 721
+2
+fn
+aaaaa 723 721
+5
+)
+aaaaa 723 721
+5
+)
+aaaaa 723 721
+11
+
+
+aaaaa 724 721
+11
+	
+aaaaa 724 721
+11
+	
+aaaaa 724 721
+1
+return
+aaaaa 724 721
+11
+ 
+aaaaa 724 721
+4
+-
+aaaaa 724 721
+2
+EPERM
+aaaaa 724 721
+5
+;
+aaaaa 724 721
+11
+
+
+aaaaa 725 721
+11
+
+
+aaaaa 726 721
+11
+	
+aaaaa 726 721
+1
+if
+aaaaa 726 721
+11
+ 
+aaaaa 726 721
+5
+(
+aaaaa 726 721
+2
+initcall_debug
+aaaaa 726 721
+5
+)
+aaaaa 726 721
+11
+
+
+aaaaa 727 721
+11
+	
+aaaaa 727 721
+11
+	
+aaaaa 727 721
+2
+ret
+aaaaa 727 721
+11
+ 
+aaaaa 727 721
+5
+=
+aaaaa 727 721
+11
+ 
+aaaaa 727 721
+2
+do_one_initcall_debug
+aaaaa 727 721
+5
+(
+aaaaa 727 721
+2
+fn
+aaaaa 727 721
+5
+)
+aaaaa 727 721
+5
+;
+aaaaa 727 721
+11
+
+
+aaaaa 728 721
+11
+	
+aaaaa 728 721
+1
+else
+aaaaa 728 721
+11
+
+
+aaaaa 729 721
+11
+	
+aaaaa 729 721
+11
+	
+aaaaa 729 721
+2
+ret
+aaaaa 729 721
+11
+ 
+aaaaa 729 721
+5
+=
+aaaaa 729 721
+11
+ 
+aaaaa 729 721
+2
+fn
+aaaaa 729 721
+5
+(
+aaaaa 729 721
+5
+)
+aaaaa 729 721
+5
+;
+aaaaa 729 721
+11
+
+
+aaaaa 730 721
+11
+
+
+new line counter reached: 731
+aaaaa 731 731
+11
+	
+aaaaa 731 731
+2
+msgbuf
+aaaaa 731 731
+5
+[
+aaaaa 731 731
+3
+0
+aaaaa 731 731
+5
+]
+aaaaa 731 731
+11
+ 
+aaaaa 731 731
+5
+=
+aaaaa 731 731
+11
+ 
+aaaaa 731 731
+3
+0
+aaaaa 731 731
+5
+;
+aaaaa 731 731
+11
+
+
+aaaaa 732 731
+11
+
+
+aaaaa 733 731
+11
+	
+aaaaa 733 731
+1
+if
+aaaaa 733 731
+11
+ 
+aaaaa 733 731
+5
+(
+aaaaa 733 731
+2
+preempt_count
+aaaaa 733 731
+5
+(
+aaaaa 733 731
+5
+)
+aaaaa 733 731
+11
+ 
+aaaaa 733 731
+4
+!=
+aaaaa 733 731
+11
+ 
+aaaaa 733 731
+2
+count
+aaaaa 733 731
+5
+)
+aaaaa 733 731
+11
+ 
+aaaaa 733 731
+5
+{
+aaaaa 733 731
+11
+
+
+aaaaa 734 731
+11
+	
+aaaaa 734 731
+11
+	
+aaaaa 734 731
+2
+sprintf
+aaaaa 734 731
+5
+(
+aaaaa 734 731
+2
+msgbuf
+aaaaa 734 731
+5
+,
+aaaaa 734 731
+11
+ 
+aaaaa 734 731
+9
+"preemption imbalance "
+aaaaa 734 731
+5
+)
+aaaaa 734 731
+5
+;
+aaaaa 734 731
+11
+
+
+aaaaa 735 731
+11
+	
+aaaaa 735 731
+11
+	
+aaaaa 735 731
+2
+preempt_count_set
+aaaaa 735 731
+5
+(
+aaaaa 735 731
+2
+count
+aaaaa 735 731
+5
+)
+aaaaa 735 731
+5
+;
+aaaaa 735 731
+11
+
+
+aaaaa 736 731
+11
+	
+aaaaa 736 731
+5
+}
+aaaaa 736 731
+11
+
+
+aaaaa 737 731
+11
+	
+aaaaa 737 731
+1
+if
+aaaaa 737 731
+11
+ 
+aaaaa 737 731
+5
+(
+aaaaa 737 731
+2
+irqs_disabled
+aaaaa 737 731
+5
+(
+aaaaa 737 731
+5
+)
+aaaaa 737 731
+5
+)
+aaaaa 737 731
+11
+ 
+aaaaa 737 731
+5
+{
+aaaaa 737 731
+11
+
+
+aaaaa 738 731
+11
+	
+aaaaa 738 731
+11
+	
+aaaaa 738 731
+2
+strlcat
+aaaaa 738 731
+5
+(
+aaaaa 738 731
+2
+msgbuf
+aaaaa 738 731
+5
+,
+aaaaa 738 731
+11
+ 
+aaaaa 738 731
+9
+"disabled interrupts "
+aaaaa 738 731
+5
+,
+aaaaa 738 731
+11
+ 
+aaaaa 738 731
+1
+sizeof
+aaaaa 738 731
+5
+(
+aaaaa 738 731
+2
+msgbuf
+aaaaa 738 731
+5
+)
+aaaaa 738 731
+5
+)
+aaaaa 738 731
+5
+;
+aaaaa 738 731
+11
+
+
+aaaaa 739 731
+11
+	
+aaaaa 739 731
+11
+	
+aaaaa 739 731
+2
+local_irq_enable
+aaaaa 739 731
+5
+(
+aaaaa 739 731
+5
+)
+aaaaa 739 731
+5
+;
+aaaaa 739 731
+11
+
+
+aaaaa 740 731
+11
+	
+aaaaa 740 731
+5
+}
+aaaaa 740 731
+11
+
+
+new line counter reached: 741
+aaaaa 741 741
+11
+	
+aaaaa 741 741
+2
+WARN
+aaaaa 741 741
+5
+(
+aaaaa 741 741
+2
+msgbuf
+aaaaa 741 741
+5
+[
+aaaaa 741 741
+3
+0
+aaaaa 741 741
+5
+]
+aaaaa 741 741
+5
+,
+aaaaa 741 741
+11
+ 
+aaaaa 741 741
+9
+"initcall %pF returned with %s\n"
+aaaaa 741 741
+5
+,
+aaaaa 741 741
+11
+ 
+aaaaa 741 741
+2
+fn
+aaaaa 741 741
+5
+,
+aaaaa 741 741
+11
+ 
+aaaaa 741 741
+2
+msgbuf
+aaaaa 741 741
+5
+)
+aaaaa 741 741
+5
+;
+aaaaa 741 741
+11
+
+
+aaaaa 742 741
+11
+
+
+aaaaa 743 741
+11
+	
+aaaaa 743 741
+2
+add_latent_entropy
+aaaaa 743 741
+5
+(
+aaaaa 743 741
+5
+)
+aaaaa 743 741
+5
+;
+aaaaa 743 741
+11
+
+
+aaaaa 744 741
+11
+	
+aaaaa 744 741
+1
+return
+aaaaa 744 741
+11
+ 
+aaaaa 744 741
+2
+ret
+aaaaa 744 741
+5
+;
+aaaaa 744 741
+11
+
+
+aaaaa 745 741
+5
+}
+aaaaa 745 741
+11
+
+
+aaaaa 746 741
+11
+
+
+aaaaa 747 741
+11
+
+
+aaaaa 748 741
+1
+extern
+aaaaa 748 741
+11
+ 
+aaaaa 748 741
+2
+initcall_t
+aaaaa 748 741
+11
+ 
+aaaaa 748 741
+2
+__initcall_start
+aaaaa 748 741
+5
+[
+aaaaa 748 741
+5
+]
+aaaaa 748 741
+5
+;
+aaaaa 748 741
+11
+
+
+aaaaa 749 741
+1
+extern
+aaaaa 749 741
+11
+ 
+aaaaa 749 741
+2
+initcall_t
+aaaaa 749 741
+11
+ 
+aaaaa 749 741
+2
+__initcall0_start
+aaaaa 749 741
+5
+[
+aaaaa 749 741
+5
+]
+aaaaa 749 741
+5
+;
+aaaaa 749 741
+11
+
+
+aaaaa 750 741
+1
+extern
+aaaaa 750 741
+11
+ 
+aaaaa 750 741
+2
+initcall_t
+aaaaa 750 741
+11
+ 
+aaaaa 750 741
+2
+__initcall1_start
+aaaaa 750 741
+5
+[
+aaaaa 750 741
+5
+]
+aaaaa 750 741
+5
+;
+aaaaa 750 741
+11
+
+
+new line counter reached: 751
+aaaaa 751 751
+1
+extern
+aaaaa 751 751
+11
+ 
+aaaaa 751 751
+2
+initcall_t
+aaaaa 751 751
+11
+ 
+aaaaa 751 751
+2
+__initcall2_start
+aaaaa 751 751
+5
+[
+aaaaa 751 751
+5
+]
+aaaaa 751 751
+5
+;
+aaaaa 751 751
+11
+
+
+aaaaa 752 751
+1
+extern
+aaaaa 752 751
+11
+ 
+aaaaa 752 751
+2
+initcall_t
+aaaaa 752 751
+11
+ 
+aaaaa 752 751
+2
+__initcall3_start
+aaaaa 752 751
+5
+[
+aaaaa 752 751
+5
+]
+aaaaa 752 751
+5
+;
+aaaaa 752 751
+11
+
+
+aaaaa 753 751
+1
+extern
+aaaaa 753 751
+11
+ 
+aaaaa 753 751
+2
+initcall_t
+aaaaa 753 751
+11
+ 
+aaaaa 753 751
+2
+__initcall4_start
+aaaaa 753 751
+5
+[
+aaaaa 753 751
+5
+]
+aaaaa 753 751
+5
+;
+aaaaa 753 751
+11
+
+
+aaaaa 754 751
+1
+extern
+aaaaa 754 751
+11
+ 
+aaaaa 754 751
+2
+initcall_t
+aaaaa 754 751
+11
+ 
+aaaaa 754 751
+2
+__initcall5_start
+aaaaa 754 751
+5
+[
+aaaaa 754 751
+5
+]
+aaaaa 754 751
+5
+;
+aaaaa 754 751
+11
+
+
+aaaaa 755 751
+1
+extern
+aaaaa 755 751
+11
+ 
+aaaaa 755 751
+2
+initcall_t
+aaaaa 755 751
+11
+ 
+aaaaa 755 751
+2
+__initcall6_start
+aaaaa 755 751
+5
+[
+aaaaa 755 751
+5
+]
+aaaaa 755 751
+5
+;
+aaaaa 755 751
+11
+
+
+aaaaa 756 751
+1
+extern
+aaaaa 756 751
+11
+ 
+aaaaa 756 751
+2
+initcall_t
+aaaaa 756 751
+11
+ 
+aaaaa 756 751
+2
+__initcall7_start
+aaaaa 756 751
+5
+[
+aaaaa 756 751
+5
+]
+aaaaa 756 751
+5
+;
+aaaaa 756 751
+11
+
+
+aaaaa 757 751
+1
+extern
+aaaaa 757 751
+11
+ 
+aaaaa 757 751
+2
+initcall_t
+aaaaa 757 751
+11
+ 
+aaaaa 757 751
+2
+__initcall_end
+aaaaa 757 751
+5
+[
+aaaaa 757 751
+5
+]
+aaaaa 757 751
+5
+;
+aaaaa 757 751
+11
+
+
+aaaaa 758 751
+11
+
+
+aaaaa 759 751
+1
+static
+aaaaa 759 751
+11
+ 
+aaaaa 759 751
+2
+initcall_t
+aaaaa 759 751
+11
+ 
+aaaaa 759 751
+4
+*
+aaaaa 759 751
+2
+initcall_levels
+aaaaa 759 751
+5
+[
+aaaaa 759 751
+5
+]
+aaaaa 759 751
+11
+ 
+aaaaa 759 751
+2
+__initdata
+aaaaa 759 751
+11
+ 
+aaaaa 759 751
+5
+=
+aaaaa 759 751
+11
+ 
+aaaaa 759 751
+5
+{
+aaaaa 759 751
+11
+
+
+aaaaa 760 751
+11
+	
+aaaaa 760 751
+2
+__initcall0_start
+aaaaa 760 751
+5
+,
+aaaaa 760 751
+11
+
+
+new line counter reached: 761
+aaaaa 761 761
+11
+	
+aaaaa 761 761
+2
+__initcall1_start
+aaaaa 761 761
+5
+,
+aaaaa 761 761
+11
+
+
+aaaaa 762 761
+11
+	
+aaaaa 762 761
+2
+__initcall2_start
+aaaaa 762 761
+5
+,
+aaaaa 762 761
+11
+
+
+aaaaa 763 761
+11
+	
+aaaaa 763 761
+2
+__initcall3_start
+aaaaa 763 761
+5
+,
+aaaaa 763 761
+11
+
+
+aaaaa 764 761
+11
+	
+aaaaa 764 761
+2
+__initcall4_start
+aaaaa 764 761
+5
+,
+aaaaa 764 761
+11
+
+
+aaaaa 765 761
+11
+	
+aaaaa 765 761
+2
+__initcall5_start
+aaaaa 765 761
+5
+,
+aaaaa 765 761
+11
+
+
+aaaaa 766 761
+11
+	
+aaaaa 766 761
+2
+__initcall6_start
+aaaaa 766 761
+5
+,
+aaaaa 766 761
+11
+
+
+aaaaa 767 761
+11
+	
+aaaaa 767 761
+2
+__initcall7_start
+aaaaa 767 761
+5
+,
+aaaaa 767 761
+11
+
+
+aaaaa 768 761
+11
+	
+aaaaa 768 761
+2
+__initcall_end
+aaaaa 768 761
+5
+,
+aaaaa 768 761
+11
+
+
+aaaaa 769 761
+5
+}
+aaaaa 769 761
+5
+;
+aaaaa 769 761
+11
+
+
+aaaaa 770 761
+11
+
+
+new line counter reached: 771
+aaaaa 771 771
+6
+/* Keep these in sync with initcalls in include/linux/init.h */
+aaaaa 771 771
+11
+
+
+aaaaa 772 771
+1
+static
+aaaaa 772 771
+11
+ 
+aaaaa 772 771
+1
+char
+aaaaa 772 771
+11
+ 
+aaaaa 772 771
+4
+*
+aaaaa 772 771
+2
+initcall_level_names
+aaaaa 772 771
+5
+[
+aaaaa 772 771
+5
+]
+aaaaa 772 771
+11
+ 
+aaaaa 772 771
+2
+__initdata
+aaaaa 772 771
+11
+ 
+aaaaa 772 771
+5
+=
+aaaaa 772 771
+11
+ 
+aaaaa 772 771
+5
+{
+aaaaa 772 771
+11
+
+
+aaaaa 773 771
+11
+	
+aaaaa 773 771
+9
+"early"
+aaaaa 773 771
+5
+,
+aaaaa 773 771
+11
+
+
+aaaaa 774 771
+11
+	
+aaaaa 774 771
+9
+"core"
+aaaaa 774 771
+5
+,
+aaaaa 774 771
+11
+
+
+aaaaa 775 771
+11
+	
+aaaaa 775 771
+9
+"postcore"
+aaaaa 775 771
+5
+,
+aaaaa 775 771
+11
+
+
+aaaaa 776 771
+11
+	
+aaaaa 776 771
+9
+"arch"
+aaaaa 776 771
+5
+,
+aaaaa 776 771
+11
+
+
+aaaaa 777 771
+11
+	
+aaaaa 777 771
+9
+"subsys"
+aaaaa 777 771
+5
+,
+aaaaa 777 771
+11
+
+
+aaaaa 778 771
+11
+	
+aaaaa 778 771
+9
+"fs"
+aaaaa 778 771
+5
+,
+aaaaa 778 771
+11
+
+
+aaaaa 779 771
+11
+	
+aaaaa 779 771
+9
+"device"
+aaaaa 779 771
+5
+,
+aaaaa 779 771
+11
+
+
+aaaaa 780 771
+11
+	
+aaaaa 780 771
+9
+"late"
+aaaaa 780 771
+5
+,
+aaaaa 780 771
+11
+
+
+new line counter reached: 781
+aaaaa 781 781
+5
+}
+aaaaa 781 781
+5
+;
+aaaaa 781 781
+11
+
+
+aaaaa 782 781
+11
+
+
+aaaaa 783 781
+1
+static
+aaaaa 783 781
+11
+ 
+aaaaa 783 781
+1
+void
+aaaaa 783 781
+11
+ 
+aaaaa 783 781
+2
+__init
+aaaaa 783 781
+11
+ 
+aaaaa 783 781
+2
+do_initcall_level
+aaaaa 783 781
+5
+(
+aaaaa 783 781
+1
+int
+aaaaa 783 781
+11
+ 
+aaaaa 783 781
+2
+level
+aaaaa 783 781
+5
+)
+aaaaa 783 781
+11
+
+
+aaaaa 784 781
+5
+{
+aaaaa 784 781
+11
+
+
+aaaaa 785 781
+11
+	
+aaaaa 785 781
+2
+initcall_t
+aaaaa 785 781
+11
+ 
+aaaaa 785 781
+4
+*
+aaaaa 785 781
+2
+fn
+aaaaa 785 781
+5
+;
+aaaaa 785 781
+11
+
+
+aaaaa 786 781
+11
+
+
+aaaaa 787 781
+11
+	
+aaaaa 787 781
+2
+strcpy
+aaaaa 787 781
+5
+(
+aaaaa 787 781
+2
+initcall_command_line
+aaaaa 787 781
+5
+,
+aaaaa 787 781
+11
+ 
+aaaaa 787 781
+2
+saved_command_line
+aaaaa 787 781
+5
+)
+aaaaa 787 781
+5
+;
+aaaaa 787 781
+11
+
+
+aaaaa 788 781
+11
+	
+aaaaa 788 781
+2
+parse_args
+aaaaa 788 781
+5
+(
+aaaaa 788 781
+2
+initcall_level_names
+aaaaa 788 781
+5
+[
+aaaaa 788 781
+2
+level
+aaaaa 788 781
+5
+]
+aaaaa 788 781
+5
+,
+aaaaa 788 781
+11
+
+
+aaaaa 789 781
+11
+	
+aaaaa 789 781
+11
+	
+aaaaa 789 781
+11
+ 
+aaaaa 789 781
+11
+ 
+aaaaa 789 781
+11
+ 
+aaaaa 789 781
+2
+initcall_command_line
+aaaaa 789 781
+5
+,
+aaaaa 789 781
+11
+ 
+aaaaa 789 781
+2
+__start___param
+aaaaa 789 781
+5
+,
+aaaaa 789 781
+11
+
+
+aaaaa 790 781
+11
+	
+aaaaa 790 781
+11
+	
+aaaaa 790 781
+11
+ 
+aaaaa 790 781
+11
+ 
+aaaaa 790 781
+11
+ 
+aaaaa 790 781
+2
+__stop___param
+aaaaa 790 781
+11
+ 
+aaaaa 790 781
+4
+-
+aaaaa 790 781
+11
+ 
+aaaaa 790 781
+2
+__start___param
+aaaaa 790 781
+5
+,
+aaaaa 790 781
+11
+
+
+new line counter reached: 791
+aaaaa 791 791
+11
+	
+aaaaa 791 791
+11
+	
+aaaaa 791 791
+11
+ 
+aaaaa 791 791
+11
+ 
+aaaaa 791 791
+11
+ 
+aaaaa 791 791
+2
+level
+aaaaa 791 791
+5
+,
+aaaaa 791 791
+11
+ 
+aaaaa 791 791
+2
+level
+aaaaa 791 791
+5
+,
+aaaaa 791 791
+11
+
+
+aaaaa 792 791
+11
+	
+aaaaa 792 791
+11
+	
+aaaaa 792 791
+11
+ 
+aaaaa 792 791
+11
+ 
+aaaaa 792 791
+11
+ 
+aaaaa 792 791
+2
+NULL
+aaaaa 792 791
+5
+,
+aaaaa 792 791
+11
+ 
+aaaaa 792 791
+4
+&
+aaaaa 792 791
+2
+repair_env_string
+aaaaa 792 791
+5
+)
+aaaaa 792 791
+5
+;
+aaaaa 792 791
+11
+
+
+aaaaa 793 791
+11
+
+
+aaaaa 794 791
+11
+	
+aaaaa 794 791
+1
+for
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+5
+(
+aaaaa 794 791
+2
+fn
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+5
+=
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+2
+initcall_levels
+aaaaa 794 791
+5
+[
+aaaaa 794 791
+2
+level
+aaaaa 794 791
+5
+]
+aaaaa 794 791
+5
+;
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+2
+fn
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+4
+<
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+2
+initcall_levels
+aaaaa 794 791
+5
+[
+aaaaa 794 791
+2
+level
+aaaaa 794 791
+3
++1
+aaaaa 794 791
+5
+]
+aaaaa 794 791
+5
+;
+aaaaa 794 791
+11
+ 
+aaaaa 794 791
+2
+fn
+aaaaa 794 791
+4
+++
+aaaaa 794 791
+5
+)
+aaaaa 794 791
+11
+
+
+aaaaa 795 791
+11
+	
+aaaaa 795 791
+11
+	
+aaaaa 795 791
+2
+do_one_initcall
+aaaaa 795 791
+5
+(
+aaaaa 795 791
+4
+*
+aaaaa 795 791
+2
+fn
+aaaaa 795 791
+5
+)
+aaaaa 795 791
+5
+;
+aaaaa 795 791
+11
+
+
+aaaaa 796 791
+5
+}
+aaaaa 796 791
+11
+
+
+aaaaa 797 791
+11
+
+
+aaaaa 798 791
+1
+static
+aaaaa 798 791
+11
+ 
+aaaaa 798 791
+1
+void
+aaaaa 798 791
+11
+ 
+aaaaa 798 791
+2
+__init
+aaaaa 798 791
+11
+ 
+aaaaa 798 791
+2
+do_initcalls
+aaaaa 798 791
+5
+(
+aaaaa 798 791
+1
+void
+aaaaa 798 791
+5
+)
+aaaaa 798 791
+11
+
+
+aaaaa 799 791
+5
+{
+aaaaa 799 791
+11
+
+
+aaaaa 800 791
+11
+	
+aaaaa 800 791
+1
+int
+aaaaa 800 791
+11
+ 
+aaaaa 800 791
+2
+level
+aaaaa 800 791
+5
+;
+aaaaa 800 791
+11
+
+
+new line counter reached: 801
+aaaaa 801 801
+11
+
+
+aaaaa 802 801
+11
+	
+aaaaa 802 801
+1
+for
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+5
+(
+aaaaa 802 801
+2
+level
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+5
+=
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+3
+0
+aaaaa 802 801
+5
+;
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+2
+level
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+4
+<
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+2
+ARRAY_SIZE
+aaaaa 802 801
+5
+(
+aaaaa 802 801
+2
+initcall_levels
+aaaaa 802 801
+5
+)
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+4
+-
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+3
+1
+aaaaa 802 801
+5
+;
+aaaaa 802 801
+11
+ 
+aaaaa 802 801
+2
+level
+aaaaa 802 801
+4
+++
+aaaaa 802 801
+5
+)
+aaaaa 802 801
+11
+
+
+aaaaa 803 801
+11
+	
+aaaaa 803 801
+11
+	
+aaaaa 803 801
+2
+do_initcall_level
+aaaaa 803 801
+5
+(
+aaaaa 803 801
+2
+level
+aaaaa 803 801
+5
+)
+aaaaa 803 801
+5
+;
+aaaaa 803 801
+11
+
+
+aaaaa 804 801
+5
+}
+aaaaa 804 801
+11
+
+
+aaaaa 805 801
+11
+
+
+aaaaa 806 801
+6
+/*
+ * Ok, the machine is now initialized. None of the devices
+ * have been touched yet, but the CPU subsystem is up and
+ * running, and memory and process management works.
+ *
+ * Now we can finally start doing some real work..
+ */
+new line counter reached: 812
+aaaaa 812 811
+11
+
+
+aaaaa 813 811
+1
+static
+aaaaa 813 811
+11
+ 
+aaaaa 813 811
+1
+void
+aaaaa 813 811
+11
+ 
+aaaaa 813 811
+2
+__init
+aaaaa 813 811
+11
+ 
+aaaaa 813 811
+2
+do_basic_setup
+aaaaa 813 811
+5
+(
+aaaaa 813 811
+1
+void
+aaaaa 813 811
+5
+)
+aaaaa 813 811
+11
+
+
+aaaaa 814 811
+5
+{
+aaaaa 814 811
+11
+
+
+aaaaa 815 811
+11
+	
+aaaaa 815 811
+2
+cpuset_init_smp
+aaaaa 815 811
+5
+(
+aaaaa 815 811
+5
+)
+aaaaa 815 811
+5
+;
+aaaaa 815 811
+11
+
+
+aaaaa 816 811
+11
+	
+aaaaa 816 811
+2
+shmem_init
+aaaaa 816 811
+5
+(
+aaaaa 816 811
+5
+)
+aaaaa 816 811
+5
+;
+aaaaa 816 811
+11
+
+
+aaaaa 817 811
+11
+	
+aaaaa 817 811
+2
+driver_init
+aaaaa 817 811
+5
+(
+aaaaa 817 811
+5
+)
+aaaaa 817 811
+5
+;
+aaaaa 817 811
+11
+
+
+aaaaa 818 811
+11
+	
+aaaaa 818 811
+2
+init_irq_proc
+aaaaa 818 811
+5
+(
+aaaaa 818 811
+5
+)
+aaaaa 818 811
+5
+;
+aaaaa 818 811
+11
+
+
+aaaaa 819 811
+11
+	
+aaaaa 819 811
+2
+do_ctors
+aaaaa 819 811
+5
+(
+aaaaa 819 811
+5
+)
+aaaaa 819 811
+5
+;
+aaaaa 819 811
+11
+
+
+aaaaa 820 811
+11
+	
+aaaaa 820 811
+2
+usermodehelper_enable
+aaaaa 820 811
+5
+(
+aaaaa 820 811
+5
+)
+aaaaa 820 811
+5
+;
+aaaaa 820 811
+11
+
+
+new line counter reached: 821
+aaaaa 821 821
+11
+	
+aaaaa 821 821
+2
+do_initcalls
+aaaaa 821 821
+5
+(
+aaaaa 821 821
+5
+)
+aaaaa 821 821
+5
+;
+aaaaa 821 821
+11
+
+
+aaaaa 822 821
+5
+}
+aaaaa 822 821
+11
+
+
+aaaaa 823 821
+11
+
+
+aaaaa 824 821
+1
+static
+aaaaa 824 821
+11
+ 
+aaaaa 824 821
+1
+void
+aaaaa 824 821
+11
+ 
+aaaaa 824 821
+2
+__init
+aaaaa 824 821
+11
+ 
+aaaaa 824 821
+2
+do_pre_smp_initcalls
+aaaaa 824 821
+5
+(
+aaaaa 824 821
+1
+void
+aaaaa 824 821
+5
+)
+aaaaa 824 821
+11
+
+
+aaaaa 825 821
+5
+{
+aaaaa 825 821
+11
+
+
+aaaaa 826 821
+11
+	
+aaaaa 826 821
+2
+initcall_t
+aaaaa 826 821
+11
+ 
+aaaaa 826 821
+4
+*
+aaaaa 826 821
+2
+fn
+aaaaa 826 821
+5
+;
+aaaaa 826 821
+11
+
+
+aaaaa 827 821
+11
+
+
+aaaaa 828 821
+11
+	
+aaaaa 828 821
+1
+for
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+5
+(
+aaaaa 828 821
+2
+fn
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+5
+=
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+2
+__initcall_start
+aaaaa 828 821
+5
+;
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+2
+fn
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+4
+<
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+2
+__initcall0_start
+aaaaa 828 821
+5
+;
+aaaaa 828 821
+11
+ 
+aaaaa 828 821
+2
+fn
+aaaaa 828 821
+4
+++
+aaaaa 828 821
+5
+)
+aaaaa 828 821
+11
+
+
+aaaaa 829 821
+11
+	
+aaaaa 829 821
+11
+	
+aaaaa 829 821
+2
+do_one_initcall
+aaaaa 829 821
+5
+(
+aaaaa 829 821
+4
+*
+aaaaa 829 821
+2
+fn
+aaaaa 829 821
+5
+)
+aaaaa 829 821
+5
+;
+aaaaa 829 821
+11
+
+
+aaaaa 830 821
+5
+}
+aaaaa 830 821
+11
+
+
+new line counter reached: 831
+aaaaa 831 831
+11
+
+
+aaaaa 832 831
+6
+/*
+ * This function requests modules which should be loaded by default and is
+ * called twice right after initrd is mounted and right before init is
+ * exec'd.  If such modules are on either initrd or rootfs, they will be
+ * loaded before control is passed to userland.
+ */
+aaaaa 837 831
+11
+
+
+aaaaa 838 831
+1
+void
+aaaaa 838 831
+11
+ 
+aaaaa 838 831
+2
+__init
+aaaaa 838 831
+11
+ 
+aaaaa 838 831
+2
+load_default_modules
+aaaaa 838 831
+5
+(
+aaaaa 838 831
+1
+void
+aaaaa 838 831
+5
+)
+aaaaa 838 831
+11
+
+
+aaaaa 839 831
+5
+{
+aaaaa 839 831
+11
+
+
+aaaaa 840 831
+11
+	
+aaaaa 840 831
+2
+load_default_elevator_module
+aaaaa 840 831
+5
+(
+aaaaa 840 831
+5
+)
+aaaaa 840 831
+5
+;
+aaaaa 840 831
+11
+
+
+new line counter reached: 841
+aaaaa 841 841
+5
+}
+aaaaa 841 841
+11
+
+
+aaaaa 842 841
+11
+
+
+aaaaa 843 841
+1
+static
+aaaaa 843 841
+11
+ 
+aaaaa 843 841
+1
+int
+aaaaa 843 841
+11
+ 
+aaaaa 843 841
+2
+run_init_process
+aaaaa 843 841
+5
+(
+aaaaa 843 841
+1
+const
+aaaaa 843 841
+11
+ 
+aaaaa 843 841
+1
+char
+aaaaa 843 841
+11
+ 
+aaaaa 843 841
+4
+*
+aaaaa 843 841
+2
+init_filename
+aaaaa 843 841
+5
+)
+aaaaa 843 841
+11
+
+
+aaaaa 844 841
+5
+{
+aaaaa 844 841
+11
+
+
+aaaaa 845 841
+11
+	
+aaaaa 845 841
+2
+argv_init
+aaaaa 845 841
+5
+[
+aaaaa 845 841
+3
+0
+aaaaa 845 841
+5
+]
+aaaaa 845 841
+11
+ 
+aaaaa 845 841
+5
+=
+aaaaa 845 841
+11
+ 
+aaaaa 845 841
+2
+init_filename
+aaaaa 845 841
+5
+;
+aaaaa 845 841
+11
+
+
+aaaaa 846 841
+11
+	
+aaaaa 846 841
+1
+return
+aaaaa 846 841
+11
+ 
+aaaaa 846 841
+2
+do_execve
+aaaaa 846 841
+5
+(
+aaaaa 846 841
+2
+getname_kernel
+aaaaa 846 841
+5
+(
+aaaaa 846 841
+2
+init_filename
+aaaaa 846 841
+5
+)
+aaaaa 846 841
+5
+,
+aaaaa 846 841
+11
+
+
+aaaaa 847 841
+11
+	
+aaaaa 847 841
+11
+	
+aaaaa 847 841
+5
+(
+aaaaa 847 841
+1
+const
+aaaaa 847 841
+11
+ 
+aaaaa 847 841
+1
+char
+aaaaa 847 841
+11
+ 
+aaaaa 847 841
+2
+__user
+aaaaa 847 841
+11
+ 
+aaaaa 847 841
+4
+*
+aaaaa 847 841
+1
+const
+aaaaa 847 841
+11
+ 
+aaaaa 847 841
+2
+__user
+aaaaa 847 841
+11
+ 
+aaaaa 847 841
+4
+*
+aaaaa 847 841
+5
+)
+aaaaa 847 841
+2
+argv_init
+aaaaa 847 841
+5
+,
+aaaaa 847 841
+11
+
+
+aaaaa 848 841
+11
+	
+aaaaa 848 841
+11
+	
+aaaaa 848 841
+5
+(
+aaaaa 848 841
+1
+const
+aaaaa 848 841
+11
+ 
+aaaaa 848 841
+1
+char
+aaaaa 848 841
+11
+ 
+aaaaa 848 841
+2
+__user
+aaaaa 848 841
+11
+ 
+aaaaa 848 841
+4
+*
+aaaaa 848 841
+1
+const
+aaaaa 848 841
+11
+ 
+aaaaa 848 841
+2
+__user
+aaaaa 848 841
+11
+ 
+aaaaa 848 841
+4
+*
+aaaaa 848 841
+5
+)
+aaaaa 848 841
+2
+envp_init
+aaaaa 848 841
+5
+)
+aaaaa 848 841
+5
+;
+aaaaa 848 841
+11
+
+
+aaaaa 849 841
+5
+}
+aaaaa 849 841
+11
+
+
+aaaaa 850 841
+11
+
+
+new line counter reached: 851
+aaaaa 851 851
+1
+static
+aaaaa 851 851
+11
+ 
+aaaaa 851 851
+1
+int
+aaaaa 851 851
+11
+ 
+aaaaa 851 851
+2
+try_to_run_init_process
+aaaaa 851 851
+5
+(
+aaaaa 851 851
+1
+const
+aaaaa 851 851
+11
+ 
+aaaaa 851 851
+1
+char
+aaaaa 851 851
+11
+ 
+aaaaa 851 851
+4
+*
+aaaaa 851 851
+2
+init_filename
+aaaaa 851 851
+5
+)
+aaaaa 851 851
+11
+
+
+aaaaa 852 851
+5
+{
+aaaaa 852 851
+11
+
+
+aaaaa 853 851
+11
+	
+aaaaa 853 851
+1
+int
+aaaaa 853 851
+11
+ 
+aaaaa 853 851
+2
+ret
+aaaaa 853 851
+5
+;
+aaaaa 853 851
+11
+
+
+aaaaa 854 851
+11
+
+
+aaaaa 855 851
+11
+	
+aaaaa 855 851
+2
+ret
+aaaaa 855 851
+11
+ 
+aaaaa 855 851
+5
+=
+aaaaa 855 851
+11
+ 
+aaaaa 855 851
+2
+run_init_process
+aaaaa 855 851
+5
+(
+aaaaa 855 851
+2
+init_filename
+aaaaa 855 851
+5
+)
+aaaaa 855 851
+5
+;
+aaaaa 855 851
+11
+
+
+aaaaa 856 851
+11
+
+
+aaaaa 857 851
+11
+	
+aaaaa 857 851
+1
+if
+aaaaa 857 851
+11
+ 
+aaaaa 857 851
+5
+(
+aaaaa 857 851
+2
+ret
+aaaaa 857 851
+11
+ 
+aaaaa 857 851
+4
+&&
+aaaaa 857 851
+11
+ 
+aaaaa 857 851
+2
+ret
+aaaaa 857 851
+11
+ 
+aaaaa 857 851
+4
+!=
+aaaaa 857 851
+11
+ 
+aaaaa 857 851
+4
+-
+aaaaa 857 851
+2
+ENOENT
+aaaaa 857 851
+5
+)
+aaaaa 857 851
+11
+ 
+aaaaa 857 851
+5
+{
+aaaaa 857 851
+11
+
+
+aaaaa 858 851
+11
+	
+aaaaa 858 851
+11
+	
+aaaaa 858 851
+2
+pr_err
+aaaaa 858 851
+5
+(
+aaaaa 858 851
+9
+"Starting init: %s exists but couldn't execute it (error %d)\n"
+aaaaa 858 851
+5
+,
+aaaaa 858 851
+11
+
+
+aaaaa 859 851
+11
+	
+aaaaa 859 851
+11
+	
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+2
+init_filename
+aaaaa 859 851
+5
+,
+aaaaa 859 851
+11
+ 
+aaaaa 859 851
+2
+ret
+aaaaa 859 851
+5
+)
+aaaaa 859 851
+5
+;
+aaaaa 859 851
+11
+
+
+aaaaa 860 851
+11
+	
+aaaaa 860 851
+5
+}
+aaaaa 860 851
+11
+
+
+new line counter reached: 861
+aaaaa 861 861
+11
+
+
+aaaaa 862 861
+11
+	
+aaaaa 862 861
+1
+return
+aaaaa 862 861
+11
+ 
+aaaaa 862 861
+2
+ret
+aaaaa 862 861
+5
+;
+aaaaa 862 861
+11
+
+
+aaaaa 863 861
+5
+}
+aaaaa 863 861
+11
+
+
+aaaaa 864 861
+11
+
+
+aaaaa 865 861
+1
+static
+aaaaa 865 861
+11
+ 
+aaaaa 865 861
+2
+noinline
+aaaaa 865 861
+11
+ 
+aaaaa 865 861
+1
+void
+aaaaa 865 861
+11
+ 
+aaaaa 865 861
+2
+__init
+aaaaa 865 861
+11
+ 
+aaaaa 865 861
+2
+kernel_init_freeable
+aaaaa 865 861
+5
+(
+aaaaa 865 861
+1
+void
+aaaaa 865 861
+5
+)
+aaaaa 865 861
+5
+;
+aaaaa 865 861
+11
+
+
+aaaaa 866 861
+11
+
+
+aaaaa 867 861
+7
+#if defined(CONFIG_STRICT_KERNEL_RWX) || defined(CONFIG_STRICT_MODULE_RWX)
+aaaaa 867 861
+11
+
+
+aaaaa 868 861
+2
+bool
+aaaaa 868 861
+11
+ 
+aaaaa 868 861
+2
+rodata_enabled
+aaaaa 868 861
+11
+ 
+aaaaa 868 861
+2
+__ro_after_init
+aaaaa 868 861
+11
+ 
+aaaaa 868 861
+5
+=
+aaaaa 868 861
+11
+ 
+aaaaa 868 861
+2
+true
+aaaaa 868 861
+5
+;
+aaaaa 868 861
+11
+
+
+aaaaa 869 861
+1
+static
+aaaaa 869 861
+11
+ 
+aaaaa 869 861
+1
+int
+aaaaa 869 861
+11
+ 
+aaaaa 869 861
+2
+__init
+aaaaa 869 861
+11
+ 
+aaaaa 869 861
+2
+set_debug_rodata
+aaaaa 869 861
+5
+(
+aaaaa 869 861
+1
+char
+aaaaa 869 861
+11
+ 
+aaaaa 869 861
+4
+*
+aaaaa 869 861
+2
+str
+aaaaa 869 861
+5
+)
+aaaaa 869 861
+11
+
+
+aaaaa 870 861
+5
+{
+aaaaa 870 861
+11
+
+
+new line counter reached: 871
+aaaaa 871 871
+11
+	
+aaaaa 871 871
+1
+return
+aaaaa 871 871
+11
+ 
+aaaaa 871 871
+2
+strtobool
+aaaaa 871 871
+5
+(
+aaaaa 871 871
+2
+str
+aaaaa 871 871
+5
+,
+aaaaa 871 871
+11
+ 
+aaaaa 871 871
+4
+&
+aaaaa 871 871
+2
+rodata_enabled
+aaaaa 871 871
+5
+)
+aaaaa 871 871
+5
+;
+aaaaa 871 871
+11
+
+
+aaaaa 872 871
+5
+}
+aaaaa 872 871
+11
+
+
+aaaaa 873 871
+2
+__setup
+aaaaa 873 871
+5
+(
+aaaaa 873 871
+9
+"rodata="
+aaaaa 873 871
+5
+,
+aaaaa 873 871
+11
+ 
+aaaaa 873 871
+2
+set_debug_rodata
+aaaaa 873 871
+5
+)
+aaaaa 873 871
+5
+;
+aaaaa 873 871
+11
+
+
+aaaaa 874 871
+7
+#endif
+aaaaa 874 871
+11
+
+
+aaaaa 875 871
+11
+
+
+aaaaa 876 871
+7
+#ifdef CONFIG_STRICT_KERNEL_RWX
+aaaaa 876 871
+11
+
+
+aaaaa 877 871
+1
+static
+aaaaa 877 871
+11
+ 
+aaaaa 877 871
+1
+void
+aaaaa 877 871
+11
+ 
+aaaaa 877 871
+2
+mark_readonly
+aaaaa 877 871
+5
+(
+aaaaa 877 871
+1
+void
+aaaaa 877 871
+5
+)
+aaaaa 877 871
+11
+
+
+aaaaa 878 871
+5
+{
+aaaaa 878 871
+11
+
+
+aaaaa 879 871
+11
+	
+aaaaa 879 871
+1
+if
+aaaaa 879 871
+11
+ 
+aaaaa 879 871
+5
+(
+aaaaa 879 871
+2
+rodata_enabled
+aaaaa 879 871
+5
+)
+aaaaa 879 871
+11
+ 
+aaaaa 879 871
+5
+{
+aaaaa 879 871
+11
+
+
+aaaaa 880 871
+11
+	
+aaaaa 880 871
+11
+	
+aaaaa 880 871
+2
+mark_rodata_ro
+aaaaa 880 871
+5
+(
+aaaaa 880 871
+5
+)
+aaaaa 880 871
+5
+;
+aaaaa 880 871
+11
+
+
+new line counter reached: 881
+aaaaa 881 881
+11
+	
+aaaaa 881 881
+11
+	
+aaaaa 881 881
+2
+rodata_test
+aaaaa 881 881
+5
+(
+aaaaa 881 881
+5
+)
+aaaaa 881 881
+5
+;
+aaaaa 881 881
+11
+
+
+aaaaa 882 881
+11
+	
+aaaaa 882 881
+5
+}
+aaaaa 882 881
+11
+ 
+aaaaa 882 881
+1
+else
+aaaaa 882 881
+11
+
+
+aaaaa 883 881
+11
+	
+aaaaa 883 881
+11
+	
+aaaaa 883 881
+2
+pr_info
+aaaaa 883 881
+5
+(
+aaaaa 883 881
+9
+"Kernel memory protection disabled.\n"
+aaaaa 883 881
+5
+)
+aaaaa 883 881
+5
+;
+aaaaa 883 881
+11
+
+
+aaaaa 884 881
+5
+}
+aaaaa 884 881
+11
+
+
+aaaaa 885 881
+7
+#else
+aaaaa 885 881
+11
+
+
+aaaaa 886 881
+1
+static
+aaaaa 886 881
+11
+ 
+aaaaa 886 881
+2
+inline
+aaaaa 886 881
+11
+ 
+aaaaa 886 881
+1
+void
+aaaaa 886 881
+11
+ 
+aaaaa 886 881
+2
+mark_readonly
+aaaaa 886 881
+5
+(
+aaaaa 886 881
+1
+void
+aaaaa 886 881
+5
+)
+aaaaa 886 881
+11
+
+
+aaaaa 887 881
+5
+{
+aaaaa 887 881
+11
+
+
+aaaaa 888 881
+11
+	
+aaaaa 888 881
+2
+pr_warn
+aaaaa 888 881
+5
+(
+aaaaa 888 881
+9
+"This architecture does not have kernel memory protection.\n"
+aaaaa 888 881
+5
+)
+aaaaa 888 881
+5
+;
+aaaaa 888 881
+11
+
+
+aaaaa 889 881
+5
+}
+aaaaa 889 881
+11
+
+
+aaaaa 890 881
+7
+#endif
+aaaaa 890 881
+11
+
+
+new line counter reached: 891
+aaaaa 891 891
+11
+
+
+aaaaa 892 891
+1
+static
+aaaaa 892 891
+11
+ 
+aaaaa 892 891
+1
+int
+aaaaa 892 891
+11
+ 
+aaaaa 892 891
+2
+__ref
+aaaaa 892 891
+11
+ 
+aaaaa 892 891
+2
+kernel_init
+aaaaa 892 891
+5
+(
+aaaaa 892 891
+1
+void
+aaaaa 892 891
+11
+ 
+aaaaa 892 891
+4
+*
+aaaaa 892 891
+2
+unused
+aaaaa 892 891
+5
+)
+aaaaa 892 891
+11
+
+
+aaaaa 893 891
+5
+{
+aaaaa 893 891
+11
+
+
+aaaaa 894 891
+11
+	
+aaaaa 894 891
+1
+int
+aaaaa 894 891
+11
+ 
+aaaaa 894 891
+2
+ret
+aaaaa 894 891
+5
+;
+aaaaa 894 891
+11
+
+
+aaaaa 895 891
+11
+
+
+aaaaa 896 891
+11
+	
+aaaaa 896 891
+2
+kernel_init_freeable
+aaaaa 896 891
+5
+(
+aaaaa 896 891
+5
+)
+aaaaa 896 891
+5
+;
+aaaaa 896 891
+11
+
+
+aaaaa 897 891
+11
+	
+aaaaa 897 891
+6
+/* need to finish all async __init code before freeing the memory */
+aaaaa 897 891
+11
+
+
+aaaaa 898 891
+11
+	
+aaaaa 898 891
+2
+async_synchronize_full
+aaaaa 898 891
+5
+(
+aaaaa 898 891
+5
+)
+aaaaa 898 891
+5
+;
+aaaaa 898 891
+11
+
+
+aaaaa 899 891
+11
+	
+aaaaa 899 891
+2
+ftrace_free_init_mem
+aaaaa 899 891
+5
+(
+aaaaa 899 891
+5
+)
+aaaaa 899 891
+5
+;
+aaaaa 899 891
+11
+
+
+aaaaa 900 891
+11
+	
+aaaaa 900 891
+2
+free_initmem
+aaaaa 900 891
+5
+(
+aaaaa 900 891
+5
+)
+aaaaa 900 891
+5
+;
+aaaaa 900 891
+11
+
+
+new line counter reached: 901
+aaaaa 901 901
+11
+	
+aaaaa 901 901
+2
+mark_readonly
+aaaaa 901 901
+5
+(
+aaaaa 901 901
+5
+)
+aaaaa 901 901
+5
+;
+aaaaa 901 901
+11
+
+
+aaaaa 902 901
+11
+	
+aaaaa 902 901
+2
+system_state
+aaaaa 902 901
+11
+ 
+aaaaa 902 901
+5
+=
+aaaaa 902 901
+11
+ 
+aaaaa 902 901
+2
+SYSTEM_RUNNING
+aaaaa 902 901
+5
+;
+aaaaa 902 901
+11
+
+
+aaaaa 903 901
+11
+	
+aaaaa 903 901
+2
+numa_default_policy
+aaaaa 903 901
+5
+(
+aaaaa 903 901
+5
+)
+aaaaa 903 901
+5
+;
+aaaaa 903 901
+11
+
+
+aaaaa 904 901
+11
+
+
+aaaaa 905 901
+11
+	
+aaaaa 905 901
+2
+rcu_end_inkernel_boot
+aaaaa 905 901
+5
+(
+aaaaa 905 901
+5
+)
+aaaaa 905 901
+5
+;
+aaaaa 905 901
+11
+
+
+aaaaa 906 901
+11
+
+
+aaaaa 907 901
+11
+	
+aaaaa 907 901
+1
+if
+aaaaa 907 901
+11
+ 
+aaaaa 907 901
+5
+(
+aaaaa 907 901
+2
+ramdisk_execute_command
+aaaaa 907 901
+5
+)
+aaaaa 907 901
+11
+ 
+aaaaa 907 901
+5
+{
+aaaaa 907 901
+11
+
+
+aaaaa 908 901
+11
+	
+aaaaa 908 901
+11
+	
+aaaaa 908 901
+2
+ret
+aaaaa 908 901
+11
+ 
+aaaaa 908 901
+5
+=
+aaaaa 908 901
+11
+ 
+aaaaa 908 901
+2
+run_init_process
+aaaaa 908 901
+5
+(
+aaaaa 908 901
+2
+ramdisk_execute_command
+aaaaa 908 901
+5
+)
+aaaaa 908 901
+5
+;
+aaaaa 908 901
+11
+
+
+aaaaa 909 901
+11
+	
+aaaaa 909 901
+11
+	
+aaaaa 909 901
+1
+if
+aaaaa 909 901
+11
+ 
+aaaaa 909 901
+5
+(
+aaaaa 909 901
+4
+!
+aaaaa 909 901
+2
+ret
+aaaaa 909 901
+5
+)
+aaaaa 909 901
+11
+
+
+aaaaa 910 901
+11
+	
+aaaaa 910 901
+11
+	
+aaaaa 910 901
+11
+	
+aaaaa 910 901
+1
+return
+aaaaa 910 901
+11
+ 
+aaaaa 910 901
+3
+0
+aaaaa 910 901
+5
+;
+aaaaa 910 901
+11
+
+
+new line counter reached: 911
+aaaaa 911 911
+11
+	
+aaaaa 911 911
+11
+	
+aaaaa 911 911
+2
+pr_err
+aaaaa 911 911
+5
+(
+aaaaa 911 911
+9
+"Failed to execute %s (error %d)\n"
+aaaaa 911 911
+5
+,
+aaaaa 911 911
+11
+
+
+aaaaa 912 911
+11
+	
+aaaaa 912 911
+11
+	
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+2
+ramdisk_execute_command
+aaaaa 912 911
+5
+,
+aaaaa 912 911
+11
+ 
+aaaaa 912 911
+2
+ret
+aaaaa 912 911
+5
+)
+aaaaa 912 911
+5
+;
+aaaaa 912 911
+11
+
+
+aaaaa 913 911
+11
+	
+aaaaa 913 911
+5
+}
+aaaaa 913 911
+11
+
+
+aaaaa 914 911
+11
+
+
+aaaaa 915 911
+11
+	
+aaaaa 915 911
+6
+/*
+	 * We try each of these until one succeeds.
+	 *
+	 * The Bourne shell can be used instead of init if we are
+	 * trying to recover a really broken machine.
+	 */
+aaaaa 920 911
+11
+
+
+new line counter reached: 921
+aaaaa 921 921
+11
+	
+aaaaa 921 921
+1
+if
+aaaaa 921 921
+11
+ 
+aaaaa 921 921
+5
+(
+aaaaa 921 921
+2
+execute_command
+aaaaa 921 921
+5
+)
+aaaaa 921 921
+11
+ 
+aaaaa 921 921
+5
+{
+aaaaa 921 921
+11
+
+
+aaaaa 922 921
+11
+	
+aaaaa 922 921
+11
+	
+aaaaa 922 921
+2
+ret
+aaaaa 922 921
+11
+ 
+aaaaa 922 921
+5
+=
+aaaaa 922 921
+11
+ 
+aaaaa 922 921
+2
+run_init_process
+aaaaa 922 921
+5
+(
+aaaaa 922 921
+2
+execute_command
+aaaaa 922 921
+5
+)
+aaaaa 922 921
+5
+;
+aaaaa 922 921
+11
+
+
+aaaaa 923 921
+11
+	
+aaaaa 923 921
+11
+	
+aaaaa 923 921
+1
+if
+aaaaa 923 921
+11
+ 
+aaaaa 923 921
+5
+(
+aaaaa 923 921
+4
+!
+aaaaa 923 921
+2
+ret
+aaaaa 923 921
+5
+)
+aaaaa 923 921
+11
+
+
+aaaaa 924 921
+11
+	
+aaaaa 924 921
+11
+	
+aaaaa 924 921
+11
+	
+aaaaa 924 921
+1
+return
+aaaaa 924 921
+11
+ 
+aaaaa 924 921
+3
+0
+aaaaa 924 921
+5
+;
+aaaaa 924 921
+11
+
+
+aaaaa 925 921
+11
+	
+aaaaa 925 921
+11
+	
+aaaaa 925 921
+2
+panic
+aaaaa 925 921
+5
+(
+aaaaa 925 921
+9
+"Requested init %s failed (error %d)."
+aaaaa 925 921
+5
+,
+aaaaa 925 921
+11
+
+
+aaaaa 926 921
+11
+	
+aaaaa 926 921
+11
+	
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+2
+execute_command
+aaaaa 926 921
+5
+,
+aaaaa 926 921
+11
+ 
+aaaaa 926 921
+2
+ret
+aaaaa 926 921
+5
+)
+aaaaa 926 921
+5
+;
+aaaaa 926 921
+11
+
+
+aaaaa 927 921
+11
+	
+aaaaa 927 921
+5
+}
+aaaaa 927 921
+11
+
+
+aaaaa 928 921
+11
+	
+aaaaa 928 921
+1
+if
+aaaaa 928 921
+11
+ 
+aaaaa 928 921
+5
+(
+aaaaa 928 921
+4
+!
+aaaaa 928 921
+2
+try_to_run_init_process
+aaaaa 928 921
+5
+(
+aaaaa 928 921
+9
+"/sbin/init"
+aaaaa 928 921
+5
+)
+aaaaa 928 921
+11
+ 
+aaaaa 928 921
+4
+||
+aaaaa 928 921
+11
+
+
+aaaaa 929 921
+11
+	
+aaaaa 929 921
+11
+ 
+aaaaa 929 921
+11
+ 
+aaaaa 929 921
+11
+ 
+aaaaa 929 921
+11
+ 
+aaaaa 929 921
+4
+!
+aaaaa 929 921
+2
+try_to_run_init_process
+aaaaa 929 921
+5
+(
+aaaaa 929 921
+9
+"/etc/init"
+aaaaa 929 921
+5
+)
+aaaaa 929 921
+11
+ 
+aaaaa 929 921
+4
+||
+aaaaa 929 921
+11
+
+
+aaaaa 930 921
+11
+	
+aaaaa 930 921
+11
+ 
+aaaaa 930 921
+11
+ 
+aaaaa 930 921
+11
+ 
+aaaaa 930 921
+11
+ 
+aaaaa 930 921
+4
+!
+aaaaa 930 921
+2
+try_to_run_init_process
+aaaaa 930 921
+5
+(
+aaaaa 930 921
+9
+"/bin/init"
+aaaaa 930 921
+5
+)
+aaaaa 930 921
+11
+ 
+aaaaa 930 921
+4
+||
+aaaaa 930 921
+11
+
+
+new line counter reached: 931
+aaaaa 931 931
+11
+	
+aaaaa 931 931
+11
+ 
+aaaaa 931 931
+11
+ 
+aaaaa 931 931
+11
+ 
+aaaaa 931 931
+11
+ 
+aaaaa 931 931
+4
+!
+aaaaa 931 931
+2
+try_to_run_init_process
+aaaaa 931 931
+5
+(
+aaaaa 931 931
+9
+"/bin/sh"
+aaaaa 931 931
+5
+)
+aaaaa 931 931
+5
+)
+aaaaa 931 931
+11
+
+
+aaaaa 932 931
+11
+	
+aaaaa 932 931
+11
+	
+aaaaa 932 931
+1
+return
+aaaaa 932 931
+11
+ 
+aaaaa 932 931
+3
+0
+aaaaa 932 931
+5
+;
+aaaaa 932 931
+11
+
+
+aaaaa 933 931
+11
+
+
+aaaaa 934 931
+11
+	
+aaaaa 934 931
+2
+panic
+aaaaa 934 931
+5
+(
+aaaaa 934 931
+9
+"No working init found.  Try passing init= option to kernel. "
+aaaaa 934 931
+11
+
+
+aaaaa 935 931
+11
+	
+aaaaa 935 931
+11
+ 
+aaaaa 935 931
+11
+ 
+aaaaa 935 931
+11
+ 
+aaaaa 935 931
+11
+ 
+aaaaa 935 931
+11
+ 
+aaaaa 935 931
+11
+ 
+aaaaa 935 931
+9
+"See Linux Documentation/admin-guide/init.rst for guidance."
+aaaaa 935 931
+5
+)
+aaaaa 935 931
+5
+;
+aaaaa 935 931
+11
+
+
+aaaaa 936 931
+5
+}
+aaaaa 936 931
+11
+
+
+aaaaa 937 931
+11
+
+
+aaaaa 938 931
+1
+static
+aaaaa 938 931
+11
+ 
+aaaaa 938 931
+2
+noinline
+aaaaa 938 931
+11
+ 
+aaaaa 938 931
+1
+void
+aaaaa 938 931
+11
+ 
+aaaaa 938 931
+2
+__init
+aaaaa 938 931
+11
+ 
+aaaaa 938 931
+2
+kernel_init_freeable
+aaaaa 938 931
+5
+(
+aaaaa 938 931
+1
+void
+aaaaa 938 931
+5
+)
+aaaaa 938 931
+11
+
+
+aaaaa 939 931
+5
+{
+aaaaa 939 931
+11
+
+
+aaaaa 940 931
+11
+	
+aaaaa 940 931
+6
+/*
+	 * Wait until kthreadd is all set-up.
+	 */
+new line counter reached: 942
+aaaaa 942 941
+11
+
+
+aaaaa 943 941
+11
+	
+aaaaa 943 941
+2
+wait_for_completion
+aaaaa 943 941
+5
+(
+aaaaa 943 941
+4
+&
+aaaaa 943 941
+2
+kthreadd_done
+aaaaa 943 941
+5
+)
+aaaaa 943 941
+5
+;
+aaaaa 943 941
+11
+
+
+aaaaa 944 941
+11
+
+
+aaaaa 945 941
+11
+	
+aaaaa 945 941
+6
+/* Now the scheduler is fully set up and can do blocking allocations */
+aaaaa 945 941
+11
+
+
+aaaaa 946 941
+11
+	
+aaaaa 946 941
+2
+gfp_allowed_mask
+aaaaa 946 941
+11
+ 
+aaaaa 946 941
+5
+=
+aaaaa 946 941
+11
+ 
+aaaaa 946 941
+2
+__GFP_BITS_MASK
+aaaaa 946 941
+5
+;
+aaaaa 946 941
+11
+
+
+aaaaa 947 941
+11
+
+
+aaaaa 948 941
+11
+	
+aaaaa 948 941
+6
+/*
+	 * init can allocate pages on any node
+	 */
+aaaaa 950 941
+11
+
+
+new line counter reached: 951
+aaaaa 951 951
+11
+	
+aaaaa 951 951
+2
+set_mems_allowed
+aaaaa 951 951
+5
+(
+aaaaa 951 951
+2
+node_states
+aaaaa 951 951
+5
+[
+aaaaa 951 951
+2
+N_MEMORY
+aaaaa 951 951
+5
+]
+aaaaa 951 951
+5
+)
+aaaaa 951 951
+5
+;
+aaaaa 951 951
+11
+
+
+aaaaa 952 951
+11
+
+
+aaaaa 953 951
+11
+	
+aaaaa 953 951
+2
+cad_pid
+aaaaa 953 951
+11
+ 
+aaaaa 953 951
+5
+=
+aaaaa 953 951
+11
+ 
+aaaaa 953 951
+2
+task_pid
+aaaaa 953 951
+5
+(
+aaaaa 953 951
+2
+current
+aaaaa 953 951
+5
+)
+aaaaa 953 951
+5
+;
+aaaaa 953 951
+11
+
+
+aaaaa 954 951
+11
+
+
+aaaaa 955 951
+11
+	
+aaaaa 955 951
+2
+smp_prepare_cpus
+aaaaa 955 951
+5
+(
+aaaaa 955 951
+2
+setup_max_cpus
+aaaaa 955 951
+5
+)
+aaaaa 955 951
+5
+;
+aaaaa 955 951
+11
+
+
+aaaaa 956 951
+11
+
+
+aaaaa 957 951
+11
+	
+aaaaa 957 951
+2
+workqueue_init
+aaaaa 957 951
+5
+(
+aaaaa 957 951
+5
+)
+aaaaa 957 951
+5
+;
+aaaaa 957 951
+11
+
+
+aaaaa 958 951
+11
+
+
+aaaaa 959 951
+11
+	
+aaaaa 959 951
+2
+init_mm_internals
+aaaaa 959 951
+5
+(
+aaaaa 959 951
+5
+)
+aaaaa 959 951
+5
+;
+aaaaa 959 951
+11
+
+
+aaaaa 960 951
+11
+
+
+new line counter reached: 961
+aaaaa 961 961
+11
+	
+aaaaa 961 961
+2
+do_pre_smp_initcalls
+aaaaa 961 961
+5
+(
+aaaaa 961 961
+5
+)
+aaaaa 961 961
+5
+;
+aaaaa 961 961
+11
+
+
+aaaaa 962 961
+11
+	
+aaaaa 962 961
+2
+lockup_detector_init
+aaaaa 962 961
+5
+(
+aaaaa 962 961
+5
+)
+aaaaa 962 961
+5
+;
+aaaaa 962 961
+11
+
+
+aaaaa 963 961
+11
+
+
+aaaaa 964 961
+11
+	
+aaaaa 964 961
+2
+smp_init
+aaaaa 964 961
+5
+(
+aaaaa 964 961
+5
+)
+aaaaa 964 961
+5
+;
+aaaaa 964 961
+11
+
+
+aaaaa 965 961
+11
+	
+aaaaa 965 961
+2
+sched_init_smp
+aaaaa 965 961
+5
+(
+aaaaa 965 961
+5
+)
+aaaaa 965 961
+5
+;
+aaaaa 965 961
+11
+
+
+aaaaa 966 961
+11
+
+
+aaaaa 967 961
+11
+	
+aaaaa 967 961
+2
+page_alloc_init_late
+aaaaa 967 961
+5
+(
+aaaaa 967 961
+5
+)
+aaaaa 967 961
+5
+;
+aaaaa 967 961
+11
+
+
+aaaaa 968 961
+11
+
+
+aaaaa 969 961
+11
+	
+aaaaa 969 961
+2
+do_basic_setup
+aaaaa 969 961
+5
+(
+aaaaa 969 961
+5
+)
+aaaaa 969 961
+5
+;
+aaaaa 969 961
+11
+
+
+aaaaa 970 961
+11
+
+
+new line counter reached: 971
+aaaaa 971 971
+11
+	
+aaaaa 971 971
+6
+/* Open the /dev/console on the rootfs, this should never fail */
+aaaaa 971 971
+11
+
+
+aaaaa 972 971
+11
+	
+aaaaa 972 971
+1
+if
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+5
+(
+aaaaa 972 971
+2
+sys_open
+aaaaa 972 971
+5
+(
+aaaaa 972 971
+5
+(
+aaaaa 972 971
+1
+const
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+1
+char
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+2
+__user
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+4
+*
+aaaaa 972 971
+5
+)
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+9
+"/dev/console"
+aaaaa 972 971
+5
+,
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+2
+O_RDWR
+aaaaa 972 971
+5
+,
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+3
+0
+aaaaa 972 971
+5
+)
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+4
+<
+aaaaa 972 971
+11
+ 
+aaaaa 972 971
+3
+0
+aaaaa 972 971
+5
+)
+aaaaa 972 971
+11
+
+
+aaaaa 973 971
+11
+	
+aaaaa 973 971
+11
+	
+aaaaa 973 971
+2
+pr_err
+aaaaa 973 971
+5
+(
+aaaaa 973 971
+9
+"Warning: unable to open an initial console.\n"
+aaaaa 973 971
+5
+)
+aaaaa 973 971
+5
+;
+aaaaa 973 971
+11
+
+
+aaaaa 974 971
+11
+
+
+aaaaa 975 971
+11
+	
+aaaaa 975 971
+5
+(
+aaaaa 975 971
+1
+void
+aaaaa 975 971
+5
+)
+aaaaa 975 971
+11
+ 
+aaaaa 975 971
+2
+sys_dup
+aaaaa 975 971
+5
+(
+aaaaa 975 971
+3
+0
+aaaaa 975 971
+5
+)
+aaaaa 975 971
+5
+;
+aaaaa 975 971
+11
+
+
+aaaaa 976 971
+11
+	
+aaaaa 976 971
+5
+(
+aaaaa 976 971
+1
+void
+aaaaa 976 971
+5
+)
+aaaaa 976 971
+11
+ 
+aaaaa 976 971
+2
+sys_dup
+aaaaa 976 971
+5
+(
+aaaaa 976 971
+3
+0
+aaaaa 976 971
+5
+)
+aaaaa 976 971
+5
+;
+aaaaa 976 971
+11
+
+
+aaaaa 977 971
+11
+	
+aaaaa 977 971
+6
+/*
+	 * check if there is an early userspace init.  If yes, let it do all
+	 * the work
+	 */
+aaaaa 980 971
+11
+
+
+new line counter reached: 981
+aaaaa 981 981
+11
+
+
+aaaaa 982 981
+11
+	
+aaaaa 982 981
+1
+if
+aaaaa 982 981
+11
+ 
+aaaaa 982 981
+5
+(
+aaaaa 982 981
+4
+!
+aaaaa 982 981
+2
+ramdisk_execute_command
+aaaaa 982 981
+5
+)
+aaaaa 982 981
+11
+
+
+aaaaa 983 981
+11
+	
+aaaaa 983 981
+11
+	
+aaaaa 983 981
+2
+ramdisk_execute_command
+aaaaa 983 981
+11
+ 
+aaaaa 983 981
+5
+=
+aaaaa 983 981
+11
+ 
+aaaaa 983 981
+9
+"/init"
+aaaaa 983 981
+5
+;
+aaaaa 983 981
+11
+
+
+aaaaa 984 981
+11
+
+
+aaaaa 985 981
+11
+	
+aaaaa 985 981
+1
+if
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+5
+(
+aaaaa 985 981
+2
+sys_access
+aaaaa 985 981
+5
+(
+aaaaa 985 981
+5
+(
+aaaaa 985 981
+1
+const
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+1
+char
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+2
+__user
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+4
+*
+aaaaa 985 981
+5
+)
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+2
+ramdisk_execute_command
+aaaaa 985 981
+5
+,
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+3
+0
+aaaaa 985 981
+5
+)
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+4
+!=
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+3
+0
+aaaaa 985 981
+5
+)
+aaaaa 985 981
+11
+ 
+aaaaa 985 981
+5
+{
+aaaaa 985 981
+11
+
+
+aaaaa 986 981
+11
+	
+aaaaa 986 981
+11
+	
+aaaaa 986 981
+2
+ramdisk_execute_command
+aaaaa 986 981
+11
+ 
+aaaaa 986 981
+5
+=
+aaaaa 986 981
+11
+ 
+aaaaa 986 981
+2
+NULL
+aaaaa 986 981
+5
+;
+aaaaa 986 981
+11
+
+
+aaaaa 987 981
+11
+	
+aaaaa 987 981
+11
+	
+aaaaa 987 981
+2
+prepare_namespace
+aaaaa 987 981
+5
+(
+aaaaa 987 981
+5
+)
+aaaaa 987 981
+5
+;
+aaaaa 987 981
+11
+
+
+aaaaa 988 981
+11
+	
+aaaaa 988 981
+5
+}
+aaaaa 988 981
+11
+
+
+aaaaa 989 981
+11
+
+
+aaaaa 990 981
+11
+	
+aaaaa 990 981
+6
+/*
+	 * Ok, we have completed the initial bootup, and
+	 * we're essentially up and running. Get rid of the
+	 * initmem segments and start the user-mode stuff..
+	 *
+	 * rootfs is available now, try loading the public keys
+	 * and default modules
+	 */
+new line counter reached: 997
+aaaaa 997 991
+11
+
+
+aaaaa 998 991
+11
+
+
+aaaaa 999 991
+11
+	
+aaaaa 999 991
+2
+integrity_load_keys
+aaaaa 999 991
+5
+(
+aaaaa 999 991
+5
+)
+aaaaa 999 991
+5
+;
+aaaaa 999 991
+11
+
+
+aaaaa 1000 991
+11
+	
+aaaaa 1000 991
+2
+load_default_modules
+aaaaa 1000 991
+5
+(
+aaaaa 1000 991
+5
+)
+aaaaa 1000 991
+5
+;
+aaaaa 1000 991
+11
+
+
+new line counter reached: 1001
+aaaaa 1001 1001
+5
+}
+aaaaa 1001 1001
+11
+
+
+aaaaa 1002 1001

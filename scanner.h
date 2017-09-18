@@ -7,5 +7,5 @@
 #define PREPROCESSOR 7
 #define CONSTANTCHAR 8
 #define CONSTANTSTRING 9
-#define ERROR 666
-#define BLANK 0
+#define ERROR 10
+#define BLANK 11
