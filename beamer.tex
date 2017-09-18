@@ -1,0 +1,89 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage[utf8]{inputenc}
+
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\title{Flex}
+\subtitle{Un generador de Scanners libre}
+% \date{\today}
+\date{}
+\author{Jose Pablo Vargas Campos \newline 2013116365}
+\institute{Instituto Tecnológico de Costa Rica\newline Compiladores e Intérpretes \newline Semestre 2017 }
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introducción}
+
+\begin{frame}[fragile]{Metropolis}
+
+
+\begin{alertblock}{Introducción}
+		Flex es una herramienta de análisis lexico desarrollada para la generación de Scanners de lenguajes. Su nombre significa "fast lexical analyzer generator". Es la alternativa gratis y open-source a la herramienta "lex". 
+\end{alertblock}
+    
+\end{frame}
+    
+\begin{frame}[fragile]{Introducción}
+
+	\begin{alertblock}{Scanning}
+		El proceso de Scanning es el proceso por el cual se identifican los diferentes lexemas de un lenguaje. El proceso es tan simple como la ejecución de un Automata Deterministico Finito. Para la generación del Scanner con Flex se utilizan las expresiones regulares, conocidas como `RegEx', para indicarle a Flex que construya apartir de las expresiones regulares un DFA en C, el cual luego se usa para adquirir los diferentes lexemas del lenguaje que se planea `Scannear'.
+
+	\end{alertblock}
+
+\end{frame}
+
+
+\section{Syntax Highlighting}
+
+\begin{frame}[fragile,allowframebreaks]{Syntax Highlighting}
+\begin{alertblock}{Source Code}
+	\end{alertblock}
+\input{source.tex}
+
+\end{frame}
+\begin{frame}[fragile]{Histograma}
+	Histograma here
+\end{frame}
+
+{\setbeamercolor{palette primary}{fg=black, bg=yellow}
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+}
+
+\begin{frame}[fragile]{Backup slides}
+  Sometimes, it is useful to add slides at the end of your presentation to
+  refer to during audience questions.
+
+  The best way to do this is to include the \verb|appendixnumberbeamer|
+  package in your preamble and call \verb|\appendix| before your backup slides.
+
+  \themename will automatically turn off slide numbering and progress bars for
+  slides in the appendix.
+\end{frame}
+
+
+\end{document}
