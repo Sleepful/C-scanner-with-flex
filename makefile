@@ -1,3 +1,6 @@
+.SUFFIXES:
+all: lex scanner
+
 scanner: scanner.h scanner.c lex.yy.c
 	cc lex.yy.c scanner.c -o scanner 
 

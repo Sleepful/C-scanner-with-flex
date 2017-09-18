@@ -14,7 +14,9 @@ typedef struct table_row {
 	struct table_row * next;
 } Row;
 
-Row* table[13];
+Row* table[11]; //symbol table 4 later
+
+int tokencount[11] = {0};
 
 Row getToken(void);
 
