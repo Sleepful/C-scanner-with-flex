@@ -4,7 +4,7 @@ This is a C-scanner built with the tool `flex`, it outputs syntax highlighting a
 
 Relevant files are:
 
-*  `scanner.l`: file used to built flex scanner.
+*  `scanner.l`: file used to build the flex scanner (lex.yy.c).
 
 *  `scanner.c`: this is the main program, it executes everything.
 
