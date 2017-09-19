@@ -18,6 +18,10 @@ Relevant files are:
 
 *  `histogram_script.gnu`: script used to create the histogram.
 
+*  `histogram.png`: output png histogram from gnuplot.
+
+*  `beamer.pdf`: output pdf presentation.
+
 To build just run `make` and then to run the program `./scanner < file_to_be_scanned`, for example: `./scanner < tests/linuxmain.c`
 
 # Dependencies
