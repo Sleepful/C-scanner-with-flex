@@ -1,3 +1,8 @@
+#Edit:
+
+Estas son dudas sobre el enunciado de la tarea y un pequeño resumen del mismo, al final de cuentas no se implementó la fución de preprocesador.
+
+
 #Resumen de enunciado
 
 C -> scanner -> beamer
