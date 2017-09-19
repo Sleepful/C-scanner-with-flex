@@ -6,7 +6,7 @@
 #define NEWFRM 250
 #define HSTGRM_LINES 50
 #define HSTGRM_SIZE 10
-#define DEBUG 1
+#define DEBUG 0
 
 extern int yylex();
 extern int yylineno;
@@ -18,6 +18,8 @@ int yylinelastcount_H = 1;
 
 char* names[TKNS] = {"KEYWORD","IDENTIFIER","CONSTANTLITERAL","OPERATOR","PUNCTUATOR","COMMENT","PREPROCESSOR","CONSTANTCHAR","CONSTANTSTRING","ERROR","BLANK"};
 char* colors[TKNS] = {"BurntOrange","Aquamarine","ForestGreen","Goldenrod","Fuchsia","Rhodamine","Gray","GreenYellow","Emerald","Red","White"};
+
+char * commands[]={"gnuplot \"histogram_script.gnu\"","pdflatex beamer.tex","okular beamer.pdf --presentation"};
 
 typedef struct table_row 
 	{
@@ -31,6 +33,7 @@ Row getToken(void);
 void writetoken(Row rowtoken, FILE* file);
 void beginwritting(FILE* file);
 void finishwritting(FILE* file);
+void writetokens_dat(void);
 
 Row* table[TKNS]; //symbol table 4 later
 
@@ -63,9 +66,38 @@ int main(void)
 		{
 		writetoken(rowtoken,file);
 		rowtoken = getToken();
+		#if DEBUG
+		for (int i=0;i<TKNS;i++)
+			printf(" n:%d ",histogram[current_Hist_i].token_count[i]);
+		printf(" end line:%d\n", current_Hist_i);
+		#endif
 		}
 	finishwritting(file);
+	fclose(file);
+	writetokens_dat();
+	system(commands[0]); //gnuplot
+	system(commands[1]); //pdflatex
+	system(commands[2]); //okular
 	return 0;
+	}
+
+void writetokens_dat(void)
+	{
+	file = fopen("datafile.dat","w");
+	fprintf(file, "x ");
+	for(int i=0;i<TKNS-1;i++)
+		fprintf(file,"%s ",names[i]);
+	fprintf(file, "\n");
+	for(int i=0;i<=current_Hist_i;i++)
+		{
+		fprintf(file,"%d-%d ",i*HSTGRM_LINES,i*HSTGRM_LINES+HSTGRM_LINES);
+		for(int a=0;a<=TKNS-2;a++)
+			{
+			fprintf(file,"%d ",histogram[i].token_count[a]);
+			}
+		fprintf(file,"\n");
+		}
+	fclose(file);
 	}
 
 void extend_histogram()
@@ -86,8 +118,21 @@ void extend_histogram()
 		{
 		#if DEBUG
 		printf("extended hist to %d\n",current_Hist_s);
+		for (int i=0;i<TKNS;i++)
+			printf(" n:%d ",histogram[current_Hist_i].token_count[i]);
+			printf("^ new line of extended hist\n");
 		#endif
 		histogram = tmp;
+		//zero out the rows
+		for(int a=0;a<HSTGRM_SIZE;a++)
+			for(int i=0;i<TKNS;i++)
+				histogram[a+current_Hist_i].token_count[i]=0;
+		#if DEBUG
+		printf("extended hist to %d\n",current_Hist_s);
+		for (int i=0;i<TKNS;i++)
+			printf(" n:%d ",histogram[current_Hist_i].token_count[i]);
+			printf("^ new line of extended hist\n");
+		#endif
 		}
 	}
 
