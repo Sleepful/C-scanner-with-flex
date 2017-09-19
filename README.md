@@ -24,3 +24,9 @@ To build just run `make` and then to run the program `./scanner < file_to_be_sca
 
 The code is written such that it assumes you have installed `gnuplot`, `pdflatex` and `okular`. The commands run by the program are declared in an array inside `scanner.c` at the beginning and can be edited accordingly.
 The least important of programs is `okular` which is a pdf-viewer, you may run the program without okular and load the pdf with your pdf-viewer of choice.
+
+#Screenshots
+
+![Screenie1](https://i.imgur.com/SwqEzSw.png)
+![Screenie2](https://i.imgur.com/oF1HXJF.png)
+![Screenie3](https://i.imgur.com/Nbmbx5E.png)
