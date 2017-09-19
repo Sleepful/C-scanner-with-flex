@@ -27,6 +27,6 @@ The least important of programs is `okular` which is a pdf-viewer, you may run t
 
 # Screenshots
 
-![Screenie1](https://i.imgur.com/SwqEzSw.png)
-![Screenie2](https://i.imgur.com/oF1HXJF.png)
 ![Screenie3](https://i.imgur.com/Nbmbx5E.png)
+![Screenie2](https://i.imgur.com/oF1HXJF.png)
+![Screenie1](https://i.imgur.com/SwqEzSw.png)
