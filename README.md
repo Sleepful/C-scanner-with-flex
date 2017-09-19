@@ -22,6 +22,8 @@ Relevant files are:
 
 *  `beamer.pdf`: output pdf presentation.
 
+*  `\tests`: folder with C source files to test the scanner with.
+
 To build just run `make` and then to run the program `./scanner < file_to_be_scanned`, for example: `./scanner < tests/linuxmain.c`
 
 # Dependencies
