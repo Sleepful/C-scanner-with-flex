@@ -1,4 +1,4 @@
-# c-scanner
+# C language Scanner
 
 This is a C-scanner built with the tool `flex`, it outputs syntax highlighting and a histogram of tokens to a pdf presentation (compiled with latex)
 
